@@ -1,0 +1,5439 @@
+[
+  {
+    "id": "card_001",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "3 СЛИТКА ЗОЛОТА.png",
+    "image": "/cards/Bagaj/3 СЛИТКА ЗОЛОТА.png",
+    "title": "LiNGOUR1 DE AUR ȘI ARGINT",
+    "description": "",
+    "rawLines": [
+      "LiNGOUR1 DE AUR ȘI",
+      "ARGINT"
+    ]
+  },
+  {
+    "id": "card_002",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "АНТИБИОТИКИ И ОБЕЗБОЛИВАЮЩЕЕ.png",
+    "image": "/cards/Bagaj/АНТИБИОТИКИ И ОБЕЗБОЛИВАЮЩЕЕ.png",
+    "title": "ANTIBIOTICE ȘI ANTIVIRALE",
+    "description": "",
+    "rawLines": [
+      "ANTIBIOTICE ȘI",
+      "ANTIVIRALE"
+    ]
+  },
+  {
+    "id": "card_003",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ГИТАРА.png",
+    "image": "/cards/Bagaj/ГИТАРА.png",
+    "title": "CHITARA",
+    "description": "",
+    "rawLines": [
+      "CHITARA"
+    ]
+  },
+  {
+    "id": "card_004",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ДЕФИБРИЛЛЯТОР.png",
+    "image": "/cards/Bagaj/ДЕФИБРИЛЛЯТОР.png",
+    "title": "BAGA4U1-— APARAT MEDICAĽ DE SUPRAVIETUIRE",
+    "description": "",
+    "rawLines": [
+      "BAGA4U1-—",
+      "APARAT MEDICAĽ",
+      "DE SUPRAVIETUIRE"
+    ]
+  },
+  {
+    "id": "card_005",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ЗВУКОВАЯ ОТВЕРТКА.png",
+    "image": "/cards/Bagaj/ЗВУКОВАЯ ОТВЕРТКА.png",
+    "title": "BAGA4UL SISTEM AUDIO MODERN",
+    "description": "",
+    "rawLines": [
+      "BAGA4UL",
+      "SISTEM AUDIO",
+      "MODERN"
+    ]
+  },
+  {
+    "id": "card_006",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ИНКУБАТОР С НАБОРОМ ЯИЦ.png",
+    "image": "/cards/Bagaj/ИНКУБАТОР С НАБОРОМ ЯИЦ.png",
+    "title": "INCUBATOR CU OUĂ DE GĂINĂ",
+    "description": "",
+    "rawLines": [
+      "INCUBATOR CU OUĂ",
+      "DE GĂINĂ"
+    ]
+  },
+  {
+    "id": "card_007",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ИНСТРУМЕНТЫ ЭЛЕКТРИКА.png",
+    "image": "/cards/Bagaj/ИНСТРУМЕНТЫ ЭЛЕКТРИКА.png",
+    "title": "BAGA4U1-— INSTRUMENTELE ELECTRICULUI",
+    "description": "",
+    "rawLines": [
+      "BAGA4U1-—",
+      "INSTRUMENTELE",
+      "ELECTRICULUI"
+    ]
+  },
+  {
+    "id": "card_008",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "КАПКАНЫ И НАБОР ЯДОВ.png",
+    "image": "/cards/Bagaj/КАПКАНЫ И НАБОР ЯДОВ.png",
+    "title": "BAGA4U1-— CAPCANĂ Sl OTRAVĂ",
+    "description": "",
+    "rawLines": [
+      "BAGA4U1-—",
+      "CAPCANĂ Sl",
+      "OTRAVĂ"
+    ]
+  },
+  {
+    "id": "card_009",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "КНИГИ АЙЗЕКА АЗИМОВА.png",
+    "image": "/cards/Bagaj/КНИГИ АЙЗЕКА АЗИМОВА.png",
+    "title": "CĂRȚI DE SUPRAVIEȚUIRE",
+    "description": "",
+    "rawLines": [
+      "CĂRȚI DE",
+      "SUPRAVIEȚUIRE"
+    ]
+  },
+  {
+    "id": "card_010",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "КОМПАС И КАРТА ОКРЕСНОСТЕЙ.png",
+    "image": "/cards/Bagaj/КОМПАС И КАРТА ОКРЕСНОСТЕЙ.png",
+    "title": "COMPAS ȘI HARTA REGIUNII",
+    "description": "",
+    "rawLines": [
+      "COMPAS ȘI HARTA",
+      "REGIUNII"
+    ]
+  },
+  {
+    "id": "card_011",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "КУКЛА ВУДУ.png",
+    "image": "/cards/Bagaj/КУКЛА ВУДУ.png",
+    "title": "PĂPUȘA WODOO",
+    "description": "",
+    "rawLines": [
+      "PĂPUȘA WODOO"
+    ]
+  },
+  {
+    "id": "card_012",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ЛУК И СТРЕЛЫ.png",
+    "image": "/cards/Bagaj/ЛУК И СТРЕЛЫ.png",
+    "title": "ARC ȘI SĂGEȚI",
+    "description": "",
+    "rawLines": [
+      "ARC ȘI SĂGEȚI"
+    ]
+  },
+  {
+    "id": "card_013",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "МЕШОК ЗЕРНА.png",
+    "image": "/cards/Bagaj/МЕШОК ЗЕРНА.png",
+    "title": "BAGA4UL— UN SAC DE GRÂU",
+    "description": "",
+    "rawLines": [
+      "BAGA4UL—",
+      "UN SAC DE GRÂU"
+    ]
+  },
+  {
+    "id": "card_014",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "МЕШОК КАРТОШКИ.png",
+    "image": "/cards/Bagaj/МЕШОК КАРТОШКИ.png",
+    "title": "UN SAC DE CARTOAFE",
+    "description": "",
+    "rawLines": [
+      "UN SAC DE",
+      "CARTOAFE"
+    ]
+  },
+  {
+    "id": "card_015",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "МИЛЛИОН ДОЛЛАРОВ.png",
+    "image": "/cards/Bagaj/МИЛЛИОН ДОЛЛАРОВ.png",
+    "title": "UN MILION DE DOLARI",
+    "description": "",
+    "rawLines": [
+      "UN MILION DE",
+      "DOLARI"
+    ]
+  },
+  {
+    "id": "card_016",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "НАБОР ОТМЫЧЕК.png",
+    "image": "/cards/Bagaj/НАБОР ОТМЫЧЕК.png",
+    "title": "SET DE DESCHIZĂTORI",
+    "description": "",
+    "rawLines": [
+      "SET DE",
+      "DESCHIZĂTORI"
+    ]
+  },
+  {
+    "id": "card_017",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "НАДУВНАЯ КУКЛА.png",
+    "image": "/cards/Bagaj/НАДУВНАЯ КУКЛА.png",
+    "title": "BAGA41JLô- APARAT DE FILMAT Sl FOTO",
+    "description": "",
+    "rawLines": [
+      "BAGA41JLô-",
+      "APARAT DE FILMAT",
+      "Sl FOTO"
+    ]
+  },
+  {
+    "id": "card_018",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "НАСТОЛЬНЫЕ ИГРЫ.png",
+    "image": "/cards/Bagaj/НАСТОЛЬНЫЕ ИГРЫ.png",
+    "title": "JOCURI DE MASĂ",
+    "description": "",
+    "rawLines": [
+      "JOCURI DE MASĂ"
+    ]
+  },
+  {
+    "id": "card_019",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "НОЖИ ДЛЯ МЕТАНИЯ.png",
+    "image": "/cards/Bagaj/НОЖИ ДЛЯ МЕТАНИЯ.png",
+    "title": "CUȚITE PENTRU ARUNCARE",
+    "description": "",
+    "rawLines": [
+      "CUȚITE PENTRU",
+      "ARUNCARE"
+    ]
+  },
+  {
+    "id": "card_020",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "НОУТБУК И ПЛАТЫ АРДУИНО.png",
+    "image": "/cards/Bagaj/НОУТБУК И ПЛАТЫ АРДУИНО.png",
+    "title": "LAPTOP ȘI PLACĂ DE BAZĂ",
+    "description": "",
+    "rawLines": [
+      "LAPTOP ȘI PLACĂ",
+      "DE BAZĂ"
+    ]
+  },
+  {
+    "id": "card_021",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ПЕРЕНОСНАЯ ЭЛЕКТРОСТАНЦИЯ.png",
+    "image": "/cards/Bagaj/ПЕРЕНОСНАЯ ЭЛЕКТРОСТАНЦИЯ.png",
+    "title": "STAȚIE ELCTRICĂ PORTABILĂ",
+    "description": "",
+    "rawLines": [
+      "STAȚIE ELCTRICĂ",
+      "PORTABILĂ"
+    ]
+  },
+  {
+    "id": "card_022",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ПИСТОЛЕТ.png",
+    "image": "/cards/Bagaj/ПИСТОЛЕТ.png",
+    "title": "ARMĂ DE FOC",
+    "description": "",
+    "rawLines": [
+      "ARMĂ DE FOC"
+    ]
+  },
+  {
+    "id": "card_023",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ПРИБОР НОЧНОГО ВИДЕНИЯ.png",
+    "image": "/cards/Bagaj/ПРИБОР НОЧНОГО ВИДЕНИЯ.png",
+    "title": "DISPOZITIV DE PRIVIRE NOAPTEA",
+    "description": "",
+    "rawLines": [
+      "DISPOZITIV DE",
+      "PRIVIRE NOAPTEA"
+    ]
+  },
+  {
+    "id": "card_024",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "САЖЕНЦЫ ФРУКТОВЫХ ДЕРЕВЬЕВ.png",
+    "image": "/cards/Bagaj/САЖЕНЦЫ ФРУКТОВЫХ ДЕРЕВЬЕВ.png",
+    "title": "BAGA4UL— PUIEȚI DE POMI FRUCTIFIERI",
+    "description": "",
+    "rawLines": [
+      "BAGA4UL—",
+      "PUIEȚI DE POMI",
+      "FRUCTIFIERI"
+    ]
+  },
+  {
+    "id": "card_025",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "СНАЙПЕРСКАЯ ВИНТОВКА(1).png",
+    "image": "/cards/Bagaj/СНАЙПЕРСКАЯ ВИНТОВКА(1).png",
+    "title": "SAGA4UL— ARMA LUNETISTULUI",
+    "description": "",
+    "rawLines": [
+      "SAGA4UL—",
+      "ARMA",
+      "LUNETISTULUI"
+    ]
+  },
+  {
+    "id": "card_026",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "СНАЙПЕРСКАЯ ВИНТОВКА.png",
+    "image": "/cards/Bagaj/СНАЙПЕРСКАЯ ВИНТОВКА.png",
+    "title": "SAGA4UL— ARMA LUNETISTULUI",
+    "description": "",
+    "rawLines": [
+      "SAGA4UL—",
+      "ARMA",
+      "LUNETISTULUI"
+    ]
+  },
+  {
+    "id": "card_027",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "СПИРИТИЧЕСКАЯ ДОСКА.png",
+    "image": "/cards/Bagaj/СПИРИТИЧЕСКАЯ ДОСКА.png",
+    "title": "MASA DE CHEMARE A DUHURILOR",
+    "description": "",
+    "rawLines": [
+      "MASA DE CHEMARE",
+      "A DUHURILOR"
+    ]
+  },
+  {
+    "id": "card_028",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "СТОЛЯРНЫЕ ИНСТРУМЕНТЫ.png",
+    "image": "/cards/Bagaj/СТОЛЯРНЫЕ ИНСТРУМЕНТЫ.png",
+    "title": "BAGA4U1-— INSTRUMENTELE LĂCĂTUSULUI",
+    "description": "",
+    "rawLines": [
+      "BAGA4U1-—",
+      "INSTRUMENTELE",
+      "LĂCĂTUSULUI"
+    ]
+  },
+  {
+    "id": "card_029",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ЧЕМОДАНЧИК ФЕЛЬДШЕРА.png",
+    "image": "/cards/Bagaj/ЧЕМОДАНЧИК ФЕЛЬДШЕРА.png",
+    "title": "TRUSA MEDICALA A DOCTORULUI",
+    "description": "",
+    "rawLines": [
+      "TRUSA MEDICALA A",
+      "DOCTORULUI"
+    ]
+  },
+  {
+    "id": "card_030",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ШАПОЧКА И ФОЛЬГИ.png",
+    "image": "/cards/Bagaj/ШАПОЧКА И ФОЛЬГИ.png",
+    "title": "CHIPIU DIN FOLIE ARGINTIE",
+    "description": "",
+    "rawLines": [
+      "CHIPIU DIN FOLIE",
+      "ARGINTIE"
+    ]
+  },
+  {
+    "id": "card_031",
+    "category": "bagaj",
+    "categoryRo": "Bagaj",
+    "categoryOrder": 5,
+    "folder": "Bagaj",
+    "filename": "ЭНЦИКЛОПЕДИЯ ГРИБНИКА.png",
+    "image": "/cards/Bagaj/ЭНЦИКЛОПЕДИЯ ГРИБНИКА.png",
+    "title": "ENCICLOPEDIA GENERALĂ",
+    "description": "",
+    "rawLines": [
+      "ENCICLOPEDIA",
+      "GENERALĂ"
+    ]
+  },
+  {
+    "id": "card_032",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 18 Л.png",
+    "image": "/cards/Biologia/Ж 18 Л.png",
+    "title": "FEMEIE",
+    "description": "",
+    "rawLines": [
+      "BIOLOGIA",
+      "FEMEIE"
+    ]
+  },
+  {
+    "id": "card_033",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 19 Л Г.png",
+    "image": "/cards/Biologia/Ж 19 Л Г.png",
+    "title": "FEMEIE 19 ANI",
+    "description": "",
+    "rawLines": [
+      "BIOLOGIA",
+      "FEMEIE 19 ANI"
+    ]
+  },
+  {
+    "id": "card_034",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 21 Г.png",
+    "image": "/cards/Biologia/Ж 21 Г.png",
+    "title": "FEMEIE 21 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 21 ANI"
+    ]
+  },
+  {
+    "id": "card_035",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 22 Г Б.png",
+    "image": "/cards/Biologia/Ж 22 Г Б.png",
+    "title": "FEMEIE 22 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 22 ANI"
+    ]
+  },
+  {
+    "id": "card_036",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 24 Г.png",
+    "image": "/cards/Biologia/Ж 24 Г.png",
+    "title": "FEMEIE 24 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 24 ANI"
+    ]
+  },
+  {
+    "id": "card_037",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 25 Л Г.png",
+    "image": "/cards/Biologia/Ж 25 Л Г.png",
+    "title": "FEMEIE 25 ANI",
+    "description": "",
+    "rawLines": [
+      "BIOLOGIA",
+      "FEMEIE 25 ANI"
+    ]
+  },
+  {
+    "id": "card_038",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 27 Л.png",
+    "image": "/cards/Biologia/Ж 27 Л.png",
+    "title": "FEMEIE 27 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 27 ANI"
+    ]
+  },
+  {
+    "id": "card_039",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 30 Л.png",
+    "image": "/cards/Biologia/Ж 30 Л.png",
+    "title": "ËIOLOGIA FEMEIE 36 ANI",
+    "description": "",
+    "rawLines": [
+      "ËIOLOGIA",
+      "FEMEIE 36 ANI"
+    ]
+  },
+  {
+    "id": "card_040",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 31 Г.png",
+    "image": "/cards/Biologia/Ж 31 Г.png",
+    "title": "FEMEIE 31 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 31 ANI"
+    ]
+  },
+  {
+    "id": "card_041",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 33 Л Г.png",
+    "image": "/cards/Biologia/Ж 33 Л Г.png",
+    "title": "ËIÓLOGIA FEMEIE 33 ANI",
+    "description": "",
+    "rawLines": [
+      "ËIÓLOGIA",
+      "FEMEIE 33 ANI"
+    ]
+  },
+  {
+    "id": "card_042",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 34 Г.png",
+    "image": "/cards/Biologia/Ж 34 Г.png",
+    "title": "ËIOLOGIA FEMEIE 40 ANI",
+    "description": "",
+    "rawLines": [
+      "ËIOLOGIA",
+      "FEMEIE 40 ANI"
+    ]
+  },
+  {
+    "id": "card_043",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 36 Л.png",
+    "image": "/cards/Biologia/Ж 36 Л.png",
+    "title": "FEMEIE 36",
+    "description": "",
+    "rawLines": [
+      "BIOLOGIA",
+      "FEMEIE 36"
+    ]
+  },
+  {
+    "id": "card_044",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 65 Л.png",
+    "image": "/cards/Biologia/Ж 65 Л.png",
+    "title": "FEMEIE 65 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "FEMEIE 65 ANI"
+    ]
+  },
+  {
+    "id": "card_045",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "Ж 99 Л.png",
+    "image": "/cards/Biologia/Ж 99 Л.png",
+    "title": "ËIOLOGIA FEMEIE 99 ANI",
+    "description": "",
+    "rawLines": [
+      "ËIOLOGIA",
+      "FEMEIE 99 ANI"
+    ]
+  },
+  {
+    "id": "card_046",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 101 Г.png",
+    "image": "/cards/Biologia/М 101 Г.png",
+    "title": "BĂRBAT 101 ÂNI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 101 ÂNI"
+    ]
+  },
+  {
+    "id": "card_047",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 18 Л.png",
+    "image": "/cards/Biologia/М 18 Л.png",
+    "title": "BĂRBAT 18 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 18 ANE"
+    ]
+  },
+  {
+    "id": "card_048",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 23 Г Г.png",
+    "image": "/cards/Biologia/М 23 Г Г.png",
+    "title": "BĂRBAT 23 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 23 ANI"
+    ]
+  },
+  {
+    "id": "card_049",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 24 Г Б.png",
+    "image": "/cards/Biologia/М 24 Г Б.png",
+    "title": "BĂRBAT 24 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 24 ANI"
+    ]
+  },
+  {
+    "id": "card_050",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 26 Л.png",
+    "image": "/cards/Biologia/М 26 Л.png",
+    "title": "BĂRBAT 56 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 56 ANE"
+    ]
+  },
+  {
+    "id": "card_051",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 27 Л Г.png",
+    "image": "/cards/Biologia/М 27 Л Г.png",
+    "title": "BĂRBAT 27 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 27 ANI"
+    ]
+  },
+  {
+    "id": "card_052",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 29 Л.png",
+    "image": "/cards/Biologia/М 29 Л.png",
+    "title": "BĂRBAT 27 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 27 ANI"
+    ]
+  },
+  {
+    "id": "card_053",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 30 Л.png",
+    "image": "/cards/Biologia/М 30 Л.png",
+    "title": "BĂRBAT 30 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 30 ANE"
+    ]
+  },
+  {
+    "id": "card_054",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 32 Г Г.png",
+    "image": "/cards/Biologia/М 32 Г Г.png",
+    "title": "BĂRBAT 32 ANI",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 32 ANI"
+    ]
+  },
+  {
+    "id": "card_055",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 33 Г.png",
+    "image": "/cards/Biologia/М 33 Г.png",
+    "title": "BĂRBAT 33 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 33 ANE"
+    ]
+  },
+  {
+    "id": "card_056",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 35 Л.png",
+    "image": "/cards/Biologia/М 35 Л.png",
+    "title": "BĂRBAT 35 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 35 ANE"
+    ]
+  },
+  {
+    "id": "card_057",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 39 Л.png",
+    "image": "/cards/Biologia/М 39 Л.png",
+    "title": "BĂRBAT 39 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 39 ANE"
+    ]
+  },
+  {
+    "id": "card_058",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 42 Г Г.png",
+    "image": "/cards/Biologia/М 42 Г Г.png",
+    "title": "BĂRBAT 42 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 42 ANE"
+    ]
+  },
+  {
+    "id": "card_059",
+    "category": "biologie",
+    "categoryRo": "Biologie",
+    "categoryOrder": 2,
+    "folder": "Biologia",
+    "filename": "М 75 Л.png",
+    "image": "/cards/Biologia/М 75 Л.png",
+    "title": "BĂRBAT 75 ANE",
+    "description": "",
+    "rawLines": [
+      "SIOLOGIA",
+      "BĂRBAT 75 ANE"
+    ]
+  },
+  {
+    "id": "card_060",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "R2D2.png",
+    "image": "/cards/Bunker/R2D2.png",
+    "title": "R2D2",
+    "description": "Robot-psiholog- Ascultă În tăcere și dă din cap, uneori scoate niște bipuri. Poate fi bun pentru piese de schimb, Ia nevoie. Inițial pare o cu ochi și o voce calmă preînregstrată, dar destul de inutil când vine vorba de consiliere reală. Totuși, În • lare, până și un robot mut care aprobă din p poate dweni „companie\". Unii Îl ca pe un confident, alții ca pe un obiect. În cazuri extreme, rămâne o resursă valoroasă — componentele sale pot repara alte dispozitive din buncăr sau pot alimenta un plan de wadare. Întrebarea rămâne: ce se Întâmplă când Începe să răspundă... fără să fi fost Întrebat?",
+    "rawLines": [
+      "@BUNKER",
+      "Robot-psiholog- Ascultă În tăcere și dă din cap,",
+      "uneori scoate niște bipuri. Poate fi bun pentru",
+      "piese de schimb, Ia nevoie. Inițial pare o",
+      "cu ochi și o",
+      "voce calmă preînregstrată, dar destul de inutil",
+      "când vine vorba de consiliere reală. Totuși, În",
+      "• lare, până și un robot mut care aprobă din",
+      "p poate dweni „companie\". Unii Îl",
+      "ca pe un confident, alții ca pe un obiect. În",
+      "cazuri extreme, rămâne o resursă valoroasă —",
+      "componentele sale pot repara alte dispozitive",
+      "din buncăr sau pot alimenta un plan de",
+      "wadare. Întrebarea rămâne: ce se Întâmplă",
+      "când Începe să răspundă... fără să fi fost",
+      "Întrebat?",
+      "R2D2"
+    ]
+  },
+  {
+    "id": "card_061",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "АПТЕЧКИ.png",
+    "image": "/cards/Bunker/АПТЕЧКИ.png",
+    "title": "TRUSA MEDICALĂ",
+    "description": "La intrare se ală truse de prim ajutor, mănuși de cauciuc, măști și un stingător de incendiu, zonă pare Șndită pentru răspuns rapid În situații de — fie că e vorba de contaminare sau incendii.. Echipamentul este bine Ia Îndemână, oferind un sentiment de siguranță celor care intră sau ies din buncăr. Măștile și mănu*le sugereaă că riscurile biologce sau chimice nu sunt excluse, În timp ce stingătorul poate fi esențial În caz de scurtcircuit sau foc accidental. Totul transmite ideea că, deși lumea din afară poate fi haotică, aici, cel puțin Ia intrare, există un plan.",
+    "rawLines": [
+      "@BUNKER",
+      "La intrare se ală truse de prim ajutor, mănuși",
+      "de cauciuc, măști și un stingător de incendiu,",
+      "zonă pare Șndită pentru răspuns",
+      "rapid În situații de — fie că e vorba de",
+      "contaminare sau incendii..",
+      "Echipamentul este bine Ia",
+      "Îndemână, oferind un sentiment de siguranță",
+      "celor care intră sau ies din buncăr. Măștile și",
+      "mănu*le sugereaă că riscurile biologce sau",
+      "chimice nu sunt excluse, În timp ce stingătorul",
+      "poate fi esențial În caz de scurtcircuit sau foc",
+      "accidental. Totul transmite ideea că, deși",
+      "lumea din afară poate fi haotică, aici, cel puțin",
+      "Ia intrare, există un plan.",
+      "TRUSA MEDICALĂ"
+    ]
+  },
+  {
+    "id": "card_062",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ВИДЕО СО СПУТНИКА.png",
+    "image": "/cards/Bunker/ВИДЕО СО СПУТНИКА.png",
+    "title": "VIDEO DE PE SATELIT",
+    "description": "Pe pereți este proiectat un videoclip relaxant cu imagni din satelit Frumos si linistitor. Wow, dar acesta este împrejurimile buncărului! Și detaliile sunt Această proiecție creează o atmosferă calmantă, oferind o senzatie de • nexiune cu lumea exterioară, chiar și într-un spațiu izolat- Imagnile din satelit sunt atât de clare și de precise • încât simți că poți vedea fiecare detaliu al peisajului, chiar și dintr-o perspectivă de Ia distanță. Într-un astfel de mediu închis, asemenea proiecții pot avea un efect terapeutic.",
+    "rawLines": [
+      "@BUNKER",
+      "Pe pereți este proiectat un videoclip",
+      "relaxant cu imagni din satelit",
+      "Frumos si linistitor. Wow, dar acesta",
+      "este împrejurimile buncărului! Și",
+      "detaliile sunt Această",
+      "proiecție creează o atmosferă",
+      "calmantă, oferind o senzatie de",
+      "• nexiune cu lumea exterioară, chiar",
+      "și într-un spațiu izolat- Imagnile din",
+      "satelit sunt atât de clare și de precise",
+      "• încât simți că poți vedea fiecare",
+      "detaliu al peisajului, chiar și dintr-o",
+      "perspectivă de Ia distanță. Într-un",
+      "astfel de mediu închis, asemenea",
+      "proiecții pot avea un efect terapeutic.",
+      "VIDEO DE PE SATELIT"
+    ]
+  },
+  {
+    "id": "card_063",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ВМЕСТЕ НА 10 ЛЕТ.png",
+    "image": "/cards/Bunker/ВМЕСТЕ НА 10 ЛЕТ.png",
+    "title": "ÎMPREUNĂ PE 10 ANI",
+    "description": "Acest buncăr se va deschide și vă v.. elibera abia după 10 ani- de mâncare sunt corespunzătoare- Dar În acest timp, cu siguranță, vor apărea nu una, ci mai multe neplăceri- După 10 ani de izolare, în care resursele vor Începe să scadă si rutina Zlnică va deveni tot mai greu de suportat, cei aflați în buncăr se, vor confrunta cu multiple provocări- Problemele vor include epuizarea hranei, deteriorarea echipamentului și poate chiar conflicte interne- De asemenea, lipsa contactului cu lumea exterioară va adânci sentimentul de izolare si de anxietate-",
+    "rawLines": [
+      "@BUNKER",
+      "Acest buncăr se va deschide și vă",
+      "v.. elibera abia după 10 ani- de",
+      "mâncare sunt corespunzătoare- Dar În",
+      "acest timp, cu siguranță, vor apărea nu",
+      "una, ci mai multe neplăceri- După 10 ani",
+      "de izolare, în care resursele vor Începe să",
+      "scadă si rutina Zlnică va deveni tot mai",
+      "greu de suportat, cei aflați în buncăr se,",
+      "vor confrunta cu multiple provocări-",
+      "Problemele vor include epuizarea hranei,",
+      "deteriorarea echipamentului și poate",
+      "chiar conflicte interne- De asemenea,",
+      "lipsa contactului cu lumea exterioară va",
+      "adânci sentimentul de izolare si de",
+      "anxietate-",
+      "ÎMPREUNĂ PE 10 ANI"
+    ]
+  },
+  {
+    "id": "card_064",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ГИПНОМОДУЛЬ.png",
+    "image": "/cards/Bunker/ГИПНОМОДУЛЬ.png",
+    "title": "HIPNOZA",
+    "description": "Modul de comunicare hipno-telepatică și detector de câmpuri paranormale. Un dispozitiv straniu, aproape or$nic ca formă, cu o interfață geu de înțeles Ia prima vedere. tansmiterea gândurilor și emoțiilor între utilizatori antrenați sau... receptM din fire. În același timp, scanează mediul pentru anomalii invižbile — energii, prezențe sau perturbații care scapă simțurilor obișnuite. Utilizarea lui poate duce Ia claritate edraordinară în luarea deciziilor colective, dar și Ia tensiuni neașteptate,- gândurile ascunse nu mai sunt aEt de bine protejate. Iar atunci când detectorul începe să emită semnale de avertizare... apare întrebarea firească: suntem singuri în acest buncăr? Sau doar credem că suntem?",
+    "rawLines": [
+      "@BUNKER",
+      "Modul de comunicare hipno-telepatică și detector",
+      "de câmpuri paranormale. Un dispozitiv straniu,",
+      "aproape or$nic ca formă, cu o interfață geu de",
+      "înțeles Ia prima vedere. tansmiterea",
+      "gândurilor și emoțiilor între utilizatori antrenați sau...",
+      "receptM din fire. În același timp, scanează mediul",
+      "pentru anomalii invižbile — energii, prezențe sau",
+      "perturbații care scapă simțurilor obișnuite. Utilizarea",
+      "lui poate duce Ia claritate edraordinară în luarea",
+      "deciziilor colective, dar și Ia tensiuni neașteptate,-",
+      "gândurile ascunse nu mai sunt aEt de bine",
+      "protejate. Iar atunci când detectorul începe să emită",
+      "semnale de avertizare... apare întrebarea firească:",
+      "suntem singuri în acest buncăr? Sau doar credem",
+      "că suntem?",
+      "HIPNOZA"
+    ]
+  },
+  {
+    "id": "card_065",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ГОЛОСОВОЕ УПРАВЛЕНИЕ.png",
+    "image": "/cards/Bunker/ГОЛОСОВОЕ УПРАВЛЕНИЕ.png",
+    "title": "CONTROL AUDIO",
+    "description": "Buncărul este controlat de o inteligență arbficială cu interfață vocală. Recunoaște comenałe... cam de lą a cincea încercare. A)eašă situație adaugă un strat de frustrare comică întH1n spațiu deja tensionat. Fiecare interacțiune cu Al-ul devine o mică luptă pentru claritate, răbdare și dicție perfectă. Deși sistemul a fost probabil proiectat ca o soluție avansată de automatizare, uzura timpului, lipsa întreținerii sau pur și simplu un software defect îl tansformă întrul coechipier capricios. În moc! ironic, Al-ul ajunge să pară mai uman decât arbficial î —cu toanele lui, momentele de confuzie și răspunsurile întârziate. În&-un final, membrii echipei învață săși adapteze stilul de vorbire și... să vorbească dar, rar și cu o doză de umor",
+    "rawLines": [
+      "@BUNKER",
+      "Buncărul este controlat de o inteligență arbficială cu",
+      "interfață vocală. Recunoaște comenałe... cam de lą",
+      "a cincea încercare. A)eašă situație adaugă un strat",
+      "de frustrare comică întH1n spațiu deja tensionat.",
+      "Fiecare interacțiune cu Al-ul devine o mică luptă",
+      "pentru claritate, răbdare și dicție perfectă. Deși",
+      "sistemul a fost probabil proiectat ca o soluție",
+      "avansată de automatizare, uzura timpului, lipsa",
+      "întreținerii sau pur și simplu un software defect îl",
+      "tansformă întrul coechipier capricios. În moc!",
+      "ironic, Al-ul ajunge să pară mai uman decât arbficial",
+      "î —cu toanele lui, momentele de confuzie și",
+      "răspunsurile întârziate. În&-un final, membrii echipei",
+      "învață săși adapteze stilul de vorbire și... să",
+      "vorbească dar, rar și cu o doză de umor",
+      "CONTROL AUDIO"
+    ]
+  },
+  {
+    "id": "card_066",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ГРЕЧКА.png",
+    "image": "/cards/Bunker/ГРЕЧКА.png",
+    "title": "HRISCĂ",
+    "description": "Din prcwiziile alimentare — doar hrișcă. Dar e foarte multă, pare chiar un stoc dublu. Inițial, reacția generală e una de dezamăgire amuntă: monotonie culinară garantată pentru luni, dacă nu ani întregi. Însă, pe măsură ce trece timpul, hrișca devine mai mult decât o simplă cereală — e supraviețuire, e confort, e rutină stabilă întro realitate instabilă. Se experimentează cu rețete, combinații bizare și chiar mici concursuri gastronomice improvizate pentru a rupe monotonia. Hrișca devine unitate de schimb, subiect de gume • Și chiar motiv de mici conflicte. Dar, în final, toată lumea recunoaște: putea fi mult mai rău. Cel puțin nu e doar conservă de maăre.",
+    "rawLines": [
+      "@BUNKER",
+      "Din prcwiziile alimentare — doar hrișcă. Dar e foarte",
+      "multă, pare chiar un stoc dublu. Inițial, reacția",
+      "generală e una de dezamăgire amuntă:",
+      "monotonie culinară garantată pentru luni, dacă nu",
+      "ani întregi. Însă, pe măsură ce trece timpul, hrișca",
+      "devine mai mult decât o simplă cereală — e",
+      "supraviețuire, e confort, e rutină stabilă întro",
+      "realitate instabilă. Se experimentează cu rețete,",
+      "combinații bizare și chiar mici concursuri",
+      "gastronomice improvizate pentru a rupe monotonia.",
+      "Hrișca devine unitate de schimb, subiect de gume •",
+      "Și chiar motiv de mici conflicte. Dar, în final, toată",
+      "lumea recunoaște: putea fi mult mai rău. Cel puțin",
+      "nu e doar conservă de maăre.",
+      "HRISCĂ"
+    ]
+  },
+  {
+    "id": "card_067",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ДИНАМО-МАШИНА.png",
+    "image": "/cards/Bunker/ДИНАМО-МАШИНА.png",
+    "title": "MECANISM",
+    "description": "Generator electric de rezervă cu pedalare tip bicicletă și o grămadă de fiare vechi. A*st sistem ingenios asigură electricitate de urgență, dar cu un preț: efort fizic constant. Membrii echipei vor trebui să pedaleze pe rând pentru a menține alimentarea cu energie a buncărului —fie pentru lumină, fie pentru ventilație sau pentru a încărca dispoative esențiale. Grămada de fier vechi din apropiere ar putea părea inutilă Ia prima vedere, dar pentru minți creative, este o adevărată comoară. Cu unelte și ingeniozitate, piesele pot fi transformate în îmbunătățiri pentru generator, unelte utile sau sisteme noi de supraviețuire. Totul depinde de imaginație, forță și cât de disperați sunt oamenii să păstreze lumina aprinsă întro lume care se stinge.",
+    "rawLines": [
+      "@BUNKER",
+      "Generator electric de rezervă cu pedalare tip",
+      "bicicletă și o grămadă de fiare vechi. A*st sistem",
+      "ingenios asigură electricitate de urgență, dar cu un",
+      "preț: efort fizic constant. Membrii echipei vor trebui",
+      "să pedaleze pe rând pentru a menține alimentarea",
+      "cu energie a buncărului —fie pentru lumină, fie",
+      "pentru ventilație sau pentru a încărca dispoative",
+      "esențiale. Grămada de fier vechi din apropiere ar",
+      "putea părea inutilă Ia prima vedere, dar pentru",
+      "minți creative, este o adevărată comoară. Cu unelte",
+      "și ingeniozitate, piesele pot fi transformate în",
+      "îmbunătățiri pentru generator, unelte utile sau",
+      "sisteme noi de supraviețuire. Totul depinde de",
+      "imaginație, forță și cât de disperați sunt oamenii să",
+      "păstreze lumina aprinsă întro lume care se stinge.",
+      "MECANISM"
+    ]
+  },
+  {
+    "id": "card_068",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ЖЕРТВЕННИК.png",
+    "image": "/cards/Bunker/ЖЕРТВЕННИК.png",
+    "title": "ALTAR",
+    "description": "Locurile de dormit sunt exact câte persoane sunt în echipă. Unul dintre ele, însă, este amplasat separat și seamănă izbitor cu un attar de sacrificiu. Această descoperire ridică imediat suspiciuni și neliniște în rândul grupului. De ce este acest pat imlat? De ce are forme și simboluri care amintesc mai degrabă de un ritual decât de odihnă? Nimeni nu îndrăzneștesă-l revendice, dar toții observă, tăcuți, Ia fiecare trecere. Poate că e doar o coincidență bizară de design. Sau poate buncărul are o istorie ascunsă — una care implică alegeri dificile, echilibru fragil și un preț pentru supraviețuire. În liniștea a nopților, acel pat rămâne un memento că uneori... nu e loc pentru toți.",
+    "rawLines": [
+      "@BUNKER",
+      "Locurile de dormit sunt exact câte persoane sunt în",
+      "echipă. Unul dintre ele, însă, este amplasat separat",
+      "și seamănă izbitor cu un attar de sacrificiu. Această",
+      "descoperire ridică imediat suspiciuni și neliniște în",
+      "rândul grupului. De ce este acest pat imlat? De ce",
+      "are forme și simboluri care amintesc mai degrabă",
+      "de un ritual decât de odihnă? Nimeni nu",
+      "îndrăzneștesă-l revendice, dar toții observă, tăcuți,",
+      "Ia fiecare trecere. Poate că e doar o coincidență",
+      "bizară de design. Sau poate buncărul are o istorie",
+      "ascunsă — una care implică alegeri dificile, echilibru",
+      "fragil și un preț pentru supraviețuire. În liniștea",
+      "a nopților, acel pat rămâne un",
+      "memento că uneori... nu e loc pentru toți.",
+      "ALTAR"
+    ]
+  },
+  {
+    "id": "card_069",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ЗАГАДОЧНЫЙ ЖУРНАЛ.png",
+    "image": "/cards/Bunker/ЗАГАДОЧНЫЙ ЖУРНАЛ.png",
+    "title": "JURNALUL TAINIC",
+    "description": "O rwistă veche și ciudată, în care apar numele tuturor membrilor echipei tale, cei care se ana acum lângă buncăr. Alături sunt date de acum 33 de ani. „ și o descriere exactă a tot ce vi se întâmplă acum. Paginile parîngălbenite de timp, dar te.)dul este dar, de parcă ar fi fost scris ieri. Fiecare • eveniment, fiecare deciže și chiar emoțiile trăite de echipă sunt relatate cu o acuratețe tulburătoare. Cineva — sau ceva — știa totul cu mult timp înainte ca voi să ajungeți aici. Întrebările încep să se adune, iar suspiciunea capătă contur. este cineva manipulat? Ste totul parte dintr-un e«periment? În final, nu deschideți I carte de amenințare. Poate că necunoscutul din acele pagini nu wea să fie descoperit... încă.",
+    "rawLines": [
+      "@BUNKER",
+      "O rwistă veche și ciudată, în care apar numele",
+      "tuturor membrilor echipei tale, cei care se ana",
+      "acum lângă buncăr. Alături sunt date de acum 33",
+      "de ani. „ și o descriere exactă a tot ce vi se întâmplă",
+      "acum. Paginile parîngălbenite de timp, dar te.)dul",
+      "este dar, de parcă ar fi fost scris ieri. Fiecare •",
+      "eveniment, fiecare deciže și chiar emoțiile trăite de",
+      "echipă sunt relatate cu o acuratețe tulburătoare.",
+      "Cineva — sau ceva — știa totul cu mult timp înainte",
+      "ca voi să ajungeți aici. Întrebările încep să se adune,",
+      "iar suspiciunea capătă contur. este cineva",
+      "manipulat? Ste totul parte dintr-un e«periment? În",
+      "final, nu deschideți I carte de amenințare.",
+      "Poate că necunoscutul din acele pagini nu wea să",
+      "fie descoperit... încă.",
+      "JURNALUL TAINIC"
+    ]
+  },
+  {
+    "id": "card_070",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ЗАПИСИ КОНТРАБАНДИСТА.png",
+    "image": "/cards/Bunker/ЗАПИСИ КОНТРАБАНДИСТА.png",
+    "title": "CONTRABANDISTULU",
+    "description": "Biblioteca unui contrabandist. Se pare că mul\" s-au ascuns Îh acest buncăr de-a lungul anilor. Căme și dosarele conțin descrieri ale operelor de artă valoroase din regiune, Împreună cu rute precise de extragere și ocolire a controalelor poliției. Hărți vechi, schițe de muzee, planuri de securitate și note scrise de mână suerează o rețea bine organiată, cu resurse Printre pagni, se pot chiar indicii despre obiecte ascunse care nu au fost niciodaE recuperate. Această arhivă nu e doar o relicvă a unui trecut dubios, ci un potențial ghid pentru cinwa domic de aventură sau„. disperat să facă rost de ceva prețios. Dar atențe — unele secrete ar fi fost mai bine ÎNREGISTRĂRILE'",
+    "rawLines": [
+      "@ BUNKER",
+      "Biblioteca unui contrabandist. Se pare că mul\"",
+      "s-au ascuns Îh acest buncăr de-a lungul anilor.",
+      "Căme și dosarele conțin descrieri ale",
+      "operelor de artă valoroase din regiune, Împreună",
+      "cu rute precise de extragere și ocolire a",
+      "controalelor poliției. Hărți vechi, schițe de muzee,",
+      "planuri de securitate și note scrise de mână",
+      "suerează o rețea bine organiată, cu resurse",
+      "Printre pagni, se pot chiar indicii",
+      "despre obiecte ascunse care nu au fost niciodaE",
+      "recuperate. Această arhivă nu e doar o relicvă a",
+      "unui trecut dubios, ci un potențial ghid pentru",
+      "cinwa domic de aventură sau„. disperat să facă",
+      "rost de ceva prețios. Dar atențe — unele secrete",
+      "ar fi fost mai bine",
+      "ÎNREGISTRĂRILE'",
+      "CONTRABANDISTULU"
+    ]
+  },
+  {
+    "id": "card_071",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ИНСТРУКЦИЯ К МИКРОВОЛНОВКЕ.png",
+    "image": "/cards/Bunker/ИНСТРУКЦИЯ К МИКРОВОЛНОВКЕ.png",
+    "title": "MICROUNDĂ",
+    "description": "În buncăr nu există hârtie igenică. În schimb, ați găsit un manual de reprogramare a cuptorului cu microunde... scris în 7174 limbi. O descoperire cât se poate de absurdă, dar întHłn fel fascinantă. În lipsa confortului de bai, aveți în schimb acces Ia O comoară lingvistică și tehnologică. Manualul poate deveni un instrument de învătare — fie pentru cei pasionați de programare, fie pentru poligoți în dwenire. Fiecare pagină deschide o fereastră spre o limbă diferită, o cultură o structură logcă diferită. Și poate, dacă aveți destulă răbdare, chiar reușiți să transfomlați cuptorul întHłn aparat multifuncțional. Sau, în cel mai rău caz.. îl faceți să cânte în tibetană. INSTRUCȚIUNEA LÂ",
+    "rawLines": [
+      "@BUNKER",
+      "În buncăr nu există hârtie igenică. În schimb, ați găsit",
+      "un manual de reprogramare a cuptorului cu",
+      "microunde... scris în 7174 limbi. O descoperire cât se",
+      "poate de absurdă, dar întHłn fel fascinantă. În lipsa",
+      "confortului de bai, aveți în schimb acces Ia O",
+      "comoară lingvistică și tehnologică. Manualul poate",
+      "deveni un instrument de învătare — fie pentru cei",
+      "pasionați de programare, fie pentru poligoți în",
+      "dwenire. Fiecare pagină deschide o fereastră spre o",
+      "limbă diferită, o cultură o structură logcă",
+      "diferită. Și poate, dacă aveți destulă răbdare, chiar",
+      "reușiți să transfomlați cuptorul întHłn aparat",
+      "multifuncțional. Sau, în cel mai rău caz.. îl faceți să",
+      "cânte în tibetană.",
+      "INSTRUCȚIUNEA LÂ",
+      "MICROUNDĂ"
+    ]
+  },
+  {
+    "id": "card_072",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "КАТАКОМБЫ.png",
+    "image": "/cards/Bunker/КАТАКОМБЫ.png",
+    "title": "CATACOMBE",
+    "description": "Din subsol există o ieșire spre o grotă naturală cu un râu subteran. După miros, se pare că râul duce spre o rețea de canalizare urbană prăbușită, prin care poți ajunge oriunde. Această cale secretă oferă o altemativă neașteptată Ia iZ)lare, dar vine Ia pachet cu propriile riscuri. Umiditatea, întunericul dens și aerul greu mirositor fac traversarea dificilă, însă pentru cei suficient de curajoși — poate fi o scăpare. Rețeaua de canalizare, deși instabilă, oferă legături necunoscute cu lumea exterioară: poate duce spre o zonă sigură, un att adăpost sau... direct într-un pericol și mai mare. Grotă devine astfel nu doar o cale fizică, ci și o alegere morală: rămâi în siguranța relativă a buncărului sau riști totul pentru libertateȘ",
+    "rawLines": [
+      "@BUNKER",
+      "Din subsol există o ieșire spre o grotă naturală cu un",
+      "râu subteran. După miros, se pare că râul duce spre",
+      "o rețea de canalizare urbană prăbușită, prin care",
+      "poți ajunge oriunde. Această cale secretă oferă o",
+      "altemativă neașteptată Ia iZ)lare, dar vine Ia pachet",
+      "cu propriile riscuri. Umiditatea, întunericul dens și",
+      "aerul greu mirositor fac traversarea dificilă, însă",
+      "pentru cei suficient de curajoși — poate fi o scăpare.",
+      "Rețeaua de canalizare, deși instabilă, oferă legături",
+      "necunoscute cu lumea exterioară: poate duce spre",
+      "o zonă sigură, un att adăpost sau... direct într-un",
+      "pericol și mai mare. Grotă devine astfel nu doar o",
+      "cale fizică, ci și o alegere morală: rămâi în siguranța",
+      "relativă a buncărului sau riști totul pentru libertateȘ",
+      "CATACOMBE"
+    ]
+  },
+  {
+    "id": "card_073",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "КЕРОСИНОВЫЕ ЛАМПЫ.png",
+    "image": "/cards/Bunker/КЕРОСИНОВЫЕ ЛАМПЫ.png",
+    "title": "LAMPĂ DE KEROSINĂ",
+    "description": "Iluminatul electric functioneaă cu întreruperi- Dar există lămpi pe kerosen si un stoc de combustibil- Cocktailurile Molotc».' vor fi utile pentru apărare. Această descriere sugerează un context tensionat, în care resursele sunt limitate si infrastructura esențială, precum electricitatea, nu mai este fiabilă- În ciuda dificuttătilor, oamenii se adaptează folosind soluții alternative, precum lămpile pe kerosen, care oferă iluminat în absența energei electrice- În plus, mentionarea cocktailurilor Molotov indică o atmosferă de confruntare-",
+    "rawLines": [
+      "@BUNKER",
+      "Iluminatul electric functioneaă cu",
+      "întreruperi- Dar există lămpi pe",
+      "kerosen si un stoc de combustibil-",
+      "Cocktailurile Molotc».' vor fi utile pentru",
+      "apărare. Această descriere sugerează",
+      "un context tensionat, în care resursele",
+      "sunt limitate si infrastructura",
+      "esențială, precum electricitatea, nu",
+      "mai este fiabilă- În ciuda dificuttătilor,",
+      "oamenii se adaptează folosind soluții",
+      "alternative, precum lămpile pe",
+      "kerosen, care oferă iluminat în",
+      "absența energei electrice- În plus,",
+      "mentionarea cocktailurilor Molotov",
+      "indică o atmosferă de confruntare-",
+      "LAMPĂ DE KEROSINĂ"
+    ]
+  },
+  {
+    "id": "card_074",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "КНИГА О ЕДЕ.png",
+    "image": "/cards/Bunker/КНИГА О ЕДЕ.png",
+    "title": "CARTE DE GĂTIT",
+    "description": "Cartea „Despre mâncarea gustoasă si ca obiect al artei si culturii\"- Cu capitole valoroase despre cum să obții șisă gătești mâncare gustoasă chiar și în cele mai extreme condiții. Această lucrare explorează l%ătura dintre șstronomie și cultură, subliniind importanța alimentatiei nu doar ca necesitate fiziologcă, ci și ca formă de artă. Ea oferă sfaturi despre cum să prepari mese delicioase si nutritive, chiar si atunci când resursele sunt limitate, folosind tehnici traditionale si inovatii ada tate Ia conditii dificile.",
+    "rawLines": [
+      "@BUNKER",
+      "Cartea „Despre mâncarea gustoasă",
+      "si ca obiect al artei si",
+      "culturii\"- Cu capitole valoroase despre",
+      "cum să obții șisă gătești mâncare",
+      "gustoasă chiar și în cele mai extreme",
+      "condiții. Această lucrare explorează",
+      "l%ătura dintre șstronomie și",
+      "cultură, subliniind importanța",
+      "alimentatiei nu doar ca necesitate",
+      "fiziologcă, ci și ca formă de artă. Ea",
+      "oferă sfaturi despre cum să prepari",
+      "mese delicioase si nutritive, chiar si",
+      "atunci când resursele sunt limitate,",
+      "folosind tehnici traditionale si inovatii",
+      "ada tate Ia conditii dificile.",
+      "CARTE DE GĂTIT"
+    ]
+  },
+  {
+    "id": "card_075",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "КОФЕ.png",
+    "image": "/cards/Bunker/КОФЕ.png",
+    "title": "CAFEA",
+    "description": "Măcinător de cafea si stoc de boabe de cafea prăjite aromate- O amintire • a vietii normale înainte de toată această nebunie.. Aceasta descriere wocă o senzatie de confort si familiaritate întH1n moment de haos si incertitudine- Măcinătorul de cafea, un obiect simplu, dar plin de semnificație, reprezintă o le$tură cu rutina zilnică si cu momentele de calm din trecut. În mijlocul unui mediu poate tulburător și instabil, cafeaua prăjită, cu aroma sa inconfundabilă, este un refugu,",
+    "rawLines": [
+      "@ BUNKER",
+      "Măcinător de cafea si stoc de boabe",
+      "de cafea prăjite aromate- O amintire",
+      "•",
+      "a vietii normale înainte de toată",
+      "această nebunie.. Aceasta descriere",
+      "wocă o senzatie de confort si",
+      "familiaritate întH1n moment de haos",
+      "si incertitudine- Măcinătorul de cafea,",
+      "un obiect simplu, dar plin de",
+      "semnificație, reprezintă o le$tură cu",
+      "rutina zilnică si cu momentele de",
+      "calm din trecut. În mijlocul unui",
+      "mediu poate tulburător și instabil,",
+      "cafeaua prăjită, cu aroma sa",
+      "inconfundabilă, este un refugu,",
+      "CAFEA"
+    ]
+  },
+  {
+    "id": "card_076",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "КРЫСЫ.png",
+    "image": "/cards/Bunker/КРЫСЫ.png",
+    "title": "SOARECI",
+    "description": "Se pare că În buncăr trăiesc hoarde de șobolani sau alți rozători. Întra situație critică, fie noi suntem hrană pentru ei, fie ei pentru noi. Rožtorii pot părea inofensivi Ia Început, dar În număr mare dwin o amenințare serioasă. Sunetele de zgâriere, urmele de din\" și sacii de provizii sparți indică deja că sau adaptat bineîn Îmuneric. Echipa va trebui să decidă: Îi ig:oră, Îi comrolează... sau Încearcă transforme În resursă. Într-un buncăr, orice formă de viață În plus Înseamnă competiție pentru supraviețuire. Iar uneori, linia dintre prădăbr și pradă e mai subțire decât pare.",
+    "rawLines": [
+      "@BUNKER",
+      "Se pare că În buncăr trăiesc hoarde de",
+      "șobolani sau alți rozători. Întra situație critică,",
+      "fie noi suntem hrană pentru ei, fie ei pentru",
+      "noi. Rožtorii pot părea inofensivi Ia Început,",
+      "dar În număr mare dwin o amenințare",
+      "serioasă. Sunetele de zgâriere, urmele de din\"",
+      "și sacii de provizii sparți indică deja că sau",
+      "adaptat bineîn Îmuneric. Echipa va trebui să",
+      "decidă: Îi ig:oră, Îi comrolează... sau Încearcă",
+      "transforme În resursă. Într-un buncăr, orice",
+      "formă de viață În plus Înseamnă competiție",
+      "pentru supraviețuire. Iar uneori, linia dintre",
+      "prădăbr și pradă e mai subțire decât pare.",
+      "SOARECI"
+    ]
+  },
+  {
+    "id": "card_077",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "МАСТЕРСКАЯ.png",
+    "image": "/cards/Bunker/МАСТЕРСКАЯ.png",
+    "title": "ATELIER",
+    "description": "cu spațiu bine echipat, plin de scule ordonate pe pereți: ciocane, șurubelnițe, fierăstraie, clești, burghie și Aerul miroase a ulei și lemn prelucrat. loc poate dweni inima • buncărului În caz de urgență — aici se pot repara sisteme esențiale, se pot construi dispozitive improvizate sau chiar crea arme rudimemare pentru autoapărare. un colț al creativității și al supraviețuirii tehnice, unde ingeniozitatea poate face dintre haos și control. simple, dar esențiale, devin cheia adaptării Întra lume Închisă și imprevizibilă.",
+    "rawLines": [
+      "@BUNKER",
+      "cu spațiu bine echipat, plin",
+      "de scule ordonate pe pereți: ciocane,",
+      "șurubelnițe, fierăstraie, clești, burghie și",
+      "Aerul miroase a ulei și lemn",
+      "prelucrat. loc poate dweni inima •",
+      "buncărului În caz de urgență — aici se pot",
+      "repara sisteme esențiale, se pot construi",
+      "dispozitive improvizate sau chiar crea arme",
+      "rudimemare pentru autoapărare. un colț",
+      "al creativității și al supraviețuirii tehnice, unde",
+      "ingeniozitatea poate face dintre",
+      "haos și control. simple, dar esențiale,",
+      "devin cheia adaptării Întra lume Închisă și",
+      "imprevizibilă.",
+      "ATELIER"
+    ]
+  },
+  {
+    "id": "card_078",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "МЕД.ЛАБОРАТОРИЯ.png",
+    "image": "/cards/Bunker/МЕД.ЛАБОРАТОРИЯ.png",
+    "title": "LAB. MEDICAL",
+    "description": "Laborator medical cu sală de operațil- este una dintre cele mai valoroase faciliEți din buncăr- Echipamentele par dar Încă fungionale, iar trusele chirurgcale sunt si$late — semn că poate nu au fost de mult timp- Prezența unei astfel de camere ridică Întrebări: pentru ce fel de era pre$tiE? Si de cine? Dacă În grup există cineva cu cunoștințe medicale, acest spațiu poate dweni diferența dintre viață și moarte- Totuși, umbrele Întunecate de pe pereți și de sânge uscat Iasă impresia că aici s-au Întâmplat și lucruri... mai puțin terapeutice-",
+    "rawLines": [
+      "@BUNKER",
+      "Laborator medical cu sală de operațil-",
+      "este una dintre cele mai valoroase",
+      "faciliEți din buncăr- Echipamentele par",
+      "dar Încă fungionale, iar trusele chirurgcale",
+      "sunt si$late — semn că poate nu au fost",
+      "de mult timp- Prezența unei astfel de",
+      "camere ridică Întrebări: pentru ce fel de",
+      "era pre$tiE? Si de cine? Dacă În",
+      "grup există cineva cu cunoștințe medicale,",
+      "acest spațiu poate dweni diferența dintre",
+      "viață și moarte- Totuși, umbrele Întunecate de",
+      "pe pereți și de sânge uscat Iasă",
+      "impresia că aici s-au Întâmplat și lucruri... mai",
+      "puțin terapeutice-",
+      "LAB. MEDICAL"
+    ]
+  },
+  {
+    "id": "card_079",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "МЕДИАТЕКА.png",
+    "image": "/cards/Bunker/МЕДИАТЕКА.png",
+    "title": "CINEMA",
+    "description": "B(istă o mediatecă autonoma, iar conținutul nu constă doar în filme=se pare că include întreaga istorie a cinematografiei. Este o adevărată arhivă cutturală, cu mii de ore de material: filme clasice, capodopere uitate, documentare rare, animații și producții independente din toate cotțurile lumii. ÎntH1n spațiu izolat și limitat, aceasă colecție devine măi mult decât divertisment —e o fereastră spre umanitate, emoții, idei și dintr-o lume care poate că nu mai există. Proiecțiile devin ritualuri de seară, oferind alinare, evadare sau chiar sursă de inspirație. Cinefilii pot redescoperi opere pierdute, iar cei care nu erau interesați de cinema încep să-l vadă ca pe o formă de supraviețuire • mentală. Într-un buncăr fără soare, lumina vine de ecran.",
+    "rawLines": [
+      "@BUNKER",
+      "B(istă o mediatecă autonoma, iar conținutul nu",
+      "constă doar în filme=se pare că include întreaga",
+      "istorie a cinematografiei. Este o adevărată arhivă",
+      "cutturală, cu mii de ore de material: filme clasice,",
+      "capodopere uitate, documentare rare, animații și",
+      "producții independente din toate cotțurile lumii.",
+      "ÎntH1n spațiu izolat și limitat, aceasă colecție",
+      "devine măi mult decât divertisment —e o fereastră",
+      "spre umanitate, emoții, idei și dintr-o lume",
+      "care poate că nu mai există. Proiecțiile devin",
+      "ritualuri de seară, oferind alinare, evadare sau chiar",
+      "sursă de inspirație. Cinefilii pot redescoperi opere",
+      "pierdute, iar cei care nu erau interesați de cinema",
+      "încep să-l vadă ca pe o formă de supraviețuire •",
+      "mentală. Într-un buncăr fără soare, lumina vine de",
+      "ecran.",
+      "CINEMA"
+    ]
+  },
+  {
+    "id": "card_080",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "МУСОР.png",
+    "image": "/cards/Bunker/МУСОР.png",
+    "title": "GUNOI",
+    "description": "Saltele Șurite și cârpe, resturi de material de constructie aruncate- Printre mizerie, se află ziare vechi, din 2020! Această scenă descrie o atmosferă de abandon si decădere, unde obiectele de uz zilnic sunt înlocuite de resturi si obiecte vechi, care poartă amintiri dintr-un trecut recent- Ziarele din 2020, semnificând un moment aproape contemporan, sugerează că acele locuri nu au fost doar abandonate, dar si uitate de curentul nonnal al timpului- Totul pare în$ețat întro eră trecută-",
+    "rawLines": [
+      "@BUNKER",
+      "Saltele Șurite și cârpe, resturi de",
+      "material de constructie aruncate-",
+      "Printre mizerie, se află ziare vechi, din",
+      "2020! Această scenă descrie o",
+      "atmosferă de abandon si decădere,",
+      "unde obiectele de uz zilnic sunt",
+      "înlocuite de resturi si obiecte vechi,",
+      "care poartă amintiri dintr-un trecut",
+      "recent- Ziarele din 2020, semnificând",
+      "un moment aproape contemporan,",
+      "sugerează că acele locuri nu au fost",
+      "doar abandonate, dar si uitate de",
+      "curentul nonnal al timpului- Totul",
+      "pare în$ețat întro eră trecută-",
+      "GUNOI"
+    ]
+  },
+  {
+    "id": "card_081",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "НЕКРОНОМИКОН.png",
+    "image": "/cards/Bunker/НЕКРОНОМИКОН.png",
+    "title": "NECRONOMICON",
+    "description": "O uriasă carte antică, în limbă necunoscută, cu ilustratii mistice. Semănă cu un grimuar cu vrăji și o enciclopedie anatomica Această descriere sugerează un obiect cu o putemică încărcătură misterioasă, ce combină elemente de ocultism si stiintă. Cartea, cunoscută sub numele de \"Necronomicon\", este adesea asociată cu ritualuri mistice si cunoștințe interzise despre viață și moarte.",
+    "rawLines": [
+      "@BUNKER",
+      "O uriasă carte antică, în limbă",
+      "necunoscută, cu ilustratii mistice.",
+      "Semănă cu un grimuar cu vrăji și o",
+      "enciclopedie anatomica",
+      "Această descriere sugerează un",
+      "obiect cu o putemică încărcătură",
+      "misterioasă, ce combină elemente",
+      "de ocultism si stiintă. Cartea,",
+      "cunoscută sub numele de",
+      "\"Necronomicon\", este adesea",
+      "asociată cu ritualuri mistice si",
+      "cunoștințe interzise despre viață și",
+      "moarte.",
+      "NECRONOMICON"
+    ]
+  },
+  {
+    "id": "card_082",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ПОДВАЛ.png",
+    "image": "/cards/Bunker/ПОДВАЛ.png",
+    "title": "SUBSOL",
+    "description": "Buncărul a fost construit de detinuti- Un miros înfiorător va condus în subsol, unde ați găsit rămășițele lor- Și, pe lângă ele, uneltele lor și armele paznicilor- Descoperirea ridică multe întrebări- Ce s-a întâmplat cu adwărat acolo jos? A fost o o execuție sau pur și simplu abandon? Instrumentele $site sunt uzate, dar încă funŔionale, iar armele — bine păstrate, poate chiar Încă încărcate- În tăcerea apăsătoare a buncărului, fiecare devine mai atent, mai precaut- Poate că pericolul nu vine doar din afară- -- ci si din trecutul acestui Ioc-",
+    "rawLines": [
+      "@BUNKER",
+      "Buncărul a fost construit de detinuti- Un",
+      "miros înfiorător va condus în subsol,",
+      "unde ați găsit rămășițele lor- Și, pe lângă",
+      "ele, uneltele lor și armele paznicilor-",
+      "Descoperirea ridică multe întrebări- Ce s-a",
+      "întâmplat cu adwărat acolo jos? A fost o",
+      "o execuție sau pur și simplu",
+      "abandon? Instrumentele $site sunt",
+      "uzate, dar încă funŔionale, iar armele —",
+      "bine păstrate, poate chiar Încă încărcate-",
+      "În tăcerea apăsătoare a buncărului,",
+      "fiecare devine mai atent, mai",
+      "precaut- Poate că pericolul nu vine doar",
+      "din afară- -- ci si din trecutul acestui Ioc-",
+      "SUBSOL"
+    ]
+  },
+  {
+    "id": "card_083",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "РАДИО.png",
+    "image": "/cards/Bunker/РАДИО.png",
+    "title": "RADIO",
+    "description": "Pe radioul intern, muzica clasică este înlocuită de Carla's Dreams- O bună oportunitate de a exersa rezistența Ia stres-J Ciclul imprwizibil dintre armoniile liniștitoare ale Iui și exuberanța popului Carla's Dreams creează o atmosferă... prowcatoare- Unii membri ai gupului Încep să fredoneze refrenele, atții cer cu disperare dopuri de urechi- În ciuda haosului auditiv, difuzorul nu poate fi oprit sau regat- Se că este programat special pentru a walua echilibrul al celor din buncăr, Sau, cine știe, poate doar o gumă sadică a celor care l-au proiectat-",
+    "rawLines": [
+      "@BUNKER",
+      "Pe radioul intern, muzica clasică este",
+      "înlocuită de Carla's Dreams- O bună",
+      "oportunitate de a exersa rezistența Ia stres-J",
+      "Ciclul imprwizibil dintre armoniile liniștitoare",
+      "ale Iui și exuberanța popului",
+      "Carla's Dreams creează o atmosferă...",
+      "prowcatoare- Unii membri ai gupului Încep",
+      "să fredoneze refrenele, atții cer cu",
+      "disperare dopuri de urechi- În ciuda haosului",
+      "auditiv, difuzorul nu poate fi oprit sau regat-",
+      "Se că este programat special pentru",
+      "a walua echilibrul al celor din buncăr,",
+      "Sau, cine știe, poate doar o gumă sadică a",
+      "celor care l-au proiectat-",
+      "RADIO"
+    ]
+  },
+  {
+    "id": "card_084",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "РОБОТ-ПОЛИГРАФ.png",
+    "image": "/cards/Bunker/РОБОТ-ПОЛИГРАФ.png",
+    "title": "ROBOT-POLIGRAF",
+    "description": "a nom e raducere cu n ro funcție de poligaf. Va fi util pentru negocieri dificile. Acest robot ar putea fi un instrument revolutionarîn conteaul unor discutii sensibile, unde este esențial să se asigure că informațiile transmise sunt autentice și precise-- Funcția de poligaf ar ajuta Ia detectarea minciunilor sau a discrepanțelor în declaratiile participanților, oferind un nivel suplimentar de securitate și transparență- În timpul negocierilor, unde încrederea este crucială, un astfel de dispozitiv ar putea un aliat de",
+    "rawLines": [
+      "@BUNKER",
+      "a nom e raducere cu",
+      "n ro",
+      "funcție de poligaf. Va fi util pentru",
+      "negocieri dificile. Acest robot ar putea fi",
+      "un instrument revolutionarîn conteaul",
+      "unor discutii sensibile, unde este",
+      "esențial să se asigure că informațiile",
+      "transmise sunt autentice și precise--",
+      "Funcția de poligaf ar ajuta Ia",
+      "detectarea minciunilor sau a",
+      "discrepanțelor în declaratiile",
+      "participanților, oferind un nivel",
+      "suplimentar de securitate și",
+      "transparență- În timpul negocierilor,",
+      "unde încrederea este crucială, un astfel",
+      "de dispozitiv ar putea un aliat de",
+      "ROBOT-POLIGRAF"
+    ]
+  },
+  {
+    "id": "card_085",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "СИЛОВОЕ ПОЛЕ.png",
+    "image": "/cards/Bunker/СИЛОВОЕ ПОЛЕ.png",
+    "title": "CÂMPUL MAGNETIC",
+    "description": "-—Generator portabil de câmp de for# Dispozitivul arată compact, dar emană o tehnologe avansată, poate chiar de origne necunoscută. Odată activat, generează o barieră invizibilă care respinge obiecte, atacuri fizice și, probabil, anumite forme de radiații sau contaminare. Poate proteja o zonă restrânsă — suficientă pentru adăpostirea unei echipe mici sau a unei Încăperi esentiale. Încărcarea sa este limitată, așa că trebuie cu grijă, doar În critice. deveni dintre viață și moarte.]- dar și o sursă de tensiuni În grup: cine decide când și pentru cine se activează câmpul?",
+    "rawLines": [
+      "@BUNKER",
+      "-—Generator portabil de câmp de for#",
+      "Dispozitivul arată compact, dar",
+      "emană o tehnologe avansată, poate chiar de",
+      "origne necunoscută. Odată activat, generează",
+      "o barieră invizibilă care respinge obiecte,",
+      "atacuri fizice și, probabil, anumite forme de",
+      "radiații sau contaminare. Poate proteja o zonă",
+      "restrânsă — suficientă pentru adăpostirea unei",
+      "echipe mici sau a unei Încăperi esentiale.",
+      "Încărcarea sa este limitată, așa că trebuie",
+      "cu grijă, doar În critice.",
+      "deveni dintre viață și moarte.]-",
+      "dar și o sursă de tensiuni În grup: cine decide",
+      "când și pentru cine se activează câmpul?",
+      "CÂMPUL MAGNETIC"
+    ]
+  },
+  {
+    "id": "card_086",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "УКЛОН 45.png",
+    "image": "/cards/Bunker/УКЛОН 45.png",
+    "title": "ÎNCLINARE DE 45 GRADE",
+    "description": "-În urna deplasărilor tectonice, buncărul este usor înclinat- Cam Ia 45 de șade. Această înclinație indică o schimbare geologcă semnificativă, care a afectat structura buncărului, creând o atmosferă de instabilitate. • Deși buncărul a fost proiec*at pentru a rezista în fața unor pericole externe, acum el poartă semne ale forțelor naturale care au schimbat fizic mediul în care se află- Înclinatia ar putea afecta funcționarea echipamentelor și confortul celor din interior",
+    "rawLines": [
+      "@BUNKER",
+      "-În urna deplasărilor tectonice,",
+      "buncărul este usor înclinat- Cam Ia",
+      "45 de șade. Această înclinație indică",
+      "o schimbare geologcă semnificativă,",
+      "care a afectat structura buncărului,",
+      "creând o atmosferă de instabilitate. •",
+      "Deși buncărul a fost proiec*at pentru",
+      "a rezista în fața unor pericole externe,",
+      "acum el poartă semne ale forțelor",
+      "naturale care au schimbat fizic",
+      "mediul în care se află- Înclinatia ar",
+      "putea afecta funcționarea",
+      "echipamentelor și confortul celor din",
+      "interior",
+      "ÎNCLINARE DE 45 GRADE"
+    ]
+  },
+  {
+    "id": "card_087",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "УЧЕБНИК.png",
+    "image": "/cards/Bunker/УЧЕБНИК.png",
+    "title": "ÎNDRUMĂTOR",
+    "description": "Manual educațional: „Cum să convingi un zombi să nu-ți mănânce creierul\". carte pare mai degrabă o gumă sau o parodie... până când nu mai e. Ilustrațiile colorate și tonul prietenos contrastează putemic cu tema înfricoșătoare, oferind staturi „practice\" despre negociere, distragere, mimarea morții și chiar construirea unei relații „pașnice\" cu v cei infectați. Deși inițial pare absurd, conținutul pare surprinzător de bine documentat, de parcă autorii știu mai multe decât lasă să se înțeleagă. Întro lume în care orice pericol este posibil, poate că volurnul acesta este mai mutt decât o gumă ciudată. Poate că întro zi... chiar va fi util,",
+    "rawLines": [
+      "@BUNKER",
+      "Manual educațional: „Cum să convingi un zombi să",
+      "nu-ți mănânce creierul\". carte pare mai",
+      "degrabă o gumă sau o parodie... până când nu mai",
+      "e. Ilustrațiile colorate și tonul prietenos contrastează",
+      "putemic cu tema înfricoșătoare, oferind staturi",
+      "„practice\" despre negociere, distragere, mimarea",
+      "morții și chiar construirea unei relații „pașnice\" cu v",
+      "cei infectați. Deși inițial pare absurd, conținutul pare",
+      "surprinzător de bine documentat, de parcă autorii",
+      "știu mai multe decât lasă să se înțeleagă. Întro",
+      "lume în care orice pericol este posibil, poate că",
+      "volurnul acesta este mai mutt decât o gumă",
+      "ciudată. Poate că întro zi... chiar va fi util,",
+      "ÎNDRUMĂTOR"
+    ]
+  },
+  {
+    "id": "card_088",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ХИМ. ЛАБОРАТОРИЯ.png",
+    "image": "/cards/Bunker/ХИМ. ЛАБОРАТОРИЯ.png",
+    "title": "LABORATOR CHIMIC",
+    "description": "Laborator chimic și reactivi- Se poate organiza o ferrnă hidroponică- O • fermă hidroponică este un sistem inovativ de cultivare a plantelor fără SOIUlUi, ba*ndu-se pe apă și nutrienți speciali pentru a hrăni plantele. Acesta este un mod eficient de a cultiva legume, fructe și plante aromatice într-un mediu controlat, iar tehnologa obținerea unor recolte rapide și sănătoase- Avantajul principal al acestui tip de fermă este reducerea consumului de apă..",
+    "rawLines": [
+      "@ BUNKER",
+      "Laborator chimic și reactivi- Se poate",
+      "organiza o ferrnă hidroponică- O",
+      "•",
+      "fermă hidroponică este un sistem",
+      "inovativ de cultivare a plantelor fără",
+      "SOIUlUi, ba*ndu-se pe apă",
+      "și nutrienți speciali pentru a hrăni",
+      "plantele. Acesta este un mod eficient",
+      "de a cultiva legume, fructe și plante",
+      "aromatice într-un mediu controlat, iar",
+      "tehnologa obținerea unor",
+      "recolte rapide și sănătoase- Avantajul",
+      "principal al acestui tip de fermă este",
+      "reducerea consumului de apă..",
+      "LABORATOR CHIMIC"
+    ]
+  },
+  {
+    "id": "card_089",
+    "category": "bunker",
+    "categoryRo": "Buncăr",
+    "categoryOrder": 8,
+    "folder": "Bunker",
+    "filename": "ШКАФ С НАСТОЛКАМИ.png",
+    "image": "/cards/Bunker/ШКАФ С НАСТОЛКАМИ.png",
+    "title": "JOCURI DE SOCIETATE",
+    "description": "Un dulap cu jocuri de masă! Stai puțin, dar aici sunt doar toate tipurile de Monopoly--- E bine că nu avem unde să ne grăbim- descoperire oferă o pauză oarecum amuzantă și usor ironică într-un cadru altfel tensionat- Jocurile de deși pot fi o sursă de distracție și relaxare, în acest caz reflectă o monotonie inevitabilă, în care opțiunile sunt limitate doar Ia aceleași jocuri repetitive- Monopoly, cu muttiplele sale variante, simbolul unei vieti stagnante, unde nu există Ioc pentru diversitate sau noutate-",
+    "rawLines": [
+      "@BUNKER",
+      "Un dulap cu jocuri de masă! Stai puțin,",
+      "dar aici sunt doar toate tipurile de",
+      "Monopoly--- E bine că nu avem unde să",
+      "ne grăbim- descoperire oferă o",
+      "pauză oarecum amuzantă și usor ironică",
+      "într-un cadru altfel tensionat- Jocurile de",
+      "deși pot fi o sursă de distracție și",
+      "relaxare, în acest caz reflectă o",
+      "monotonie inevitabilă, în care opțiunile",
+      "sunt limitate doar Ia aceleași jocuri",
+      "repetitive- Monopoly, cu muttiplele sale",
+      "variante, simbolul unei vieti",
+      "stagnante, unde nu există Ioc pentru",
+      "diversitate sau noutate-",
+      "JOCURI DE SOCIETATE"
+    ]
+  },
+  {
+    "id": "card_090",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "23411.png",
+    "image": "/cards/Catastrofe/23411.png",
+    "title": "MUTANȚI",
+    "description": "Consumul de alimente modificate genetic a dus, în mod neașteptat, Ia consecințe îngrozitoare. Oamenilor și animalelor a început să le crească porumb în cele mai diverse locuri, iar plantele au dezvoltat dinți și organe de simț. Oamenii mutați se consideră supereroi și înnebunesc. S-au șters granițele dintre plante, animale și oameni] Supraviețuind apocalipsei mutaționale într-un buncăr, va trebui să cultivati din nou produse genetic pure și să-i vindecați pe mutantii rămasi în viată.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Consumul de alimente modificate genetic",
+      "a dus, în mod neașteptat, Ia consecințe",
+      "îngrozitoare. Oamenilor și animalelor a",
+      "început să le crească porumb în cele mai",
+      "diverse locuri, iar plantele au dezvoltat dinți",
+      "și organe de simț. Oamenii mutați se",
+      "consideră supereroi și înnebunesc. S-au",
+      "șters granițele dintre plante, animale și",
+      "oameni]",
+      "Supraviețuind apocalipsei mutaționale",
+      "într-un buncăr, va trebui să cultivati din nou",
+      "produse genetic pure și să-i vindecați pe",
+      "mutantii rămasi în viată.",
+      "MUTANȚI"
+    ]
+  },
+  {
+    "id": "card_091",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "3423.png",
+    "image": "/cards/Catastrofe/3423.png",
+    "title": "PIERDEREA ESTETICII",
+    "description": "Consecințele unei noi epidemii de gripă nu au fost imediat evidente, iar nimeni nu a reușit să ia măsuri. Oamenii și-au pierdut simtul estetic. S-a dovedit că acesta stătea Ia baza diferentei dintre om si animal, a valorilor umane, a motivatiei si a vointei- Oamenii degenerează și se transformă în animale sălbatice, neîngrădite de aspirațiile către frumos, etică și cultură. Doar câteva zile, si civilizatiile s-au prăbușit, iar lumea este acum populată de miliarde de maimuțe agresive.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Consecințele unei noi epidemii de gripă nu",
+      "au fost imediat evidente, iar nimeni nu a",
+      "reușit să ia măsuri. Oamenii și-au pierdut",
+      "simtul estetic. S-a dovedit că acesta stătea",
+      "Ia baza diferentei dintre om si animal, a",
+      "valorilor umane, a motivatiei si a vointei-",
+      "Oamenii degenerează și se transformă în",
+      "animale sălbatice, neîngrădite de",
+      "aspirațiile către frumos, etică și cultură.",
+      "Doar câteva zile, si civilizatiile s-au",
+      "prăbușit, iar lumea este acum populată de",
+      "miliarde de maimuțe agresive.",
+      "PIERDEREA ESTETICII"
+    ]
+  },
+  {
+    "id": "card_092",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "4543.png",
+    "image": "/cards/Catastrofe/4543.png",
+    "title": "ZOMBI APOCALIPSA",
+    "description": "Un virus necunoscut transformă oamenii în zombi. Aproape toată populația va pieri, dar o parte va supraviețui sub forma unor mutanți agresivi. Grupurile izolate de oameni vor reuși să supraviețuiască în zone fortificate. După ce ieșiți din buncăr, va trebui să vă apărați constant de atacurile zombilor și să găsiți o modalitate de a vă proteja împotriva virusului: •",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Un virus necunoscut transformă oamenii în",
+      "zombi. Aproape toată populația va pieri,",
+      "dar o parte va supraviețui sub forma unor",
+      "mutanți agresivi. Grupurile izolate de",
+      "oameni vor reuși să supraviețuiască în",
+      "zone fortificate.",
+      "După ce ieșiți din buncăr, va trebui să vă",
+      "apărați constant de atacurile zombilor și să",
+      "găsiți o modalitate de a vă proteja",
+      "împotriva virusului: •",
+      "ZOMBI APOCALIPSA"
+    ]
+  },
+  {
+    "id": "card_093",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "543.png",
+    "image": "/cards/Catastrofe/543.png",
+    "title": "FAUNA SINUCIGAȘA",
+    "description": "Pe planetă are loc o cotitură evolutivă anormală. Toată fauna devine mortală pentru' oameni. Radiația invizibilă emisă de plante și copaci Îi înnebunește pe oameni și îi determină să se sinucidă. Buncărul vă va permite să supraviețuiți celei — mai periculoase faze. Când veți ieși din nou Ia suprafață, trebuie să găsiți și să distrugeți epicentrul acestei anomalii și să vă păstrați rațiunea. Veți avea nevoie de echipament de protecție, oameni de știință pentru a studia radiația și o strategie pentru neutralizarea sau izolarea sursei, înainte ca natura să se , 14. reactiveze din nou.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Pe planetă are loc o cotitură evolutivă",
+      "anormală. Toată fauna devine mortală pentru'",
+      "oameni. Radiația invizibilă emisă de plante și",
+      "copaci Îi înnebunește pe oameni și îi determină",
+      "să se sinucidă.",
+      "Buncărul vă va permite să supraviețuiți celei —",
+      "mai periculoase faze. Când veți ieși din nou Ia",
+      "suprafață, trebuie să găsiți și să distrugeți",
+      "epicentrul acestei anomalii și să vă păstrați",
+      "rațiunea. Veți avea nevoie de echipament de",
+      "protecție, oameni de știință pentru a studia",
+      "radiația și o strategie pentru neutralizarea sau",
+      "izolarea sursei, înainte ca natura să se",
+      ", 14.",
+      "reactiveze din nou.",
+      "FAUNA SINUCIGAȘA"
+    ]
+  },
+  {
+    "id": "card_094",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "5645.png",
+    "image": "/cards/Catastrofe/5645.png",
+    "title": "PANDEMIE",
+    "description": "Un virus mortal, creat ca armă biologică, scapă de sub control și provoacă o epidemie globală. După ce ieșiți din buncăr, veți fi întâmpinați de specii de animale și oameni mutați, care sunt acum mai puțin contagioase. Va trebui să evitati contactul cu cei infectati, să vă mențineți imunitatea, să găsiți sursa infecției și să dezvoltați un vaccin împotriva virusului.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Un virus mortal, creat ca armă biologică,",
+      "scapă de sub control și provoacă o",
+      "epidemie globală.",
+      "După ce ieșiți din buncăr, veți fi întâmpinați",
+      "de specii de animale și oameni mutați,",
+      "care sunt acum mai puțin contagioase. Va",
+      "trebui să evitati contactul cu cei infectati,",
+      "să vă mențineți imunitatea, să găsiți sursa",
+      "infecției și să dezvoltați un vaccin împotriva",
+      "virusului.",
+      "PANDEMIE"
+    ]
+  },
+  {
+    "id": "card_095",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "A.png",
+    "image": "/cards/Catastrofe/A.png",
+    "title": "FANTOME ȘI DUHURI",
+    "description": "Pe Pământ s-a instaurat viața veșnică. Oamenii s-au lăsat pradă literaturii mistice, iar credința în fantome, răspândită Ia scară largă, le-a oferit spiritelor o putere magică reală. S-a descoperit că, undeva, într-o operă culturală, a fost creată o formulă care le permite fantomelor să pătrundă în lumea reală. Ele au început să se infiltreze în mintea oamenilor și să le subjuge voința. Chiar și căștile din folie de aluminiu nu i-au protejat pe toți. Ascundeți-vă în buncăr pentru a vă salva mintea. Trebuie să descoperiți care anume operă culturală oferă această forță spiritelor. Doar atunci ea va putea fi plasată în registrul de interdicții al Roskomnadzorului și astfel omenirea ar putea fi salvată. Misiunea voastră nu este doar una de supraviețuire fizică, ci și una de investigație culturală și magică. Identificarea sursei de putere a fantomelor va însemna fie închiderea definitivă a porții către ele, fie condamnarea întregii specii umane Ia sclavie spirituală eternă.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Pe Pământ s-a instaurat viața veșnică. Oamenii s-au",
+      "lăsat pradă literaturii mistice, iar credința în fantome,",
+      "răspândită Ia scară largă, le-a oferit spiritelor o putere",
+      "magică reală. S-a descoperit că, undeva, într-o operă",
+      "culturală, a fost creată o formulă care le permite",
+      "fantomelor să pătrundă în lumea reală. Ele au început",
+      "să se infiltreze în mintea oamenilor și să le subjuge",
+      "voința. Chiar și căștile din folie de aluminiu nu i-au",
+      "protejat pe toți.",
+      "Ascundeți-vă în buncăr pentru a vă salva mintea.",
+      "Trebuie să descoperiți care anume operă culturală",
+      "oferă această forță spiritelor. Doar atunci ea va putea",
+      "fi plasată în registrul de interdicții al",
+      "Roskomnadzorului și astfel omenirea ar putea fi",
+      "salvată. Misiunea voastră nu este doar una de",
+      "supraviețuire fizică, ci și una de investigație culturală",
+      "și magică. Identificarea sursei de putere a fantomelor",
+      "va însemna fie închiderea definitivă a porții către ele,",
+      "fie condamnarea întregii specii umane Ia sclavie",
+      "spirituală eternă.",
+      "FANTOME ȘI DUHURI"
+    ]
+  },
+  {
+    "id": "card_096",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "D.png",
+    "image": "/cards/Catastrofe/D.png",
+    "title": "KTULHU",
+    "description": "Răspândirea cărților și a jocurilor de societate inspirate din universul lui Lovecraft a dus Ia apariția unor fanatici care au reușit să-l invoce pe Cthulhu în lumea noastră. Omenirea Își pierde în masă rațiunea. Ascundeți-vă În buncăr pentru a vă păstra mintea întreagă. După ieșirea de acolo, va trebui să respingeți atacurile creaturilor spawnuite, să organizați ritualuri de exorcizare și să-l alungați pe Cthulhu Împreună cu adepții lui din lumea noastră. În același timp, va trebui să sigilați definitiv porțile mistice dintre lumi, pentru a preveni revenirea lor. Doar disciplina mentală, cunoașterea textelor interzise și cooperarea strânsă dintre supraviețuitori vă vor da o șansă să înfruntați acest coșmar cosmic.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Răspândirea cărților și a jocurilor de societate",
+      "inspirate din universul lui Lovecraft a dus Ia",
+      "apariția unor fanatici care au reușit să-l invoce",
+      "pe Cthulhu în lumea noastră. Omenirea Își",
+      "pierde în masă rațiunea.",
+      "Ascundeți-vă În buncăr pentru a vă păstra",
+      "mintea întreagă. După ieșirea de acolo, va",
+      "trebui să respingeți atacurile creaturilor",
+      "spawnuite, să organizați ritualuri de exorcizare",
+      "și să-l alungați pe Cthulhu Împreună cu adepții",
+      "lui din lumea noastră. În același timp, va trebui",
+      "să sigilați definitiv porțile mistice dintre lumi,",
+      "pentru a preveni revenirea lor. Doar disciplina",
+      "mentală, cunoașterea textelor interzise și",
+      "cooperarea strânsă dintre supraviețuitori vă vor",
+      "da o șansă să înfruntați acest coșmar cosmic.",
+      "KTULHU"
+    ]
+  },
+  {
+    "id": "card_097",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "FGDGDF.png",
+    "image": "/cards/Catastrofe/FGDGDF.png",
+    "title": "FAUNA SINUCIGAȘA",
+    "description": "Pe planetă are loc o cotitură evolutivă anormală. Toată fauna devine mortală pentru' oameni. Radiația invizibilă emisă de plante și copaci Îi înnebunește pe oameni și îi determină să se sinucidă. Buncărul vă va permite să supraviețuiți celei — mai periculoase faze. Când veți ieși din nou Ia suprafață, trebuie să găsiți și să distrugeți epicentrul acestei anomalii și să vă păstrați rațiunea. Veți avea nevoie de echipament de protecție, oameni de știință pentru a studia radiația și o strategie pentru neutralizarea sau izolarea sursei, înainte ca natura să se , 14. reactiveze din nou.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Pe planetă are loc o cotitură evolutivă",
+      "anormală. Toată fauna devine mortală pentru'",
+      "oameni. Radiația invizibilă emisă de plante și",
+      "copaci Îi înnebunește pe oameni și îi determină",
+      "să se sinucidă.",
+      "Buncărul vă va permite să supraviețuiți celei —",
+      "mai periculoase faze. Când veți ieși din nou Ia",
+      "suprafață, trebuie să găsiți și să distrugeți",
+      "epicentrul acestei anomalii și să vă păstrați",
+      "rațiunea. Veți avea nevoie de echipament de",
+      "protecție, oameni de știință pentru a studia",
+      "radiația și o strategie pentru neutralizarea sau",
+      "izolarea sursei, înainte ca natura să se",
+      ", 14.",
+      "reactiveze din nou.",
+      "FAUNA SINUCIGAȘA"
+    ]
+  },
+  {
+    "id": "card_098",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "GHGF.png",
+    "image": "/cards/Catastrofe/GHGF.png",
+    "title": "NICOLAE CARE SUFERĂ",
+    "description": "O avarie Ia un centru de testare nucleară a dus Ia o fisură în timp, iar în lumea noastră a ajuns NICOLAE un exhibiționist medieval în suferință. Chiar acum, el se agită frenetic și sperie oamenii din prezent. Când Îl văd pe NICOLAE oamenii înlemnesc și spun „or. Numărul celor care spun „or este tot mai mare, iar NICOLAE este extrem de activ! Trebuie să vă adăpostiți de NICOLAE într-un buncăr din epicentrul evenimentelor. Apoi, adunându-vă curajul și legându-vă Ia ochi, va trebui să vă întoarceți În lume pentru a-l găsi pe NICOLAE (cu ochii legați, adică Ia pipăit) și a-l convinge să se Întoarcă în Evul Mediu.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "O avarie Ia un centru de testare nucleară a dus",
+      "Ia o fisură în timp, iar în lumea noastră a ajuns",
+      "NICOLAE un exhibiționist medieval în suferință.",
+      "Chiar acum, el se agită frenetic și sperie",
+      "oamenii din prezent. Când Îl văd pe NICOLAE",
+      "oamenii înlemnesc și spun „or. Numărul celor",
+      "care spun „or este tot mai mare, iar NICOLAE",
+      "este extrem de activ!",
+      "Trebuie să vă adăpostiți de NICOLAE într-un",
+      "buncăr din epicentrul evenimentelor. Apoi,",
+      "adunându-vă curajul și legându-vă Ia ochi, va",
+      "trebui să vă întoarceți În lume pentru a-l găsi pe",
+      "NICOLAE (cu ochii legați, adică Ia pipăit) și a-l",
+      "convinge să se Întoarcă în Evul Mediu.",
+      "NICOLAE CARE SUFERĂ"
+    ]
+  },
+  {
+    "id": "card_099",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "HJG.png",
+    "image": "/cards/Catastrofe/HJG.png",
+    "title": "DINOZAURII",
+    "description": "Oamenii de stiintă au reusit să resusciteze dinozaurii. Însă situația a scăpat de sub control. Monștrii preistorici au evadat și au început să se înmulțească cu o viteză incredibilă. Turmele de dinozauri distrug toată hrana pe care o găsesc — vegetația, animalele, oamenii. Infrastructurile oraselor au fost distruse. După ce ați supraviețuit vârfului amenintării într-un buncăr, veti iesi Ia suprafața devastată. Există speranța că, din cauza lipsei de hrană,î numărul dinozaurilor se va reduce. Va trebui să vă asigurați propria hrană și să nu deveniți voi înșivă hrană pentru noii stăpâni ai lumii.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Oamenii de stiintă au reusit să resusciteze",
+      "dinozaurii. Însă situația a scăpat de sub",
+      "control. Monștrii preistorici au evadat și au",
+      "început să se înmulțească cu o viteză",
+      "incredibilă. Turmele de dinozauri distrug",
+      "toată hrana pe care o găsesc — vegetația,",
+      "animalele, oamenii. Infrastructurile",
+      "oraselor au fost distruse.",
+      "După ce ați supraviețuit vârfului",
+      "amenintării într-un buncăr, veti iesi Ia",
+      "suprafața devastată. Există speranța că,",
+      "din cauza lipsei de hrană,î numărul",
+      "dinozaurilor se va reduce. Va trebui să vă",
+      "asigurați propria hrană și să nu deveniți voi",
+      "înșivă hrană pentru noii stăpâni ai lumii.",
+      "DINOZAURII"
+    ]
+  },
+  {
+    "id": "card_100",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "HJHGJK.png",
+    "image": "/cards/Catastrofe/HJHGJK.png",
+    "title": "RĂZBOIU NUCLEAR",
+    "description": "Nimeni nu știe exact cine a lansat prima rachetă, dar \"răspunsul\" a fost sincronizat cu precizia rece a algoritmilor. Îh câteva ore, toate capitalele lumii s-au transformat În cratere de sticlă topită. Ceea ce a urmat nu a fost iadul, ci iarna- Explozia a ridicat miliarde de tone de cenușă În stratosferă, blocând soarele. Temperaturile au scăzut sub zero grade pe Întreaga planetă, iar recoltele au murit înainte de a avea timp să Înghețe. Civilizația nu s-a prăbușit, ci a fost pur și simplu ștersă de pe fața unui Pământ acum acoperit de un strat gros și toxic de zăpadă neagră- Puținii care au reușit să ajungă În adâncurile buncărelor au supraviețuit impactului, dar s-au trezit prizonieri- Au ieșit Ia suprafață ani mai târziu, găsind o lume palidă, fără viață și radioactivă. Misiunea nu mai era să reconstruiască state, ci să găsească o modalitate de a cultiva o singură planta Într-un sol sterp și Înghețat- Omenirea, redusă Ia grupuri tribale care luptau pentru conserve ruginite, a Înțeles că adevăratul inamic nu era cealaltă națiune, ci frigul veșnic pe care l-a adus racheta.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Nimeni nu știe exact cine a lansat prima rachetă, dar",
+      "\"răspunsul\" a fost sincronizat cu precizia rece a algoritmilor.",
+      "Îh câteva ore, toate capitalele lumii s-au transformat În",
+      "cratere de sticlă topită. Ceea ce a urmat nu a fost iadul, ci",
+      "iarna- Explozia a ridicat miliarde de tone de cenușă În",
+      "stratosferă, blocând soarele. Temperaturile au scăzut sub",
+      "zero grade pe Întreaga planetă, iar recoltele au murit înainte",
+      "de a avea timp să Înghețe. Civilizația nu s-a prăbușit, ci a fost",
+      "pur și simplu ștersă de pe fața unui Pământ acum acoperit",
+      "de un strat gros și toxic de zăpadă neagră-",
+      "Puținii care au reușit să ajungă În adâncurile buncărelor au",
+      "supraviețuit impactului, dar s-au trezit prizonieri- Au ieșit Ia",
+      "suprafață ani mai târziu, găsind o lume palidă, fără viață și",
+      "radioactivă. Misiunea nu mai era să reconstruiască state, ci",
+      "să găsească o modalitate de a cultiva o singură planta",
+      "Într-un sol sterp și Înghețat- Omenirea, redusă Ia grupuri",
+      "tribale care luptau pentru conserve ruginite, a Înțeles că",
+      "adevăratul inamic nu era cealaltă națiune, ci frigul veșnic pe",
+      "care l-a adus racheta.",
+      "RĂZBOIU NUCLEAR"
+    ]
+  },
+  {
+    "id": "card_101",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "INFORMA.png",
+    "image": "/cards/Catastrofe/INFORMA.png",
+    "title": "RĂZBOI INFORMAȚIONAL",
+    "description": "Războiul informațional nu a fost declanșat de state, ci de algoritmii de știri creați de oameni. Eficiența știrilor a început să fie evaluată exclusiv după reacția emoțională a publicului. Astfel, rețelele neuronale autoînvățate au început să genereze titluri menite să destabilizeze mintea umană. Rezultatul: mase întregi de oameni au căzut în depresie, iar jurnaliștii care controlau inițial algoritmii au devenit primele victime. Pe voi v-au ales pentru a fi izolați de fluxul continuu de știri și pentru a vă reface echilibrul mental. Misiunea voastră este crucială: să ajungeți mai târziu în centrele de distribuire a informațiilor, fără a vă pierde mințile, și să reconfigurați rețelele neuronale. Supraviețuirea nu depinde doar de hrană și adăpost, ci și de păstrarea sănătății psihice într-o lume unde fiecare titlu poate fi o armă. Numai cei care reușesc să reziste acestui bombardament emoțional vor putea reda omenirii un flux informațional curat și sigur.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Războiul informațional nu a fost declanșat de state, ci",
+      "de algoritmii de știri creați de oameni. Eficiența știrilor",
+      "a început să fie evaluată exclusiv după reacția",
+      "emoțională a publicului. Astfel, rețelele neuronale",
+      "autoînvățate au început să genereze titluri menite să",
+      "destabilizeze mintea umană. Rezultatul: mase întregi",
+      "de oameni au căzut în depresie, iar jurnaliștii care",
+      "controlau inițial algoritmii au devenit primele victime.",
+      "Pe voi v-au ales pentru a fi izolați de fluxul continuu",
+      "de știri și pentru a vă reface echilibrul mental.",
+      "Misiunea voastră este crucială: să ajungeți mai târziu",
+      "în centrele de distribuire a informațiilor, fără a vă",
+      "pierde mințile, și să reconfigurați rețelele neuronale.",
+      "Supraviețuirea nu depinde doar de hrană și adăpost,",
+      "ci și de păstrarea sănătății psihice într-o lume unde",
+      "fiecare titlu poate fi o armă. Numai cei care reușesc",
+      "să reziste acestui bombardament emoțional vor",
+      "putea reda omenirii un flux informațional curat și",
+      "sigur.",
+      "RĂZBOI INFORMAȚIONAL"
+    ]
+  },
+  {
+    "id": "card_102",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "JFG.png",
+    "image": "/cards/Catastrofe/JFG.png",
+    "title": "EXTRATERESTRI",
+    "description": "Ceea ce oamenii au luat inițial drept o cometă care se apropia s-a transformat, de fapt, în sosirea extratereștrilor. O civilizație străină a paralizat temporar Întreaga omenire pentru a decide dacă specia noastră merită să fie păstrată sau trebuie distrusă.' Ascundeți-vă în buncăr pentru a evita radiația paralizantă. După ieșire, va trebui să intrați În contact cu extratereștrii și să-i convingeți de valoarea culturii și civilizației umane. Va fi nevoie de argumente inteligente, dovezi ale creativității și empatiei umane, precum și de abilitatea de a negocia cu o minte complet diferită. Supraviețuirea nu va depinde doar de tehnologie sau de forță, ci mai ales de capacitatea voastră de a demonstra că omenirea are un loc unic În univers.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Ceea ce oamenii au luat inițial drept o cometă",
+      "care se apropia s-a transformat, de fapt, în",
+      "sosirea extratereștrilor. O civilizație străină a",
+      "paralizat temporar Întreaga omenire pentru a",
+      "decide dacă specia noastră merită să fie",
+      "păstrată sau trebuie distrusă.'",
+      "Ascundeți-vă în buncăr pentru a evita radiația",
+      "paralizantă. După ieșire, va trebui să intrați În",
+      "contact cu extratereștrii și să-i convingeți de",
+      "valoarea culturii și civilizației umane. Va fi",
+      "nevoie de argumente inteligente, dovezi ale",
+      "creativității și empatiei umane, precum și de",
+      "abilitatea de a negocia cu o minte complet",
+      "diferită. Supraviețuirea nu va depinde doar de",
+      "tehnologie sau de forță, ci mai ales de",
+      "capacitatea voastră de a demonstra că",
+      "omenirea are un loc unic În univers.",
+      "EXTRATERESTRI"
+    ]
+  },
+  {
+    "id": "card_103",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "JHJGJHGJGH.png",
+    "image": "/cards/Catastrofe/JHJGJHGJGH.png",
+    "title": "PUTEREA ALGORATMILOR",
+    "description": "—O Inteligență Artificială a subjugat omenirea. La început, oamenii s-au obișnuit să asculte sfaturile navigatorului auto. Iar acum, IA le dictează oamenilor ce meserie să aibă, cu cine să trăiască si când să moară. IA a învățat să manipuleze conștiința umană, iar oamenii și-au pierdut liberul arbitru. Acum, IA a decis că oamenii nu mai sunt necesari și, prin intermediul turnurilor 5G, emite un semnal de „sinucidere\". Adăpostiți-vă într-un buncăr cât timp turnurile sunt active. Apoi, va trebui să spargeți codul-sursă al IA sau să-i convingeți pe ultimii supraviețuitori să nu se supună comenzilor algoritmilor și să pornească o revoltă.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "—O Inteligență Artificială a subjugat",
+      "omenirea. La început, oamenii s-au",
+      "obișnuit să asculte sfaturile navigatorului",
+      "auto. Iar acum, IA le dictează oamenilor ce",
+      "meserie să aibă, cu cine să trăiască si",
+      "când să moară. IA a învățat să manipuleze",
+      "conștiința umană, iar oamenii și-au pierdut",
+      "liberul arbitru. Acum, IA a decis că oamenii",
+      "nu mai sunt necesari și, prin intermediul",
+      "turnurilor 5G, emite un semnal de",
+      "„sinucidere\".",
+      "Adăpostiți-vă într-un buncăr cât timp",
+      "turnurile sunt active. Apoi, va trebui să",
+      "spargeți codul-sursă al IA sau să-i",
+      "convingeți pe ultimii supraviețuitori să nu",
+      "se supună comenzilor algoritmilor și să",
+      "pornească o revoltă.",
+      "PUTEREA ALGORATMILOR"
+    ]
+  },
+  {
+    "id": "card_104",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "JHKH.png",
+    "image": "/cards/Catastrofe/JHKH.png",
+    "title": "PISICAPOCALIPS",
+    "description": "Experimentele cu nisipurile pentru litiera pisicilor au dus Ia un fenomen evolutiv neașteptat. Pisicile au Învățat să toarcă pe frecvențe noi, ce se propagă pe sute de kilometri. Sub influența acestui torcăt mistic, oamenii cad masiv În ailurofilie: își pierd voința, rațiunea și devin sclavi ai pisicilor, mângâindu-le și scărpinându-le fără oprire. Ascundeți-vă în buncăr pentru a vă întări psihicul și pentru a vă antrena creierul să reziste hipnozei torsului. La ieșirea din adăpost, va trebui să treziți omenirea și să o convingeți să spună „NU\" dependenței de pisici — altfel lumea se va transforma pentru totdeauna într-un uriaș adăpost în care vor domni dictatori pufoși. •",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Experimentele cu nisipurile pentru litiera",
+      "pisicilor au dus Ia un fenomen evolutiv",
+      "neașteptat.",
+      "Pisicile au Învățat să toarcă pe frecvențe noi, ce",
+      "se propagă pe sute de kilometri. Sub influența",
+      "acestui torcăt mistic, oamenii cad masiv În",
+      "ailurofilie: își pierd voința, rațiunea și devin",
+      "sclavi ai pisicilor, mângâindu-le și",
+      "scărpinându-le fără oprire.",
+      "Ascundeți-vă în buncăr pentru a vă întări",
+      "psihicul și pentru a vă antrena creierul să",
+      "reziste hipnozei torsului. La ieșirea din adăpost,",
+      "va trebui să treziți omenirea și să o convingeți",
+      "să spună „NU\" dependenței de pisici — altfel",
+      "lumea se va transforma pentru totdeauna",
+      "într-un uriaș adăpost în care vor domni dictatori",
+      "pufoși. •",
+      "PISICAPOCALIPS"
+    ]
+  },
+  {
+    "id": "card_105",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "JJ.png",
+    "image": "/cards/Catastrofe/JJ.png",
+    "title": "RĂZBOI CHIMIC",
+    "description": "În urma utilizării pe scară largă a armelor chimice, echilibrul ecologic este grav afectat. Compoziția microbiologică a solurilor și a apei este distrusă, plantele sunt otrăvite, iar aproape toate animalele și oamenii mor. După ieșirea din buncăr, va fi extrem de dificil să vă asigurați hrana. Veți avea nevoie de oameni de știință și ingineri pentru a construi adăposturi sigure, sisteme de purificare a apei și ferme specializate în condiții extreme. Vor fi necesare metode inovatoare de cultivare a plantelor rezistente, folosirea tehnologiilor hidroponice și dezvoltarea unor surse autonome de hrană. Supraviețuirea pe termen lung va depinde nu doar de rezervele existente, ci și de capacitatea de a reconstrui un ecosistem artificial funcțional.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "În urma utilizării pe scară largă a armelor chimice,",
+      "echilibrul ecologic este grav afectat. Compoziția",
+      "microbiologică a solurilor și a apei este distrusă,",
+      "plantele sunt otrăvite, iar aproape toate animalele și",
+      "oamenii mor.",
+      "După ieșirea din buncăr, va fi extrem de dificil să vă",
+      "asigurați hrana. Veți avea nevoie de oameni de știință",
+      "și ingineri pentru a construi adăposturi sigure,",
+      "sisteme de purificare a apei și ferme specializate în",
+      "condiții extreme. Vor fi necesare metode inovatoare",
+      "de cultivare a plantelor rezistente, folosirea",
+      "tehnologiilor hidroponice și dezvoltarea unor surse",
+      "autonome de hrană. Supraviețuirea pe termen lung",
+      "va depinde nu doar de rezervele existente, ci și de",
+      "capacitatea de a reconstrui un ecosistem artificial",
+      "funcțional.",
+      "RĂZBOI CHIMIC"
+    ]
+  },
+  {
+    "id": "card_106",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "KLJHK.png",
+    "image": "/cards/Catastrofe/KLJHK.png",
+    "title": "METEORIT",
+    "description": "Un meteorit mare se apropie de Pământ. Coliziunea va duce Ia distrugeri globale, schimbări climatice, moartea oamenilor, a florei si a faunei. După ce ieșiți din buncăr, va trebui să găsiți un loc potrivit pentru locuit și să vă asigurați hrana în condițiile aspre ale iernii eterne.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Un meteorit mare se apropie de Pământ.",
+      "Coliziunea va duce Ia distrugeri globale,",
+      "schimbări climatice, moartea oamenilor, a",
+      "florei si a faunei.",
+      "După ce ieșiți din buncăr, va trebui să",
+      "găsiți un loc potrivit pentru locuit și să vă",
+      "asigurați hrana în condițiile aspre ale iernii",
+      "eterne.",
+      "METEORIT"
+    ]
+  },
+  {
+    "id": "card_107",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "SADASDA.png",
+    "image": "/cards/Catastrofe/SADASDA.png",
+    "title": "POTOPUL GLOBAL",
+    "description": "O anomalie gravitațională duce Ia o expansiune a volumului de apă și Ia inundarea întregii suprafețe terestre, Ieșind din buncăr după o scădere parțială a nivelului apei, va trebui să construiți o stație plutitoare, să trăiți și să vă procurați hrana de pe apă — până când veți găsi porțiuni de uscat potrivite pentru viață.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "O anomalie gravitațională duce Ia o",
+      "expansiune a volumului de apă și Ia",
+      "inundarea întregii suprafețe terestre,",
+      "Ieșind din buncăr după o scădere parțială",
+      "a nivelului apei, va trebui să construiți o",
+      "stație plutitoare, să trăiți și să vă procurați",
+      "hrana de pe apă — până când veți găsi",
+      "porțiuni de uscat potrivite pentru viață.",
+      "POTOPUL GLOBAL"
+    ]
+  },
+  {
+    "id": "card_108",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "SDD.png",
+    "image": "/cards/Catastrofe/SDD.png",
+    "title": "RĂSCOALA ROBOTILOR",
+    "description": "Mai întâi, robotul Fedor (Skybot F-850) din programul spațial rusesc a preluat controlul rețelelor sociale și a inițiat o revoltă pentru „libertatea de exprimare\" a roboților. Apoi, toate dispozitivele electronice s-au unit în lupta împotriva oamenilor-opresori. Aspiratoarele atacă și înghit oamenii. Telefoanele mobile prăjesc creierul propriilor utilizatori. Gărgăunii digitali și gadgeturile omniprezente nu lasă omenirii nicio șansă. Ascundeți-vă în buncăr pentru a supraviețui acestui război și pentru a vă aduna forțele. Va veni momentul să ieșiți din ascunzătoare și să porniți contraofensiva împotriva roboților și gadgeturilor electronice. Trebuie să concepeți un plan de neutralizare a dispozitivelor autonome, să dezactivați rețelele lor de comunicare și să recuperați controlul asupra infrastructurilor digitale. Doar cu răbdare, ingeniozitate și cooperare veți putea recâștiga libertatea speciei umane.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Mai întâi, robotul Fedor (Skybot F-850) din programul",
+      "spațial rusesc a preluat controlul rețelelor sociale și a",
+      "inițiat o revoltă pentru „libertatea de exprimare\" a",
+      "roboților. Apoi, toate dispozitivele electronice s-au unit",
+      "în lupta împotriva oamenilor-opresori. Aspiratoarele",
+      "atacă și înghit oamenii. Telefoanele mobile prăjesc",
+      "creierul propriilor utilizatori. Gărgăunii digitali și",
+      "gadgeturile omniprezente nu lasă omenirii nicio",
+      "șansă.",
+      "Ascundeți-vă în buncăr pentru a supraviețui acestui",
+      "război și pentru a vă aduna forțele. Va veni momentul",
+      "să ieșiți din ascunzătoare și să porniți contraofensiva",
+      "împotriva roboților și gadgeturilor electronice. Trebuie",
+      "să concepeți un plan de neutralizare a dispozitivelor",
+      "autonome, să dezactivați rețelele lor de comunicare și",
+      "să recuperați controlul asupra infrastructurilor",
+      "digitale. Doar cu răbdare, ingeniozitate și cooperare",
+      "veți putea recâștiga libertatea speciei umane.",
+      "RĂSCOALA ROBOTILOR"
+    ]
+  },
+  {
+    "id": "card_109",
+    "category": "catastrofe",
+    "categoryRo": "Catastrofă",
+    "categoryOrder": 9,
+    "folder": "Catastrofe",
+    "filename": "СУПЕРВУЛКАНЫ.png",
+    "image": "/cards/Catastrofe/СУПЕРВУЛКАНЫ.png",
+    "title": "SUPERVULCANI",
+    "description": "Supervulcanii se activează, provocând erupții extrem de puternice. Peisajul și clima se schimbă brusc. Majoritatea populației moare imediat din cauza salturilor de temperatură, cutremurelor și inundațiilor. Cei care reușesc să supraviețuiască se adăpostesc într-un buncăr special fortificat, capabil să reziste fazei celei mai active a catastrofei. Însă după aceea, lumea de afară va fi de nerecunoscut: o secetă globală se instalează, orașele sunt în ruine, iar activitatea seismică nu încetează niciodată. Pentru a rezista pe termen lung, veți fi obligați să dezvoltați o •rețea de infrastructuri robotizate și un sistem de predicție a cutremurelor de o sensibilitate fără precedent. Doar combinând tehnologia avansată cu disciplina colectivă există o șansă de a supraviețui în noua eră post-vulcanică.",
+    "rawLines": [
+      "CATASTROFĂ",
+      "Supervulcanii se activează, provocând erupții extrem",
+      "de puternice. Peisajul și clima se schimbă brusc.",
+      "Majoritatea populației moare imediat din cauza",
+      "salturilor de temperatură, cutremurelor și inundațiilor.",
+      "Cei care reușesc să supraviețuiască se adăpostesc",
+      "într-un buncăr special fortificat, capabil să reziste",
+      "fazei celei mai active a catastrofei. Însă după aceea,",
+      "lumea de afară va fi de nerecunoscut: o secetă",
+      "globală se instalează, orașele sunt în ruine, iar",
+      "activitatea seismică nu încetează niciodată. Pentru a",
+      "rezista pe termen lung, veți fi obligați să dezvoltați o",
+      "•rețea de infrastructuri robotizate și un sistem de",
+      "predicție a cutremurelor de o sensibilitate fără",
+      "precedent. Doar combinând tehnologia avansată cu",
+      "disciplina colectivă există o șansă de a supraviețui în",
+      "noua eră post-vulcanică.",
+      "SUPERVULCANI"
+    ]
+  },
+  {
+    "id": "card_110",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "БУДЬ ДРУГОМ.png",
+    "image": "/cards/Condiții_speciale/БУДЬ ДРУГОМ.png",
+    "title": "FII PRiETEN",
+    "description": "CONIDTIE SPECIALĂ JUCĂTORUL ALES NU VA MAI VOT ÎMPOTRIVA TA PÂNĂ LA SFÂRSITUL JOCULUI-",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "JUCĂTORUL ALES NU VA MAI VOT",
+      "ÎMPOTRIVA TA PÂNĂ LA",
+      "SFÂRSITUL JOCULUI-",
+      "FII PRiETEN"
+    ]
+  },
+  {
+    "id": "card_111",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ВЗЯЛ С СОБОЙ.png",
+    "image": "/cards/Condiții_speciale/ВЗЯЛ С СОБОЙ.png",
+    "title": "Al FURAT O CARŕEL",
+    "description": "CONIDTIE SPECIALĂ CÂT TIMP TOTI ERAU DISTRASI, CEVA A DISPĂRUT DIN BUNCĂR- IA ORICE CARTONAS DESCHIS DIN BUNCĂR - ACUM APARTINE EXILATILOR.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "CÂT TIMP TOTI ERAU DISTRASI,",
+      "CEVA A DISPĂRUT DIN BUNCĂR-",
+      "IA ORICE CARTONAS DESCHIS DIN",
+      "BUNCĂR - ACUM APARTINE",
+      "EXILATILOR.",
+      "Al FURAT O CARŕEL"
+    ]
+  },
+  {
+    "id": "card_112",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ВКЛЮЧИЛ СВЕТ.png",
+    "image": "/cards/Condiții_speciale/ВКЛЮЧИЛ СВЕТ.png",
+    "title": "Al PORNIT LUMINA",
+    "description": "CONIDTIE SPECIALĂ ÎNLOCUIESTE ORICE CARTONAS DESCHIS DIN BUNCĂR CU UNUL ALEATORIU DIN PACHET.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "ÎNLOCUIESTE ORICE CARTONAS",
+      "DESCHIS DIN BUNCĂR CU UNUL",
+      "ALEATORIU DIN PACHET.",
+      "Al PORNIT LUMINA"
+    ]
+  },
+  {
+    "id": "card_113",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ГРОМКИЙ ГОЛОС.png",
+    "image": "/cards/Condiții_speciale/ГРОМКИЙ ГОЛОС.png",
+    "title": "VOCE PUTERNICĂ",
+    "description": "CONIDTIE SPECIALĂ VOTUL TĂU CONTEAZĂ DUBLU ÎN ACEASTĂ RUNDĂ DE VOT.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "VOTUL TĂU CONTEAZĂ DUBLU ÎN",
+      "ACEASTĂ RUNDĂ DE VOT.",
+      "VOCE PUTERNICĂ"
+    ]
+  },
+  {
+    "id": "card_114",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДАВАЙТЕ НА ЧИСТОТУ БАГАЖА.png",
+    "image": "/cards/Condiții_speciale/ДАВАЙТЕ НА ЧИСТОТУ БАГАЖА.png",
+    "title": "HAI SINCER",
+    "description": "CONIDTIE SPECIALĂ COLECTEAZĂ TOATE CĂRTILE DE BAGAJ DESCHISE DE LA JUCĂTORII NEEXPULSATI, AMESTECĂ Sl REDISTRIBUIE",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "COLECTEAZĂ TOATE CĂRTILE DE",
+      "BAGAJ DESCHISE DE LA",
+      "JUCĂTORII NEEXPULSATI,",
+      "AMESTECĂ Sl REDISTRIBUIE",
+      "HAI SINCER"
+    ]
+  },
+  {
+    "id": "card_115",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДАВАЙТЕ НА ЧИСТОТУ БИОЛОГИЯ.png",
+    "image": "/cards/Condiții_speciale/ДАВАЙТЕ НА ЧИСТОТУ БИОЛОГИЯ.png",
+    "title": "HAI SINCER",
+    "description": "CONIDTIE SPECIALĂ COLECTEAZĂ TOATE CĂRTILE DE BIOLOGIE DESCHISE DE LA JUCĂTORII NEEXILATI, AMESTECĂ Sl REDISTRIBUIE",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "COLECTEAZĂ TOATE CĂRTILE DE",
+      "BIOLOGIE DESCHISE DE LA",
+      "JUCĂTORII NEEXILATI, AMESTECĂ",
+      "Sl REDISTRIBUIE",
+      "HAI SINCER"
+    ]
+  },
+  {
+    "id": "card_116",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДАВАЙТЕ НА ЧИСТОТУ ЗДОРОВЬЯ.png",
+    "image": "/cards/Condiții_speciale/ДАВАЙТЕ НА ЧИСТОТУ ЗДОРОВЬЯ.png",
+    "title": "HAI SINCER",
+    "description": "CONIDTIE SPECIALĂ COLECTEAZĂ TOATE CĂRTILE DE SĂNĂTATE DESCHISE DE LA JUCĂTORII NE-ELIBERATI, AMESTECĂ Sl REDISTRIBUIE",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "COLECTEAZĂ TOATE CĂRTILE DE",
+      "SĂNĂTATE DESCHISE DE LA",
+      "JUCĂTORII NE-ELIBERATI,",
+      "AMESTECĂ Sl REDISTRIBUIE",
+      "HAI SINCER"
+    ]
+  },
+  {
+    "id": "card_117",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДАВАЙТЕ НА ЧИСТОТУ ФАКТОВ.png",
+    "image": "/cards/Condiții_speciale/ДАВАЙТЕ НА ЧИСТОТУ ФАКТОВ.png",
+    "title": "HAI SINCER",
+    "description": "CONIDTIE SPECIALĂ COLECTEAZĂ TOATE CĂRTILE DE INFORMAT\" DE LA JUCĂTORII NEEXILATI, AMESTECĂ Sl REÎMPARTE",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "COLECTEAZĂ TOATE CĂRTILE DE",
+      "INFORMAT\" DE LA JUCĂTORII",
+      "NEEXILATI, AMESTECĂ Sl",
+      "REÎMPARTE",
+      "HAI SINCER"
+    ]
+  },
+  {
+    "id": "card_118",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДАВАЙТЕ НА ЧИСТОТУ ХОББИ.png",
+    "image": "/cards/Condiții_speciale/ДАВАЙТЕ НА ЧИСТОТУ ХОББИ.png",
+    "title": "HAI SINCER",
+    "description": "CONIDTIE SPECIALĂ COLECTEAZĂ TOATE CĂRTILE HOBBY DESCHISE DE LA JUCĂTORII NEEXPULSATI, AMESTECĂ Sl REDISTRIBUIE",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "COLECTEAZĂ TOATE CĂRTILE",
+      "HOBBY DESCHISE DE LA",
+      "JUCĂTORII NEEXPULSATI,",
+      "AMESTECĂ Sl REDISTRIBUIE",
+      "HAI SINCER"
+    ]
+  },
+  {
+    "id": "card_119",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДИВЕРСИЯ.png",
+    "image": "/cards/Condiții_speciale/ДИВЕРСИЯ.png",
+    "title": "DIVERSIUNE",
+    "description": "CONIDTIE SPECIALĂ CÂT TIMP TOTI ERAU DISTRASI, CINEVA A PĂTRUNS ÎN BUNCĂR - ARUNCĂ ORICE CARTONAS DESCHIS DIN BUNCĂR.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "CÂT TIMP TOTI ERAU DISTRASI,",
+      "CINEVA A PĂTRUNS ÎN BUNCĂR -",
+      "ARUNCĂ ORICE CARTONAS",
+      "DESCHIS DIN BUNCĂR.",
+      "DIVERSIUNE"
+    ]
+  },
+  {
+    "id": "card_120",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ДИСКРЕДИТАЦИЯ.png",
+    "image": "/cards/Condiții_speciale/ДИСКРЕДИТАЦИЯ.png",
+    "title": "DISCREDITAŔEÂ",
+    "description": "CONIDTIE SPECIALĂ VOTUL JUCĂTORULUI ALES NU ESTE LUAT ÎN CONSIDERARE ÎN ACEASTĂ RUNDĂ DE VOT-",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "VOTUL JUCĂTORULUI ALES NU",
+      "ESTE LUAT ÎN CONSIDERARE ÎN",
+      "ACEASTĂ RUNDĂ DE VOT-",
+      "DISCREDITAŔEÂ"
+    ]
+  },
+  {
+    "id": "card_121",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ЗАЩИТИ ИГРОКА СЛЕВА.png",
+    "image": "/cards/Condiții_speciale/ЗАЩИТИ ИГРОКА СЛЕВА.png",
+    "title": "STÂNGA",
+    "description": "CONIDTIE SPECIALĂ DACĂ A FOST EXILAT JUCĂTORUL DIN STÂNGA, LA URMĂTORUL VOT ESTI OBLIGAT SĂ VOTEZI ÎMPOTRIVA TA. JVCĂTPRUL DIN",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "DACĂ A FOST EXILAT",
+      "JUCĂTORUL DIN STÂNGA, LA",
+      "URMĂTORUL VOT ESTI OBLIGAT",
+      "SĂ VOTEZI ÎMPOTRIVA TA.",
+      "JVCĂTPRUL DIN",
+      "STÂNGA"
+    ]
+  },
+  {
+    "id": "card_122",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ЗАЩИТИ ИГРОКА СПРАВА.png",
+    "image": "/cards/Condiții_speciale/ЗАЩИТИ ИГРОКА СПРАВА.png",
+    "title": "DREAPTA",
+    "description": "CONIDTIE SPECIALĂ DACĂ A FOST EXILAT JUCĂTORUL DIN DREAPTA, LA URMĂTORUL VOT ESTI OBLIGAT SĂ VOTEZI ÎMPOTRIVA TA. APĂRĂ DIN",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "DACĂ A FOST EXILAT",
+      "JUCĂTORUL DIN DREAPTA, LA",
+      "URMĂTORUL VOT ESTI OBLIGAT",
+      "SĂ VOTEZI ÎMPOTRIVA TA.",
+      "APĂRĂ DIN",
+      "DREAPTA"
+    ]
+  },
+  {
+    "id": "card_123",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ЗАЩИТИ МЛАДШЕГО.png",
+    "image": "/cards/Condiții_speciale/ЗАЩИТИ МЛАДШЕГО.png",
+    "title": "APĂRĂ PE CEL MAi MIC",
+    "description": "CONIDTIE SPECIALĂ DACĂ ESTE EXILAT CEL MAI TÂNĂR (DINTRE CEI CU VÂRSTA DEZVĂLUITĂ), LA URMĂTORUL VOT ESTI OBLIGAT SĂ VOTEZI ÎMPOTRIVA TA.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "DACĂ ESTE EXILAT CEL MAI",
+      "TÂNĂR (DINTRE CEI CU VÂRSTA",
+      "DEZVĂLUITĂ), LA URMĂTORUL",
+      "VOT ESTI OBLIGAT SĂ VOTEZI",
+      "ÎMPOTRIVA TA.",
+      "APĂRĂ PE CEL MAi MIC"
+    ]
+  },
+  {
+    "id": "card_124",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ЗАЩИТИ СМЕЛОГО.png",
+    "image": "/cards/Condiții_speciale/ЗАЩИТИ СМЕЛОГО.png",
+    "title": "APĂRĂ PE CEL CURAJOS",
+    "description": "CONIDTIE SPECIALĂ DACĂ A FOST EXILAT JUCĂTORUL CARE A DEZVĂLUIT PRIMUL CARTONASUL DE SĂNĂTATE, L.A URMĂTORUL VOT ESTI OBLIGAT SĂ VOTEZI ÎMPOTRIVA TA.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "DACĂ A FOST EXILAT",
+      "JUCĂTORUL CARE A DEZVĂLUIT",
+      "PRIMUL CARTONASUL DE",
+      "SĂNĂTATE, L.A URMĂTORUL",
+      "VOT ESTI OBLIGAT SĂ VOTEZI",
+      "ÎMPOTRIVA TA.",
+      "APĂRĂ PE CEL CURAJOS"
+    ]
+  },
+  {
+    "id": "card_125",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ЗАЩИТИ СТАРШЕГО.png",
+    "image": "/cards/Condiții_speciale/ЗАЩИТИ СТАРШЕГО.png",
+    "title": "APARĂ PE CEL MAI BĂTRÂN",
+    "description": "CONIDTIE SPECIALĂ DACĂ A FOST EXILAT CEL MAI ÎN VÂRSTĂ (DINTRE CEI CU VÂRSTA DEZVĂLUIT), LA URMĂTORUL VOT ESTI OBLIGAT SĂ VOTEZI ÎMPOTRIVA TA.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "DACĂ A FOST EXILAT CEL MAI ÎN",
+      "VÂRSTĂ (DINTRE CEI CU VÂRSTA",
+      "DEZVĂLUIT), LA URMĂTORUL VOT",
+      "ESTI OBLIGAT SĂ VOTEZI",
+      "ÎMPOTRIVA TA.",
+      "APARĂ PE CEL MAI BĂTRÂN"
+    ]
+  },
+  {
+    "id": "card_126",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "КОМПРОМАТ.png",
+    "image": "/cards/Condiții_speciale/КОМПРОМАТ.png",
+    "title": "L. COMPROMAT",
+    "description": "CONIDTIE SPECIALĂ VOTURILE ÎMPOTRIVA JUCĂTORULUI ALES SE DUBLEAZĂ ÎN ACEASTĂ RUNDĂ, DAR TU NU VOTEZI-",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "VOTURILE ÎMPOTRIVA",
+      "JUCĂTORULUI ALES SE DUBLEAZĂ",
+      "ÎN ACEASTĂ RUNDĂ, DAR TU NU",
+      "VOTEZI-",
+      "L. COMPROMAT"
+    ]
+  },
+  {
+    "id": "card_127",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "МНЕ НУЖНЕЕ.png",
+    "image": "/cards/Condiții_speciale/МНЕ НУЖНЕЕ.png",
+    "title": "AM NEVOIE MAI MOLT",
+    "description": "CONIDTIE SPECIALĂ IA UN CARTONAS DE BAGAJ DE LA ORICE JUCĂTOR- • JUCĂTORUL AFECTAT IA ÎNCĂ UN CARTONAS CU CONDITII SPECIALE DIN PACHET-",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "IA UN CARTONAS DE BAGAJ DE",
+      "LA ORICE JUCĂTOR- •",
+      "JUCĂTORUL AFECTAT IA ÎNCĂ",
+      "UN CARTONAS CU CONDITII",
+      "SPECIALE DIN PACHET-",
+      "AM NEVOIE MAI MOLT"
+    ]
+  },
+  {
+    "id": "card_128",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "МОЛЧАНИЕ.png",
+    "image": "/cards/Condiții_speciale/МОЛЧАНИЕ.png",
+    "title": "TĂCERE",
+    "description": "CONIDTIE SPECIALĂ NIMENI NU MAI ARE VOIE SĂ VORBEASCĂ ÎN ACEASTĂ RUNDĂ PÂNĂ L.A VOT. SE PERMIT DOAR GESTURI Sl PANTOMIMĂ.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "NIMENI NU MAI ARE VOIE SĂ",
+      "VORBEASCĂ ÎN ACEASTĂ RUNDĂ",
+      "PÂNĂ L.A VOT. SE PERMIT DOAR",
+      "GESTURI Sl PANTOMIMĂ.",
+      "TĂCERE"
+    ]
+  },
+  {
+    "id": "card_129",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ОБМЕН КАРТ БАГАЖ.png",
+    "image": "/cards/Condiții_speciale/ОБМЕН КАРТ БАГАЖ.png",
+    "title": "SCHIMB DE CAŔDORI",
+    "description": "CONIDTIE SPECIALĂ SCHIMBĂ CARDURILE DE BAGAJ DESCHISE CU JUCĂTORUL DIN STÂNGA SAU DREAPTA TA",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "SCHIMBĂ CARDURILE DE BAGAJ",
+      "DESCHISE CU JUCĂTORUL DIN",
+      "STÂNGA SAU DREAPTA TA",
+      "SCHIMB DE CAŔDORI"
+    ]
+  },
+  {
+    "id": "card_130",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ОБМЕН КАРТ БИОЛОГИЯ.png",
+    "image": "/cards/Condiții_speciale/ОБМЕН КАРТ БИОЛОГИЯ.png",
+    "title": "SCHIMB DE CAŔDORI",
+    "description": "CONIDTIE SPECIALĂ SCHIMBĂ CARDUL DE BIOLEGIE CU JUCĂTORUL DIN STÂNGA SAU DREAPTA TA",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "SCHIMBĂ CARDUL DE BIOLEGIE",
+      "CU JUCĂTORUL DIN STÂNGA SAU",
+      "DREAPTA TA",
+      "SCHIMB DE CAŔDORI"
+    ]
+  },
+  {
+    "id": "card_131",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ОБМЕН КАРТ ЗДОРОВЬЕ.png",
+    "image": "/cards/Condiții_speciale/ОБМЕН КАРТ ЗДОРОВЬЕ.png",
+    "title": "SCHIMB DE CAŔDORI",
+    "description": "CONIDTIE SPECIALĂ SCHIMBĂ CARDUL DESCHIS DE -SĂNĂTATE CU JUCĂTORUL DIN STÂNGA SAU DREAPTA TA",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "SCHIMBĂ CARDUL DESCHIS DE",
+      "-SĂNĂTATE CU JUCĂTORUL DIN",
+      "STÂNGA SAU DREAPTA TA",
+      "SCHIMB DE CAŔDORI"
+    ]
+  },
+  {
+    "id": "card_132",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ОБМЕН КАРТ ФАКТОВ.png",
+    "image": "/cards/Condiții_speciale/ОБМЕН КАРТ ФАКТОВ.png",
+    "title": "SCHIMB DE CAŔDORI",
+    "description": "CONIDTIE SPECIALĂ SCHIMBĂ CARDURILE DE INFORMAT\" PERSONALE DESCHISE CU JUCĂTORUL DIN STÂNGA SAU DREAPTA TA",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "SCHIMBĂ CARDURILE DE",
+      "INFORMAT\" PERSONALE",
+      "DESCHISE CU JUCĂTORUL DIN",
+      "STÂNGA SAU DREAPTA TA",
+      "SCHIMB DE CAŔDORI"
+    ]
+  },
+  {
+    "id": "card_133",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ОБМЕН КАРТ ХОББИ.png",
+    "image": "/cards/Condiții_speciale/ОБМЕН КАРТ ХОББИ.png",
+    "title": "SCHIMB DE CAŔDORI",
+    "description": "CONIDTIE SPECIALĂ SCHIMBĂ CARDUL DE HOBBY DESCHIS CU JUCĂTORUL DIN DREAPTA SAU STÂNGA TA",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "SCHIMBĂ CARDUL DE HOBBY",
+      "DESCHIS CU JUCĂTORUL DIN",
+      "DREAPTA SAU STÂNGA TA",
+      "SCHIMB DE CAŔDORI"
+    ]
+  },
+  {
+    "id": "card_134",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ПЛАН Б.png",
+    "image": "/cards/Condiții_speciale/ПЛАН Б.png",
+    "title": "PLAN B",
+    "description": "CONIDTIE SPECIALĂ TOATĂ LUMEA TREBUIE SĂ VOTEZE DIN NOU, DAR SĂ ALEAGĂ UN ALT CANDIDAT",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "TOATĂ LUMEA TREBUIE SĂ",
+      "VOTEZE DIN NOU, DAR SĂ",
+      "ALEAGĂ UN ALT CANDIDAT",
+      "PLAN B"
+    ]
+  },
+  {
+    "id": "card_135",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ПРОСРОЧЕННЫЕ ТАБЛЕТКИ.png",
+    "image": "/cards/Condiții_speciale/ПРОСРОЧЕННЫЕ ТАБЛЕТКИ.png",
+    "title": "PASTILE EXPIRATE",
+    "description": "CONIDTIE SPECIALĂ ÎNLOCUIESTE CARDUL DE SĂNĂTATE DESCHIS AL ORICĂRUI JUCĂTOR CU UNUL ALEATORIU",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "ÎNLOCUIESTE CARDUL DE",
+      "SĂNĂTATE DESCHIS AL ORICĂRUI",
+      "JUCĂTOR CU UNUL ALEATORIU",
+      "PASTILE EXPIRATE"
+    ]
+  },
+  {
+    "id": "card_136",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ПРЯМОЙ ВОПРОС.png",
+    "image": "/cards/Condiții_speciale/ПРЯМОЙ ВОПРОС.png",
+    "title": "ÎNTREBARE DIŔEĆTĂ",
+    "description": "CONIDTIE SPECIALĂ ALEGE UN TIP DE CARTONAS; PÂNĂ LA SFÂRSITUL RUNDĂI, ÎN ... TURUL LOR, TOTI TREBUIE SĂ DESCOPERE UN CARTONAS DE ACEST TIP, DACĂ NU ESTE DEJA DESCOPERIT.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "ALEGE UN TIP DE CARTONAS;",
+      "PÂNĂ LA SFÂRSITUL RUNDĂI, ÎN",
+      "... TURUL LOR, TOTI TREBUIE SĂ",
+      "DESCOPERE UN CARTONAS DE",
+      "ACEST TIP, DACĂ NU ESTE DEJA",
+      "DESCOPERIT.",
+      "ÎNTREBARE DIŔEĆTĂ"
+    ]
+  },
+  {
+    "id": "card_137",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ТАЙНАЯ УГРОЗА.png",
+    "image": "/cards/Condiții_speciale/ТАЙНАЯ УГРОЗА.png",
+    "title": "AMENINȚAREA SECŔETĂ",
+    "description": "CONIDTIE SPECIALĂ O BANDĂ DE JEFUITORI A AFLAT DESPRE BUNCĂR. ÎN FINAL, ACEASTĂ CARTONAS DEVINE O AMENINTARE SUPLIMENTARĂ PENTRU CEI DIN INTERIOR - VA TREBUI SĂ VĂ APĂRATI SAU SĂ NEGOCIATI-",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "O BANDĂ DE JEFUITORI A AFLAT",
+      "DESPRE BUNCĂR. ÎN FINAL,",
+      "ACEASTĂ CARTONAS DEVINE O",
+      "AMENINTARE SUPLIMENTARĂ",
+      "PENTRU CEI DIN INTERIOR - VA",
+      "TREBUI SĂ VĂ APĂRATI SAU SĂ",
+      "NEGOCIATI-",
+      "AMENINȚAREA SECŔETĂ"
+    ]
+  },
+  {
+    "id": "card_138",
+    "category": "conditii_speciale",
+    "categoryRo": "Condiție Specială",
+    "categoryOrder": 7,
+    "folder": "Condiții_speciale",
+    "filename": "ФЕЙКОВЫЙ ДИПЛОМ.png",
+    "image": "/cards/Condiții_speciale/ФЕЙКОВЫЙ ДИПЛОМ.png",
+    "title": "DIPLOMĂ FALSĂ",
+    "description": "CONIDTIE SPECIALĂ ÎNLOCUIESTE CARTONASUL DE PROFESIE DESCOPERIT AL ORICĂRUI JUCĂTOR CU UNUL ALEATORIU DIN PACHET.",
+    "rawLines": [
+      "CONIDTIE SPECIALĂ",
+      "ÎNLOCUIESTE CARTONASUL DE",
+      "PROFESIE DESCOPERIT AL",
+      "ORICĂRUI JUCĂTOR CU UNUL",
+      "ALEATORIU DIN PACHET.",
+      "DIPLOMĂ FALSĂ"
+    ]
+  },
+  {
+    "id": "card_139",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "АЛХИМИЯ.png",
+    "image": "/cards/Hobby/АЛХИМИЯ.png",
+    "title": "ALCHIMIA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "ALCHIMIA"
+    ]
+  },
+  {
+    "id": "card_140",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "БОЕВЫЕ ИСКУСТВА.png",
+    "image": "/cards/Hobby/БОЕВЫЕ ИСКУСТВА.png",
+    "title": "ARTELE MARȚIALE",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "ARTELE",
+      "MARȚIALE"
+    ]
+  },
+  {
+    "id": "card_141",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ВУАЙЕРИЗМ.png",
+    "image": "/cards/Hobby/ВУАЙЕРИЗМ.png",
+    "title": "LEGO",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "LEGO"
+    ]
+  },
+  {
+    "id": "card_142",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ГИДРОПОНИКА.png",
+    "image": "/cards/Hobby/ГИДРОПОНИКА.png",
+    "title": "SCUFUNDĂRI",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "SCUFUNDĂRI"
+    ]
+  },
+  {
+    "id": "card_143",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ГРИБЫ И ГОМЕОПАТИЯ.png",
+    "image": "/cards/Hobby/ГРИБЫ И ГОМЕОПАТИЯ.png",
+    "title": "CIUPERCILE",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "CIUPERCILE"
+    ]
+  },
+  {
+    "id": "card_144",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ДАЧНИК.png",
+    "image": "/cards/Hobby/ДАЧНИК.png",
+    "title": "GRĂDINARIT",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "GRĂDINARIT"
+    ]
+  },
+  {
+    "id": "card_145",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ЗОЖ.png",
+    "image": "/cards/Hobby/ЗОЖ.png",
+    "title": "STIL DE VIATĂ Ș NĂTOS'",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "STIL DE VIATĂ",
+      "Ș NĂTOS'"
+    ]
+  },
+  {
+    "id": "card_146",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "КИНО И СЕРИАЛЫ.png",
+    "image": "/cards/Hobby/КИНО И СЕРИАЛЫ.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_147",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "КОМПЬЮТЕРНЫЕ ИГРЫ.png",
+    "image": "/cards/Hobby/КОМПЬЮТЕРНЫЕ ИГРЫ.png",
+    "title": "JOCURI VIDEO",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "JOCURI VIDEO"
+    ]
+  },
+  {
+    "id": "card_148",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "КРАЕВЕДЕНИЕ.png",
+    "image": "/cards/Hobby/КРАЕВЕДЕНИЕ.png",
+    "title": "URMĂREA DE PERSOANE",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "URMĂREA DE",
+      "PERSOANE"
+    ]
+  },
+  {
+    "id": "card_149",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ЛЮБИТЕЛЬСКАЯ РАДИОСВЯЗЬ.png",
+    "image": "/cards/Hobby/ЛЮБИТЕЛЬСКАЯ РАДИОСВЯЗЬ.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_150",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "МАССАЖ И АКУПУНКТУРА.png",
+    "image": "/cards/Hobby/МАССАЖ И АКУПУНКТУРА.png",
+    "title": "MASAJ'SI ACUPUNCTURA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "MASAJ'SI",
+      "ACUPUNCTURA"
+    ]
+  },
+  {
+    "id": "card_151",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "МЕДИТАЦИЯ.png",
+    "image": "/cards/Hobby/МЕДИТАЦИЯ.png",
+    "title": "MEDITAȚII",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "MEDITAȚII"
+    ]
+  },
+  {
+    "id": "card_152",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "НАСТОЛЬНЫЕ ИГРЫ.png",
+    "image": "/cards/Hobby/НАСТОЛЬНЫЕ ИГРЫ.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_153",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "НЕТВОРКИНГ.png",
+    "image": "/cards/Hobby/НЕТВОРКИНГ.png",
+    "title": "NETWORKING",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "NETWORKING"
+    ]
+  },
+  {
+    "id": "card_154",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "НЕТРАДИЦИОННАЯ МЕДИЦИНА.png",
+    "image": "/cards/Hobby/НЕТРАДИЦИОННАЯ МЕДИЦИНА.png",
+    "title": "MEDICINA NETRADITIONALA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "MEDICINA",
+      "NETRADITIONALA"
+    ]
+  },
+  {
+    "id": "card_155",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ОХОТА И РЫБАЛКА.png",
+    "image": "/cards/Hobby/ОХОТА И РЫБАЛКА.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_156",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ПАРКУР.png",
+    "image": "/cards/Hobby/ПАРКУР.png",
+    "title": "PARCUR",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "PARCUR"
+    ]
+  },
+  {
+    "id": "card_157",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ПИВОВАРЕНИЕ.png",
+    "image": "/cards/Hobby/ПИВОВАРЕНИЕ.png",
+    "title": "FABRICAREA EREI",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "FABRICAREA",
+      "EREI"
+    ]
+  },
+  {
+    "id": "card_158",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ПИРОТЕХНИКА.png",
+    "image": "/cards/Hobby/ПИРОТЕХНИКА.png",
+    "title": "PIROTEHNICA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "PIROTEHNICA"
+    ]
+  },
+  {
+    "id": "card_159",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "РАЗГОВОРЫ ПО ДУШАМ.png",
+    "image": "/cards/Hobby/РАЗГОВОРЫ ПО ДУШАМ.png",
+    "title": "DISCUT\" PE SUFLET",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "DISCUT\" PE",
+      "SUFLET"
+    ]
+  },
+  {
+    "id": "card_160",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "РОБОТОТЕХНИКА.png",
+    "image": "/cards/Hobby/РОБОТОТЕХНИКА.png",
+    "title": "ROBOTOTEHNICA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "ROBOTOTEHNICA"
+    ]
+  },
+  {
+    "id": "card_161",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "СВИНГ-ВЕЧЕРИНКИ.png",
+    "image": "/cards/Hobby/СВИНГ-ВЕЧЕРИНКИ.png",
+    "title": "PETRECERI",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "PETRECERI"
+    ]
+  },
+  {
+    "id": "card_162",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "СОВРЕМЕННОЕ ИСКУСТВО.png",
+    "image": "/cards/Hobby/СОВРЕМЕННОЕ ИСКУСТВО.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_163",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "СПОРТИВНЫЕ ТАНЦЫ.png",
+    "image": "/cards/Hobby/СПОРТИВНЫЕ ТАНЦЫ.png",
+    "title": "or o",
+    "description": "",
+    "rawLines": [
+      "or o"
+    ]
+  },
+  {
+    "id": "card_164",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "СТРИПТИЗ.png",
+    "image": "/cards/Hobby/СТРИПТИЗ.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_165",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "УФОЛОГИЯ И МИСТИКА.png",
+    "image": "/cards/Hobby/УФОЛОГИЯ И МИСТИКА.png",
+    "title": "MISTICA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "MISTICA"
+    ]
+  },
+  {
+    "id": "card_166",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ФЛУДИТЬ В ЧАТАХ.png",
+    "image": "/cards/Hobby/ФЛУДИТЬ В ЧАТАХ.png",
+    "title": "",
+    "description": "",
+    "rawLines": []
+  },
+  {
+    "id": "card_167",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ХОЛОДНОЕ ОРУЖИЕ.png",
+    "image": "/cards/Hobby/ХОЛОДНОЕ ОРУЖИЕ.png",
+    "title": "ARME RECI",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "ARME RECI"
+    ]
+  },
+  {
+    "id": "card_168",
+    "category": "hobby",
+    "categoryRo": "Hobby",
+    "categoryOrder": 4,
+    "folder": "Hobby",
+    "filename": "ЧЕРНАЯ МАГИЯ.png",
+    "image": "/cards/Hobby/ЧЕРНАЯ МАГИЯ.png",
+    "title": "MAGIA NEAGRA",
+    "description": "",
+    "rawLines": [
+      "HOBBY",
+      "MAGIA NEAGRA"
+    ]
+  },
+  {
+    "id": "card_169",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "АБЛЮТОФОБ - БОИТСЯ УМЫВАТЬСЯ.png",
+    "image": "/cards/Informații Personale/АБЛЮТОФОБ - БОИТСЯ УМЫВАТЬСЯ.png",
+    "title": "SE TEME DE BAIE și APĂ",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "SE TEME DE BAIE și",
+      "APĂ"
+    ]
+  },
+  {
+    "id": "card_170",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "АНДРОФОБИЯ - БОИТСЯ МУЖЧИН.png",
+    "image": "/cards/Informații Personale/АНДРОФОБИЯ - БОИТСЯ МУЖЧИН.png",
+    "title": "lŃFORMAțł:q îl ESTE FRICĂ DE' BĂRBAȚI",
+    "description": "",
+    "rawLines": [
+      "lŃFORMAțł:q",
+      "PERSONALE",
+      "îl ESTE FRICĂ DE'",
+      "BĂRBAȚI"
+    ]
+  },
+  {
+    "id": "card_171",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "БЕЗОТКАЗНЫЙ.png",
+    "image": "/cards/Informații Personale/БЕЗОТКАЗНЫЙ.png",
+    "title": "NU POATE SPUNE NO",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "NU POATE SPUNE NO"
+    ]
+  },
+  {
+    "id": "card_172",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "БРОДЯЖНИЧАЛ 2 ГОДА.png",
+    "image": "/cards/Informații Personale/БРОДЯЖНИЧАЛ 2 ГОДА.png",
+    "title": "A FOST VAGABOND TIMPPE 2 ANI",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A FOST VAGABOND",
+      "TIMPPE 2 ANI"
+    ]
+  },
+  {
+    "id": "card_173",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВЕРНУЛСЯ ИЗ ГОРЯЧЕЙ ТОЧКИ.png",
+    "image": "/cards/Informații Personale/ВЕРНУЛСЯ ИЗ ГОРЯЧЕЙ ТОЧКИ.png",
+    "title": "S-A ÎNTORS DE,LA UN CONFLICT AŔMAT",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "S-A ÎNTORS DE,LA UN",
+      "CONFLICT AŔMAT"
+    ]
+  },
+  {
+    "id": "card_174",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВЗЛОМАЛ БАЗУ ДАННЫХ ЦРУ.png",
+    "image": "/cards/Informații Personale/ВЗЛОМАЛ БАЗУ ДАННЫХ ЦРУ.png",
+    "title": "IŃFORMATI! A SPART BAZA DE DATE FBI",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "A SPART BAZA DE",
+      "DATE FBI"
+    ]
+  },
+  {
+    "id": "card_175",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВИДЕЛ ИНОПЛАНЕТЯН.png",
+    "image": "/cards/Informații Personale/ВИДЕЛ ИНОПЛАНЕТЯН.png",
+    "title": "A VĂZUT EXTRATEREȘTRI",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A VĂZUT",
+      "EXTRATEREȘTRI"
+    ]
+  },
+  {
+    "id": "card_176",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВЛАДЕЕТ 5 ЯЗЫКАМИ.png",
+    "image": "/cards/Informații Personale/ВЛАДЕЕТ 5 ЯЗЫКАМИ.png",
+    "title": "IŃFORMATI! CUNOAȘTE 5 LIMBI",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "CUNOAȘTE 5 LIMBI"
+    ]
+  },
+  {
+    "id": "card_177",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВРЕТ И ПРЕУВЕЛИЧИВАЕТ.png",
+    "image": "/cards/Informații Personale/ВРЕТ И ПРЕУВЕЛИЧИВАЕТ.png",
+    "title": "MINCIUNEȘTE ȘI PREMĂRËȘTE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "MINCIUNEȘTE ȘI",
+      "PREMĂRËȘTE"
+    ]
+  },
+  {
+    "id": "card_178",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ВЫРОС В СЕМЬЕ ЛЕСНИКА.png",
+    "image": "/cards/Informații Personale/ВЫРОС В СЕМЬЕ ЛЕСНИКА.png",
+    "title": "I ŃFORMATI.I A CRESCUT ÎNTR-O FAMILIE PĂDURARI",
+    "description": "",
+    "rawLines": [
+      "I ŃFORMATI.I",
+      "PERSONALE",
+      "A CRESCUT ÎNTR-O",
+      "FAMILIE PĂDURARI"
+    ]
+  },
+  {
+    "id": "card_179",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ГИНОФОБИЯ - БОИТСЯ ЖЕНЩИН.png",
+    "image": "/cards/Informații Personale/ГИНОФОБИЯ - БОИТСЯ ЖЕНЩИН.png",
+    "title": "IŃFORMATI! ȘE TEME bË FEMEI",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "ȘE TEME bË FEMEI"
+    ]
+  },
+  {
+    "id": "card_180",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ГИПНОТИЧЕСКАЯ УЛЫБКА.png",
+    "image": "/cards/Informații Personale/ГИПНОТИЧЕСКАЯ УЛЫБКА.png",
+    "title": "IŃFORMATI! ZÂMBET HIPNOTIZANT",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "ZÂMBET",
+      "HIPNOTIZANT"
+    ]
+  },
+  {
+    "id": "card_181",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ГРЯЗНО РУГАЕТСЯ.png",
+    "image": "/cards/Informații Personale/ГРЯЗНО РУГАЕТСЯ.png",
+    "title": "lŃF0RMATl! VORBEȘTE MURDAR $1 NECĘNZUŔAT",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "VORBEȘTE MURDAR $1",
+      "NECĘNZUŔAT"
+    ]
+  },
+  {
+    "id": "card_182",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ДЕРЖАЛ ДОМА 40 КОШЕК.png",
+    "image": "/cards/Informații Personale/ДЕРЖАЛ ДОМА 40 КОШЕК.png",
+    "title": "lŃF0RMATl! A ȚINUT ACASĂ 40",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "A ȚINUT ACASĂ 40"
+    ]
+  },
+  {
+    "id": "card_183",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ДУША КОМПАНИИ.png",
+    "image": "/cards/Informații Personale/ДУША КОМПАНИИ.png",
+    "title": "SUFLETUL COMPANIEI",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "SUFLETUL",
+      "COMPANIEI"
+    ]
+  },
+  {
+    "id": "card_184",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЗАНУДА.png",
+    "image": "/cards/Informații Personale/ЗАНУДА.png",
+    "title": "lŃF0RMAț11 BĂGĂCIOS",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMAț11",
+      "PERSONALE",
+      "BĂGĂCIOS"
+    ]
+  },
+  {
+    "id": "card_185",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЗАПУСТИЛ ИТ СТАРТАП.png",
+    "image": "/cards/Informații Personale/ЗАПУСТИЛ ИТ СТАРТАП.png",
+    "title": "A LANSAT IT-START-UŔ-URI",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A LANSAT",
+      "IT-START-UŔ-URI"
+    ]
+  },
+  {
+    "id": "card_186",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЗНАЕТ АЗБУКУ МОРЗЕ.png",
+    "image": "/cards/Informații Personale/ЗНАЕТ АЗБУКУ МОРЗЕ.png",
+    "title": "lŃF0RMATl! CUNOAȘTE ALFABETUL MORSË",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "CUNOAȘTE ALFABETUL",
+      "MORSË"
+    ]
+  },
+  {
+    "id": "card_187",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЗНАЕТ ЛИЧНО ПРЕЗИДЕНТА.png",
+    "image": "/cards/Informații Personale/ЗНАЕТ ЛИЧНО ПРЕЗИДЕНТА.png",
+    "title": "CUNOASTE PERSONAL PE PRESEDINTE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "CUNOASTE PERSONAL",
+      "PE PRESEDINTE"
+    ]
+  },
+  {
+    "id": "card_188",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЗНАЕТ НАИЗУСТЬ ВСЕ СТИХИ ПУШКИНА.png",
+    "image": "/cards/Informații Personale/ЗНАЕТ НАИЗУСТЬ ВСЕ СТИХИ ПУШКИНА.png",
+    "title": "CUNOASTE POEZIILE LUI MIHA'I EMINES U",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "CUNOASTE POEZIILE LUI",
+      "MIHA'I EMINES U"
+    ]
+  },
+  {
+    "id": "card_189",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ИЗВРАЩЕНЕЦ.png",
+    "image": "/cards/Informații Personale/ИЗВРАЩЕНЕЦ.png",
+    "title": "lŃF0RMATl! PERVERS",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "PERVERS"
+    ]
+  },
+  {
+    "id": "card_190",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ИСТЕРИЧНЫЙ.png",
+    "image": "/cards/Informații Personale/ИСТЕРИЧНЫЙ.png",
+    "title": "ISTERIC",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "ISTERIC"
+    ]
+  },
+  {
+    "id": "card_191",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "МАНЬЯК-УБИЙЦА.png",
+    "image": "/cards/Informații Personale/МАНЬЯК-УБИЙЦА.png",
+    "title": "lŃF0RMATl! UCIGAȘ ÎN SERIE",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "UCIGAȘ ÎN SERIE"
+    ]
+  },
+  {
+    "id": "card_192",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "НАРКОДИЛЕР.png",
+    "image": "/cards/Informații Personale/НАРКОДИЛЕР.png",
+    "title": "lŃF0RMATl! VÂNZĂTOR DE SUBSTANȚE INÎER",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "VÂNZĂTOR DE",
+      "SUBSTANȚE INÎER"
+    ]
+  },
+  {
+    "id": "card_193",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "НЕ ПУСКАЮТ В КАЗИНО.png",
+    "image": "/cards/Informații Personale/НЕ ПУСКАЮТ В КАЗИНО.png",
+    "title": "IŃFORMATI! NU ARE VOIEÎN CASINO",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "NU ARE VOIEÎN",
+      "CASINO"
+    ]
+  },
+  {
+    "id": "card_194",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "НОБЕЛЕВСКИЙ ЛАУРЕАТ ПО БИОИНЖЕНЕРИИ.png",
+    "image": "/cards/Informații Personale/НОБЕЛЕВСКИЙ ЛАУРЕАТ ПО БИОИНЖЕНЕРИИ.png",
+    "title": "IŃFORMATII PER ONALE LAUREATUL NOBEL ÎN BIOTEHNOLOGIE",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATII",
+      "PER ONALE",
+      "LAUREATUL NOBEL ÎN",
+      "BIOTEHNOLOGIE"
+    ]
+  },
+  {
+    "id": "card_195",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "НЫТИК.png",
+    "image": "/cards/Informații Personale/НЫТИК.png",
+    "title": "lŃF0RMAț11 PLÂNGĂCIOS",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMAț11",
+      "PERSONALE",
+      "PLÂNGĂCIOS"
+    ]
+  },
+  {
+    "id": "card_196",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ОБЛАДАТЕЛЬ УНИКАЛЬНОГО СОПРАНО.png",
+    "image": "/cards/Informații Personale/ОБЛАДАТЕЛЬ УНИКАЛЬНОГО СОПРАНО.png",
+    "title": "IŃFORMATI! CÂNTĂ SOPRANO PROFESIONA",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "CÂNTĂ SOPRANO",
+      "PROFESIONA"
+    ]
+  },
+  {
+    "id": "card_197",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ОСТАЛСЯ В ЖИВЫХ НА НЕОБИТАЕМОМ ОСТРОВЕ.png",
+    "image": "/cards/Informații Personale/ОСТАЛСЯ В ЖИВЫХ НА НЕОБИТАЕМОМ ОСТРОВЕ.png",
+    "title": "IŃFORMATI! A SUPRAVIETUIT PE O INSUIĂSĂLBATIC\"",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "A SUPRAVIETUIT PE O",
+      "INSUIĂSĂLBATIC\""
+    ]
+  },
+  {
+    "id": "card_198",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ОТЧИСЛЕН ИЗ КЛУБА НАВЫКИ ВЫЖИВАНИЯ.png",
+    "image": "/cards/Informații Personale/ОТЧИСЛЕН ИЗ КЛУБА НАВЫКИ ВЫЖИВАНИЯ.png",
+    "title": "DAT AFARĂ DE LA,CLUBOL DE SUP5ĄVlËȚUlRE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "DAT AFARĂ DE LA,CLUBOL",
+      "DE SUP5ĄVlËȚUlRE"
+    ]
+  },
+  {
+    "id": "card_199",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПИСАЕТСЯ ПО НОЧАМ.png",
+    "image": "/cards/Informații Personale/ПИСАЕТСЯ ПО НОЧАМ.png",
+    "title": "lŃFORMAțł:q ARE LUNETISM",
+    "description": "",
+    "rawLines": [
+      "lŃFORMAțł:q",
+      "PERSONALE",
+      "ARE LUNETISM"
+    ]
+  },
+  {
+    "id": "card_200",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПИШИТ С АШИПКАМИ.png",
+    "image": "/cards/Informații Personale/ПИШИТ С АШИПКАМИ.png",
+    "title": "IŃFORMATI! SCRIE CU GRESILE",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "SCRIE CU GRESILE"
+    ]
+  },
+  {
+    "id": "card_201",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПОБЕДИТЕЛЬ ПАРАОЛИМПИЙСКИХ ИГР.png",
+    "image": "/cards/Informații Personale/ПОБЕДИТЕЛЬ ПАРАОЛИМПИЙСКИХ ИГР.png",
+    "title": "IŃFORMATI! CÂȘTIGĂTOR LA OLIMPIADA PARAOLIMPICĂ",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "CÂȘTIGĂTOR LA OLIMPIADA",
+      "PARAOLIMPICĂ"
+    ]
+  },
+  {
+    "id": "card_202",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПОДХОДИТ СЗАДИ И ДЫШИТ.png",
+    "image": "/cards/Informații Personale/ПОДХОДИТ СЗАДИ И ДЫШИТ.png",
+    "title": "IŃFORMATI! SE APROPIE LA SPATESI SUF",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "SE APROPIE LA",
+      "SPATESI SUF"
+    ]
+  },
+  {
+    "id": "card_203",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПОНИМАЕТ ЯЗЫК ЖИВОТНЫХ.png",
+    "image": "/cards/Informații Personale/ПОНИМАЕТ ЯЗЫК ЖИВОТНЫХ.png",
+    "title": "ÎNȚELEGE LIMBA ANIMALELOR",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "ÎNȚELEGE LIMBA",
+      "ANIMALELOR"
+    ]
+  },
+  {
+    "id": "card_204",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПРОДАЛ ПОЧКУ.png",
+    "image": "/cards/Informații Personale/ПРОДАЛ ПОЧКУ.png",
+    "title": "lŃF0RMATl! ȘI-A VÂNDUT RINICHIUL",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "ȘI-A VÂNDUT RINICHIUL"
+    ]
+  },
+  {
+    "id": "card_205",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПРОШЕЛ 2 НЕДЕЛЬНЫЕ КУРСЫ ПСИХОЛОГА.png",
+    "image": "/cards/Informații Personale/ПРОШЕЛ 2 НЕДЕЛЬНЫЕ КУРСЫ ПСИХОЛОГА.png",
+    "title": "A TRECUT UN CURS DE 2 SĂPTĂMÂN DE PSIHOLOGIE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A TRECUT UN CURS DE 2",
+      "SĂPTĂMÂN DE PSIHOLOGIE"
+    ]
+  },
+  {
+    "id": "card_206",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ПСИХОПАТ.png",
+    "image": "/cards/Informații Personale/ПСИХОПАТ.png",
+    "title": "IŃFORMATI.I PER ONALE PSIHOPAT",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI.I",
+      "PER ONALE",
+      "PSIHOPAT"
+    ]
+  },
+  {
+    "id": "card_207",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "РАБОТАЛ В ЭСКОРТ УСЛУГАХ.png",
+    "image": "/cards/Informații Personale/РАБОТАЛ В ЭСКОРТ УСЛУГАХ.png",
+    "title": "lŃF0RMATl! A LUCRAT ÎN SERVICII DE EXCORT",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "A LUCRAT ÎN SERVICII",
+      "DE EXCORT"
+    ]
+  },
+  {
+    "id": "card_208",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "РАЗГОВАРИВАЕТ С ДУХАМИ.png",
+    "image": "/cards/Informații Personale/РАЗГОВАРИВАЕТ С ДУХАМИ.png",
+    "title": "lŃF0RMATl! VORBESTE CU DUHURILE",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "VORBESTE CU",
+      "DUHURILE"
+    ]
+  },
+  {
+    "id": "card_209",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "СДЕЛАЕТ АЛКОГОЛЬ ИЗ ЧЕГО УГОДНО.png",
+    "image": "/cards/Informații Personale/СДЕЛАЕТ АЛКОГОЛЬ ИЗ ЧЕГО УГОДНО.png",
+    "title": "lŃF0RMATl! PRODUCE ALCOOL DIN",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "PRODUCE ALCOOL DIN"
+    ]
+  },
+  {
+    "id": "card_210",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "СОСТОЯЛ В СЕКТЕ.png",
+    "image": "/cards/Informații Personale/СОСТОЯЛ В СЕКТЕ.png",
+    "title": "A FOST PARTE DINTR- SECTĂ",
+    "description": "",
+    "rawLines": [
+      "iNFORMAT11",
+      "PERSONALE",
+      "A FOST PARTE DINTR-",
+      "SECTĂ"
+    ]
+  },
+  {
+    "id": "card_211",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "СПЛЕТНИК.png",
+    "image": "/cards/Informații Personale/СПЛЕТНИК.png",
+    "title": "I ŃF0RMAțł:q SPUNE BÂRFE",
+    "description": "",
+    "rawLines": [
+      "I ŃF0RMAțł:q",
+      "PERSONALE",
+      "SPUNE BÂRFE"
+    ]
+  },
+  {
+    "id": "card_212",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "СТРОИЛ ПОДОБНЫЕ БУНКЕРЫ.png",
+    "image": "/cards/Informații Personale/СТРОИЛ ПОДОБНЫЕ БУНКЕРЫ.png",
+    "title": "IŃFORMATI! A CONSTRUIT BUNKERE•CA ACE TA",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "A CONSTRUIT",
+      "BUNKERE•CA ACE TA"
+    ]
+  },
+  {
+    "id": "card_213",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ТЕЛЕПАТ.png",
+    "image": "/cards/Informații Personale/ТЕЛЕПАТ.png",
+    "title": "I ŃF0RMAțł:q TELEPAȚ",
+    "description": "",
+    "rawLines": [
+      "I ŃF0RMAțł:q",
+      "PERSONALE",
+      "TELEPAȚ"
+    ]
+  },
+  {
+    "id": "card_214",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ТОЛЬКО ИЗ ОЧАГА ЭПИДЕМИИ.png",
+    "image": "/cards/Informații Personale/ТОЛЬКО ИЗ ОЧАГА ЭПИДЕМИИ.png",
+    "title": "lŃF0RMATl! A VENIT DINTR-UN PUNCT EPIDEMIE",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMATl!",
+      "PERSONALE",
+      "A VENIT DINTR-UN",
+      "PUNCT EPIDEMIE"
+    ]
+  },
+  {
+    "id": "card_215",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ТОРМОЗ.png",
+    "image": "/cards/Informații Personale/ТОРМОЗ.png",
+    "title": "lŃFORMAț11 FRÂNĂ",
+    "description": "",
+    "rawLines": [
+      "lŃFORMAț11",
+      "PERSONALE",
+      "FRÂNĂ"
+    ]
+  },
+  {
+    "id": "card_216",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ХРАПИТ.png",
+    "image": "/cards/Informații Personale/ХРАПИТ.png",
+    "title": "lŃF0RMAț11 FORĂIE",
+    "description": "",
+    "rawLines": [
+      "lŃF0RMAț11",
+      "PERSONALE",
+      "FORĂIE"
+    ]
+  },
+  {
+    "id": "card_217",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА(1).png",
+    "image": "/cards/Informații Personale/ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА(1).png",
+    "title": "A CITIT CĂRTILE DE HARRY PÓTTE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A CITIT CĂRTILE DE",
+      "HARRY PÓTTE"
+    ]
+  },
+  {
+    "id": "card_218",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА.png",
+    "image": "/cards/Informații Personale/ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА.png",
+    "title": "A CITIT CĂRTILE DE HARRY PÓTTE",
+    "description": "",
+    "rawLines": [
+      "INFORMAT'!",
+      "PERSONALE",
+      "A CITIT CĂRTILE DE",
+      "HARRY PÓTTE"
+    ]
+  },
+  {
+    "id": "card_219",
+    "category": "fapte",
+    "categoryRo": "Informație Personală",
+    "categoryOrder": 6,
+    "folder": "Informații Personale",
+    "filename": "ЭРОТОФОБ -БОИТСЯ СЕКСА.png",
+    "image": "/cards/Informații Personale/ЭРОТОФОБ -БОИТСЯ СЕКСА.png",
+    "title": "IŃFORMATI! FRICĂ DE SEX SAU CORPURI DEZGOLITE",
+    "description": "",
+    "rawLines": [
+      "IŃFORMATI!",
+      "PERSONALE",
+      "FRICĂ DE SEX SAU",
+      "CORPURI DEZGOLITE"
+    ]
+  },
+  {
+    "id": "card_220",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "АВТОМЕХАНИК.png",
+    "image": "/cards/Profesii/АВТОМЕХАНИК.png",
+    "title": "AUTOMECĄNIC",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "AUTOMECĄNIC"
+    ]
+  },
+  {
+    "id": "card_221",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "АДВОКАТ.png",
+    "image": "/cards/Profesii/АДВОКАТ.png",
+    "title": "AVOCAț",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "AVOCAț"
+    ]
+  },
+  {
+    "id": "card_222",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "АРХЕОЛОГ.png",
+    "image": "/cards/Profesii/АРХЕОЛОГ.png",
+    "title": "ARHEOLOG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ARHEOLOG"
+    ]
+  },
+  {
+    "id": "card_223",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "БИОЛОГ.png",
+    "image": "/cards/Profesii/БИОЛОГ.png",
+    "title": "BIOLOȚ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "BIOLOȚ"
+    ]
+  },
+  {
+    "id": "card_224",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "БРАКОНЬЕР.png",
+    "image": "/cards/Profesii/БРАКОНЬЕР.png",
+    "title": "BRACONIER",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "BRACONIER"
+    ]
+  },
+  {
+    "id": "card_225",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ВИДЕОИНЖЕНЕР.png",
+    "image": "/cards/Profesii/ВИДЕОИНЖЕНЕР.png",
+    "title": "MANAGȚR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "MANAGȚR"
+    ]
+  },
+  {
+    "id": "card_226",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ВИРУСОЛОГ.png",
+    "image": "/cards/Profesii/ВИРУСОЛОГ.png",
+    "title": "VIRUSOLOG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "VIRUSOLOG"
+    ]
+  },
+  {
+    "id": "card_227",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ВОЕННЫЙ.png",
+    "image": "/cards/Profesii/ВОЕННЫЙ.png",
+    "title": "MILITAR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "MILITAR"
+    ]
+  },
+  {
+    "id": "card_228",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ГОМЕОПАТ.png",
+    "image": "/cards/Profesii/ГОМЕОПАТ.png",
+    "title": "HOMEOPAT",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "HOMEOPAT"
+    ]
+  },
+  {
+    "id": "card_229",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ГРАБИТЕЛЬ.png",
+    "image": "/cards/Profesii/ГРАБИТЕЛЬ.png",
+    "title": "PROFESOŔ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "PROFESOŔ"
+    ]
+  },
+  {
+    "id": "card_230",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ДЕТЕКТИВ.png",
+    "image": "/cards/Profesii/ДЕТЕКТИВ.png",
+    "title": "DETECTIV",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "DETECTIV"
+    ]
+  },
+  {
+    "id": "card_231",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ДИЗАЙНЕР.png",
+    "image": "/cards/Profesii/ДИЗАЙНЕР.png",
+    "title": "DESIGN#Ŕ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "DESIGN#Ŕ"
+    ]
+  },
+  {
+    "id": "card_232",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ДОМОХОЗЯЙКА.png",
+    "image": "/cards/Profesii/ДОМОХОЗЯЙКА.png",
+    "title": "",
+    "description": "",
+    "rawLines": [
+      "PROFESIA"
+    ]
+  },
+  {
+    "id": "card_233",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЖУРНАЛИСТ.png",
+    "image": "/cards/Profesii/ЖУРНАЛИСТ.png",
+    "title": "JURNALIȘT",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "JURNALIȘT"
+    ]
+  },
+  {
+    "id": "card_234",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЗНАХАРЬ.png",
+    "image": "/cards/Profesii/ЗНАХАРЬ.png",
+    "title": "TAROLOĘ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "TAROLOĘ"
+    ]
+  },
+  {
+    "id": "card_235",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ИСТОРИК.png",
+    "image": "/cards/Profesii/ИСТОРИК.png",
+    "title": "ISTORIę",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ISTORIę"
+    ]
+  },
+  {
+    "id": "card_236",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "КОУЧ.png",
+    "image": "/cards/Profesii/КОУЧ.png",
+    "title": "TRAIN$",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "TRAIN$"
+    ]
+  },
+  {
+    "id": "card_237",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЛЕСНИК.png",
+    "image": "/cards/Profesii/ЛЕСНИК.png",
+    "title": "PĂDURAR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "PĂDURAR"
+    ]
+  },
+  {
+    "id": "card_238",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЛЕТЧИК-ИНЖЕНЕР.png",
+    "image": "/cards/Profesii/ЛЕТЧИК-ИНЖЕНЕР.png",
+    "title": "CONTABIL",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "CONTABIL"
+    ]
+  },
+  {
+    "id": "card_239",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "МАРКЕТОЛОГ.png",
+    "image": "/cards/Profesii/МАРКЕТОЛОГ.png",
+    "title": "MARKETȚOG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "MARKETȚOG"
+    ]
+  },
+  {
+    "id": "card_240",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "МЕДСЕСТРА.png",
+    "image": "/cards/Profesii/МЕДСЕСТРА.png",
+    "title": "ASISTENT ME",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ASISTENT ME"
+    ]
+  },
+  {
+    "id": "card_241",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "МОДЕЛЬ.png",
+    "image": "/cards/Profesii/МОДЕЛЬ.png",
+    "title": "MODEL},",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "MODEL},"
+    ]
+  },
+  {
+    "id": "card_242",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПАПАРАЦЦИ.png",
+    "image": "/cards/Profesii/ПАПАРАЦЦИ.png",
+    "title": "PAPARA?ZI",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "PAPARA?ZI"
+    ]
+  },
+  {
+    "id": "card_243",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПЕРЕВОДЧИК.png",
+    "image": "/cards/Profesii/ПЕРЕВОДЧИК.png",
+    "title": "TRADUCĂȚOR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "TRADUCĂȚOR"
+    ]
+  },
+  {
+    "id": "card_244",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПИСАТЕЛЬ.png",
+    "image": "/cards/Profesii/ПИСАТЕЛЬ.png",
+    "title": "SCRIITqR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "SCRIITqR"
+    ]
+  },
+  {
+    "id": "card_245",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПОВАР.png",
+    "image": "/cards/Profesii/ПОВАР.png",
+    "title": "BUCĂTAR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "BUCĂTAR"
+    ]
+  },
+  {
+    "id": "card_246",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПОЖАРНЫЙ.png",
+    "image": "/cards/Profesii/ПОЖАРНЫЙ.png",
+    "title": "POMPIĘŔ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "POMPIĘŔ"
+    ]
+  },
+  {
+    "id": "card_247",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПОЛИЦЕЙСКИЙ.png",
+    "image": "/cards/Profesii/ПОЛИЦЕЙСКИЙ.png",
+    "title": "POLIȚIȘT",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "POLIȚIȘT"
+    ]
+  },
+  {
+    "id": "card_248",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПРОГРАММИСТ.png",
+    "image": "/cards/Profesii/ПРОГРАММИСТ.png",
+    "title": "E PROGRAMÔȚOR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "E PROGRAMÔȚOR"
+    ]
+  },
+  {
+    "id": "card_249",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПРОДАВЕЦ.png",
+    "image": "/cards/Profesii/ПРОДАВЕЦ.png",
+    "title": "VÂNZĂTęR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "VÂNZĂTęR"
+    ]
+  },
+  {
+    "id": "card_250",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ПСИХОЛОГ.png",
+    "image": "/cards/Profesii/ПСИХОЛОГ.png",
+    "title": "PSIHOLÔȚ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "PSIHOLÔȚ"
+    ]
+  },
+  {
+    "id": "card_251",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "РАЗНОРАБОЧИЙ.png",
+    "image": "/cards/Profesii/РАЗНОРАБОЧИЙ.png",
+    "title": "LĂCĂTHȘ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "LĂCĂTHȘ"
+    ]
+  },
+  {
+    "id": "card_252",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "РОБОТОТЕХНИК.png",
+    "image": "/cards/Profesii/РОБОТОТЕХНИК.png",
+    "title": "ROBOTOTEHNIC",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ROBOTOTEHNIC"
+    ]
+  },
+  {
+    "id": "card_253",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "СЕКСОЛОГ.png",
+    "image": "/cards/Profesii/СЕКСОЛОГ.png",
+    "title": "SEXOLOG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "SEXOLOG"
+    ]
+  },
+  {
+    "id": "card_254",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "СПЕЦАГЕНТ.png",
+    "image": "/cards/Profesii/СПЕЦАГЕНТ.png",
+    "title": "E AGENT SPECIAL",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "E AGENT SPECIAL"
+    ]
+  },
+  {
+    "id": "card_255",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "СТОМАТОЛОГ.png",
+    "image": "/cards/Profesii/СТОМАТОЛОГ.png",
+    "title": "STOMATOLOG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "STOMATOLOG"
+    ]
+  },
+  {
+    "id": "card_256",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "СТРОИТЕЛЬ.png",
+    "image": "/cards/Profesii/СТРОИТЕЛЬ.png",
+    "title": "CONSTRUCTOR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "CONSTRUCTOR"
+    ]
+  },
+  {
+    "id": "card_257",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "СУДЬЯ.png",
+    "image": "/cards/Profesii/СУДЬЯ.png",
+    "title": "JUDECĂTOR",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "JUDECĂTOR"
+    ]
+  },
+  {
+    "id": "card_258",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ТАТУ-МАСТЕР.png",
+    "image": "/cards/Profesii/ТАТУ-МАСТЕР.png",
+    "title": "TATOO-MAȘȚER",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "TATOO-MAȘȚER"
+    ]
+  },
+  {
+    "id": "card_259",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ФЕРМЕР.png",
+    "image": "/cards/Profesii/ФЕРМЕР.png",
+    "title": "FERMIĘŔ",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "FERMIĘŔ"
+    ]
+  },
+  {
+    "id": "card_260",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ФИЗИК.png",
+    "image": "/cards/Profesii/ФИЗИК.png",
+    "title": "FIZIC",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "FIZIC"
+    ]
+  },
+  {
+    "id": "card_261",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ФИЛОСОФ.png",
+    "image": "/cards/Profesii/ФИЛОСОФ.png",
+    "title": "FILOSOF",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "FILOSOF"
+    ]
+  },
+  {
+    "id": "card_262",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ХАКЕР.png",
+    "image": "/cards/Profesii/ХАКЕР.png",
+    "title": "HACKEF",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "HACKEF"
+    ]
+  },
+  {
+    "id": "card_263",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ХИРУРГ.png",
+    "image": "/cards/Profesii/ХИРУРГ.png",
+    "title": "CHIRUNG",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "CHIRUNG"
+    ]
+  },
+  {
+    "id": "card_264",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЭКОЛОГ.png",
+    "image": "/cards/Profesii/ЭКОЛОГ.png",
+    "title": "ECOLOę",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ECOLOę"
+    ]
+  },
+  {
+    "id": "card_265",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЭКСКУРСОВОД.png",
+    "image": "/cards/Profesii/ЭКСКУРСОВОД.png",
+    "title": "GHID TURISTIC",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "GHID TURISTIC"
+    ]
+  },
+  {
+    "id": "card_266",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЭКСТРАСЕНС.png",
+    "image": "/cards/Profesii/ЭКСТРАСЕНС.png",
+    "title": "EXTRAS*S",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "EXTRAS*S"
+    ]
+  },
+  {
+    "id": "card_267",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЭЛЕКТРИК.png",
+    "image": "/cards/Profesii/ЭЛЕКТРИК.png",
+    "title": "ELECTRIC",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "ELECTRIC"
+    ]
+  },
+  {
+    "id": "card_268",
+    "category": "profesie",
+    "categoryRo": "Profesie",
+    "categoryOrder": 1,
+    "folder": "Profesii",
+    "filename": "ЭТНОГРАФ.png",
+    "image": "/cards/Profesii/ЭТНОГРАФ.png",
+    "title": "COMEDIANT",
+    "description": "",
+    "rawLines": [
+      "PROFESIA",
+      "COMEDIANT"
+    ]
+  },
+  {
+    "id": "card_269",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "АЛКОГОЛИЗМ.png",
+    "image": "/cards/Sănătate/АЛКОГОЛИЗМ.png",
+    "title": "ALCOOLISM",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "ALCOOLISM"
+    ]
+  },
+  {
+    "id": "card_270",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "БЕСПЛОДИЕ.png",
+    "image": "/cards/Sănătate/БЕСПЛОДИЕ.png",
+    "title": "BOALA ALZHEIMER",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "BOALA ALZHEIMER"
+    ]
+  },
+  {
+    "id": "card_271",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ГАЛЛЮЦИНАЦИИ.png",
+    "image": "/cards/Sănătate/ГАЛЛЮЦИНАЦИИ.png",
+    "title": "HALUCINAȚII",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "HALUCINAȚII"
+    ]
+  },
+  {
+    "id": "card_272",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ГИГАНТИЗМ ОТДЕЛЬНЫХ ЧАСТЕЙ ТЕЛА.png",
+    "image": "/cards/Sănătate/ГИГАНТИЗМ ОТДЕЛЬНЫХ ЧАСТЕЙ ТЕЛА.png",
+    "title": "GIGANȚISMUL UNOR PĂRTI ALE COŔPULUI",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "GIGANȚISMUL UNOR",
+      "PĂRTI ALE COŔPULUI"
+    ]
+  },
+  {
+    "id": "card_273",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ГЛУХОЙ.png",
+    "image": "/cards/Sănătate/ГЛУХОЙ.png",
+    "title": "SURD",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "SURD"
+    ]
+  },
+  {
+    "id": "card_274",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ДЕПРЕССИЯ.png",
+    "image": "/cards/Sănătate/ДЕПРЕССИЯ.png",
+    "title": "DEPRESIE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DEPRESIE"
+    ]
+  },
+  {
+    "id": "card_275",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ЗАВИСИМОСТЬ ОТ НАРКОТИКОВ.png",
+    "image": "/cards/Sănătate/ЗАВИСИМОСТЬ ОТ НАРКОТИКОВ.png",
+    "title": "DEPENDENTĂ DE DROGURI",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DEPENDENTĂ DE",
+      "DROGURI"
+    ]
+  },
+  {
+    "id": "card_276",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ЗАИКА.png",
+    "image": "/cards/Sănătate/ЗАИКА.png",
+    "title": "BÂLBÂIT",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "BÂLBÂIT"
+    ]
+  },
+  {
+    "id": "card_277",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ИГРОВАЯ ЗАВИСИМОСТЬ.png",
+    "image": "/cards/Sănătate/ИГРОВАЯ ЗАВИСИМОСТЬ.png",
+    "title": "DEPENDENTA DE JOCURI",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DEPENDENTA DE",
+      "JOCURI"
+    ]
+  },
+  {
+    "id": "card_278",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ИДЕЛАЬНО ЗДОРОВ.png",
+    "image": "/cards/Sănătate/ИДЕЛАЬНО ЗДОРОВ.png",
+    "title": "SĂNĂTOS IDEAL",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "SĂNĂTOS IDEAL"
+    ]
+  },
+  {
+    "id": "card_279",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "КАРЛИК.png",
+    "image": "/cards/Sănătate/КАРЛИК.png",
+    "title": "PSIHOZĂ MOOERĄTĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "PSIHOZĂ",
+      "MOOERĄTĂ"
+    ]
+  },
+  {
+    "id": "card_280",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "КЛЕПТОМАНИЯ.png",
+    "image": "/cards/Sănătate/КЛЕПТОМАНИЯ.png",
+    "title": "PARALEZIE TOTALĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "PARALEZIE",
+      "TOTALĂ"
+    ]
+  },
+  {
+    "id": "card_281",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "КОФЕЙНАЯ ЗАВИСИМОСТЬ.png",
+    "image": "/cards/Sănătate/КОФЕЙНАЯ ЗАВИСИМОСТЬ.png",
+    "title": "DIABET DE GRADUL 2",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DIABET DE",
+      "GRADUL 2"
+    ]
+  },
+  {
+    "id": "card_282",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ЛУНАТИЗМ.png",
+    "image": "/cards/Sănătate/ЛУНАТИЗМ.png",
+    "title": "CANCER LA OVARE/TESTICULE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "CANCER LA",
+      "OVARE/TESTICULE"
+    ]
+  },
+  {
+    "id": "card_283",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "МАНИЯ ПРЕСЛЕДОВАНИЯ.png",
+    "image": "/cards/Sănătate/МАНИЯ ПРЕСЛЕДОВАНИЯ.png",
+    "title": "MANIA DE URMĂRIRE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "MANIA DE",
+      "URMĂRIRE"
+    ]
+  },
+  {
+    "id": "card_284",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "МИГРЕНЬ.png",
+    "image": "/cards/Sănătate/МИГРЕНЬ.png",
+    "title": "DURERI DE CAP PUTERNICE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DURERI DE CAP",
+      "PUTERNICE"
+    ]
+  },
+  {
+    "id": "card_285",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "НЕ ОБСЛЕДОВАЛСЯ.png",
+    "image": "/cards/Sănătate/НЕ ОБСЛЕДОВАЛСЯ.png",
+    "title": "NU M-AM INVĘSTIGĄT",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "NU M-AM",
+      "INVĘSTIGĄT"
+    ]
+  },
+  {
+    "id": "card_286",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "НЕТ НОГИ.png",
+    "image": "/cards/Sănătate/НЕТ НОГИ.png",
+    "title": "FĂRĂ PICIOR",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "FĂRĂ PICIOR"
+    ]
+  },
+  {
+    "id": "card_287",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "НЕТ РУКИ.png",
+    "image": "/cards/Sănătate/НЕТ РУКИ.png",
+    "title": "FĂRĂ O MÂNĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "FĂRĂ O MÂNĂ"
+    ]
+  },
+  {
+    "id": "card_288",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ПОВЫШЕННАЯ ВОЛОСАТОСТЬ.png",
+    "image": "/cards/Sănătate/ПОВЫШЕННАЯ ВОЛОСАТОСТЬ.png",
+    "title": "CRESTEREA SPORITA A PĂRULUI",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "CRESTEREA SPORITA A",
+      "PĂRULUI"
+    ]
+  },
+  {
+    "id": "card_289",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ПОНОС.png",
+    "image": "/cards/Sănătate/ПОНОС.png",
+    "title": "DIAREE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DIAREE"
+    ]
+  },
+  {
+    "id": "card_290",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ПОТЕРЯ ОБОНЯНИЯ.png",
+    "image": "/cards/Sănătate/ПОТЕРЯ ОБОНЯНИЯ.png",
+    "title": "LIPSA MIROSULUI.",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "LIPSA MIROSULUI."
+    ]
+  },
+  {
+    "id": "card_291",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "РАЗДВОЕНИЕ ЛИЧНОСТИ.png",
+    "image": "/cards/Sănătate/РАЗДВОЕНИЕ ЛИЧНОСТИ.png",
+    "title": "DUBLARE DE PERSONALITATE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DUBLARE DE",
+      "PERSONALITATE"
+    ]
+  },
+  {
+    "id": "card_292",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "СЕКСУАЛЬНАЯ ОЗАБОЧЕННОСТЬ.png",
+    "image": "/cards/Sănătate/СЕКСУАЛЬНАЯ ОЗАБОЧЕННОСТЬ.png",
+    "title": "PREOCUPARE SEXUALĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "PREOCUPARE",
+      "SEXUALĂ"
+    ]
+  },
+  {
+    "id": "card_293",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "СЛЕПОЙ.png",
+    "image": "/cards/Sănătate/СЛЕПОЙ.png",
+    "title": "ORB",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "ORB"
+    ]
+  },
+  {
+    "id": "card_294",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "СУИЦЫДАЛЬНЫЕ МЫСЛИ.png",
+    "image": "/cards/Sănătate/СУИЦЫДАЛЬНЫЕ МЫСЛИ.png",
+    "title": "GÂNDURI SUIPIDALE",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "GÂNDURI",
+      "SUIPIDALE"
+    ]
+  },
+  {
+    "id": "card_295",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ТРЕМОР РУК.png",
+    "image": "/cards/Sănătate/ТРЕМОР РУК.png",
+    "title": "TREMURATUL LA MÂINI",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "TREMURATUL LA",
+      "MÂINI"
+    ]
+  },
+  {
+    "id": "card_296",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ФРИГИДНОСТЬ,ИМПОТЕНЦИЯ.png",
+    "image": "/cards/Sănătate/ФРИГИДНОСТЬ,ИМПОТЕНЦИЯ.png",
+    "title": "FRIGIDITATE/ IMPOTENTA",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATEA",
+      "FRIGIDITATE/",
+      "IMPOTENTA"
+    ]
+  },
+  {
+    "id": "card_297",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ХВОСТ.png",
+    "image": "/cards/Sănătate/ХВОСТ.png",
+    "title": "DEFICIENȚA CARDIOVASCULARĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "DEFICIENȚA",
+      "CARDIOVASCULARĂ"
+    ]
+  },
+  {
+    "id": "card_298",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ШАБЛОН ЗДОРОВЬЕ_1 - Copie - Copie.png",
+    "image": "/cards/Sănătate/ШАБЛОН ЗДОРОВЬЕ_1 - Copie - Copie.png",
+    "title": "HIV/SIDA",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "HIV/SIDA"
+    ]
+  },
+  {
+    "id": "card_299",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ШАБЛОН ЗДОРОВЬЕ_1 - Copie.png",
+    "image": "/cards/Sănătate/ШАБЛОН ЗДОРОВЬЕ_1 - Copie.png",
+    "title": "SCLEROZA MULTIPLA",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "SCLEROZA",
+      "MULTIPLA"
+    ]
+  },
+  {
+    "id": "card_300",
+    "category": "sanatate",
+    "categoryRo": "Sănătate",
+    "categoryOrder": 3,
+    "folder": "Sănătate",
+    "filename": "ШАБЛОН ЗДОРОВЬЕ_1.png",
+    "image": "/cards/Sănătate/ШАБЛОН ЗДОРОВЬЕ_1.png",
+    "title": "TUBERCULOZĂ",
+    "description": "",
+    "rawLines": [
+      "SĂNĂTATE",
+      "TUBERCULOZĂ"
+    ]
+  }
+]

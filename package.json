@@ -1,0 +1,30 @@
+{
+  "name": "bunker",
+  "version": "1.0.0",
+  "description": "Platforma de suport pentru jocul fizic BUNKER",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/game.test.js tests/storage.test.js tests/server.test.js",
+    "test:browser": "playwright test",
+    "check": "node scripts/check_project.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "qrcode-generator": "^2.0.4",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "prettier": "^3.9.9"
+  }
+}

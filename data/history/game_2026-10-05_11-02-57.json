@@ -1,0 +1,276 @@
+{
+  "id": "game_2026-10-05_11-02-57",
+  "savedAt": "2026-10-05T08:02:57.269Z",
+  "formattedDate": "05.10.2026 11:02",
+  "mode": "basic",
+  "goal": "renastere",
+  "roundReached": 1,
+  "totalRounds": 5,
+  "phase": "bunker_reveal",
+  "playerCount": 10,
+  "bunkerCapacity": 5,
+  "expectedExiles": 5,
+  "exileSchedule": [
+    0,
+    1,
+    1,
+    1,
+    2
+  ],
+  "catastrophe": {
+    "id": "card_090",
+    "title": "Mutanți",
+    "description": "Consumul de alimente modificate genetic a dus la mutații hibride necontrolate între plante, animale și oameni. După buncăr va trebui să cultivați semințe pure și să vindecați mutanții supraviețuitori.",
+    "image": "/cards/Catastrofe/23411.png"
+  },
+  "bunkerCards": [
+    {
+      "round": 1,
+      "title": "Împreună pe 10 Ani",
+      "revealed": false,
+      "description": "Acest buncăr se va deschide abia după 10 ani! Proviziile sunt suficiente, însă provocările psihologice și uzura echipamentelor vor fi uriașe."
+    },
+    {
+      "round": 2,
+      "title": "Proiecție Satelit Exterior",
+      "revealed": false,
+      "description": "Pe pereți este proiectat un videoclip relaxant cu imagini din satelit ale împrejurimilor buncărului, oferind o perspectivă terapeutică și observațională."
+    },
+    {
+      "round": 3,
+      "title": "Generator de Câmp Magnetic",
+      "revealed": false,
+      "description": "Generator portabil de câmp de forță defensiv capabil să respingă radiațiile cosmice și exploziile electromagnetice."
+    },
+    {
+      "round": 4,
+      "title": "Laborator Medical & Chirurgie",
+      "revealed": false,
+      "description": "Sală sterilă de operații cu aparatură de monitorizare, microscoape și instrumentar chirurgical complet."
+    },
+    {
+      "round": 5,
+      "title": "Cuptor cu Microunde & Ghid",
+      "revealed": false,
+      "description": "Aparatură de încălzire rapidă a rațiilor alimentare și manuale de utilizare a sistemelor casnice."
+    }
+  ],
+  "threatsRevealed": [],
+  "survivors": [
+    {
+      "id": 2,
+      "name": "Jucător 2",
+      "cards": {}
+    },
+    {
+      "id": 3,
+      "name": "Jucător 3",
+      "cards": {}
+    },
+    {
+      "id": 4,
+      "name": "Jucător 4",
+      "cards": {}
+    },
+    {
+      "id": 5,
+      "name": "Jucător 5",
+      "cards": {}
+    },
+    {
+      "id": 6,
+      "name": "Jucător 6",
+      "cards": {}
+    },
+    {
+      "id": 7,
+      "name": "Jucător 7",
+      "cards": {}
+    },
+    {
+      "id": 8,
+      "name": "Jucător 8",
+      "cards": {}
+    },
+    {
+      "id": 9,
+      "name": "Jucător 9",
+      "cards": {}
+    },
+    {
+      "id": 10,
+      "name": "Jucător 10",
+      "cards": {}
+    }
+  ],
+  "exiled": [
+    {
+      "id": 1,
+      "name": "Jucător 1",
+      "exiledInRound": 1,
+      "cards": {}
+    }
+  ],
+  "fullPlayersData": [
+    {
+      "id": 1,
+      "name": "Jucător 1",
+      "status": "exiled",
+      "exiledInRound": 1,
+      "votes": 1,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jucător 2",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 3,
+      "name": "Jucător 3",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 4,
+      "name": "Jucător 4",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 5,
+      "name": "Jucător 5",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 6,
+      "name": "Jucător 6",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 7,
+      "name": "Jucător 7",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 8,
+      "name": "Jucător 8",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 9,
+      "name": "Jucător 9",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 10,
+      "name": "Jucător 10",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    }
+  ]
+}

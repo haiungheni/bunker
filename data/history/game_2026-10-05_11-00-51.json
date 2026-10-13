@@ -1,0 +1,528 @@
+{
+  "id": "game_2026-10-05_11-00-51",
+  "savedAt": "2026-10-05T08:00:51.360Z",
+  "formattedDate": "05.10.2026 11:00",
+  "mode": "basic",
+  "goal": "renastere",
+  "roundReached": 1,
+  "totalRounds": 5,
+  "phase": "tiebreak",
+  "playerCount": 22,
+  "bunkerCapacity": 11,
+  "expectedExiles": 11,
+  "exileSchedule": [
+    0,
+    3,
+    3,
+    3,
+    2
+  ],
+  "catastrophe": {
+    "id": "card_101",
+    "title": "Război Informațional & Colaps Digital",
+    "description": "Atacuri cibernetice globale au distrus internetul, rețelele energetice, serverele bancare și sistemele logistice ale planetei.",
+    "image": "/cards/Catastrofe/INFORMA.png"
+  },
+  "bunkerCards": [
+    {
+      "round": 1,
+      "title": "Trusa Medicală de Urgență",
+      "revealed": false,
+      "description": "La intrare se află truse de prim ajutor, mănuși de cauciuc, măști și un stingător de incendiu. Echipament esențial pentru reacție rapidă."
+    },
+    {
+      "round": 2,
+      "title": "Rezervă Strategică de Cafea",
+      "revealed": false,
+      "description": "Măcinător de cafea și un stoc bogat de boabe de cafea prăjită. Moralul echipei este asigurat!"
+    },
+    {
+      "round": 3,
+      "title": "Resturi Industriale & Reciclare",
+      "revealed": false,
+      "description": "O cameră plină cu componente electronice, carcase și materiale din care se pot improviza dispozitive utile."
+    },
+    {
+      "round": 4,
+      "title": "Generator de Câmp Magnetic",
+      "revealed": false,
+      "description": "Generator portabil de câmp de forță defensiv capabil să respingă radiațiile cosmice și exploziile electromagnetice."
+    },
+    {
+      "round": 5,
+      "title": "Control Vocal Inteligent (AI)",
+      "revealed": false,
+      "description": "Buncărul este complet asistat de o inteligență artificială care gestionează resursele, climatul și securitatea porților."
+    }
+  ],
+  "threatsRevealed": [],
+  "survivors": [
+    {
+      "id": 2,
+      "name": "Echipa 2",
+      "cards": {}
+    },
+    {
+      "id": 3,
+      "name": "Echipa 3",
+      "cards": {}
+    },
+    {
+      "id": 4,
+      "name": "Echipa 4",
+      "cards": {}
+    },
+    {
+      "id": 5,
+      "name": "Echipa 5",
+      "cards": {}
+    },
+    {
+      "id": 6,
+      "name": "Echipa 6",
+      "cards": {}
+    },
+    {
+      "id": 7,
+      "name": "Echipa 7",
+      "cards": {}
+    },
+    {
+      "id": 8,
+      "name": "Echipa 8",
+      "cards": {}
+    },
+    {
+      "id": 9,
+      "name": "Echipa 9",
+      "cards": {}
+    },
+    {
+      "id": 10,
+      "name": "Echipa 10",
+      "cards": {}
+    },
+    {
+      "id": 11,
+      "name": "Echipa 11",
+      "cards": {}
+    },
+    {
+      "id": 12,
+      "name": "Echipa 12",
+      "cards": {}
+    },
+    {
+      "id": 13,
+      "name": "Echipa 13",
+      "cards": {}
+    },
+    {
+      "id": 14,
+      "name": "Echipa 14",
+      "cards": {}
+    },
+    {
+      "id": 15,
+      "name": "Echipa 15",
+      "cards": {}
+    },
+    {
+      "id": 16,
+      "name": "Echipa 16",
+      "cards": {}
+    },
+    {
+      "id": 17,
+      "name": "Echipa 17",
+      "cards": {}
+    },
+    {
+      "id": 18,
+      "name": "Echipa 18",
+      "cards": {}
+    },
+    {
+      "id": 19,
+      "name": "Echipa 19",
+      "cards": {}
+    },
+    {
+      "id": 20,
+      "name": "Echipa 20",
+      "cards": {}
+    },
+    {
+      "id": 21,
+      "name": "Echipa 21",
+      "cards": {}
+    },
+    {
+      "id": 22,
+      "name": "Echipa 22",
+      "cards": {}
+    }
+  ],
+  "exiled": [
+    {
+      "id": 1,
+      "name": "Echipa 1",
+      "exiledInRound": 1,
+      "cards": {}
+    }
+  ],
+  "fullPlayersData": [
+    {
+      "id": 1,
+      "name": "Echipa 1",
+      "status": "exiled",
+      "exiledInRound": 1,
+      "votes": 1,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 2,
+      "name": "Echipa 2",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 3,
+      "name": "Echipa 3",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 4,
+      "name": "Echipa 4",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 5,
+      "name": "Echipa 5",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 6,
+      "name": "Echipa 6",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 7,
+      "name": "Echipa 7",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 8,
+      "name": "Echipa 8",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 9,
+      "name": "Echipa 9",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 10,
+      "name": "Echipa 10",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 11,
+      "name": "Echipa 11",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 12,
+      "name": "Echipa 12",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 13,
+      "name": "Echipa 13",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 14,
+      "name": "Echipa 14",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 15,
+      "name": "Echipa 15",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 16,
+      "name": "Echipa 16",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 17,
+      "name": "Echipa 17",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 18,
+      "name": "Echipa 18",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 19,
+      "name": "Echipa 19",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 20,
+      "name": "Echipa 20",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 21,
+      "name": "Echipa 21",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 22,
+      "name": "Echipa 22",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    }
+  ]
+}

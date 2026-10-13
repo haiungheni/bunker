@@ -1,0 +1,566 @@
+[hidden] {
+  display: none !important;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(3, 7, 12, 0.96);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 420px;
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-bright);
+  border-radius: 16px;
+}
+.vote-session-status,
+.finale-outcome {
+  padding: 16px;
+  line-height: 1.5;
+  background: var(--bg-card-alt);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-cyan);
+}
+.history-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-dim);
+}
+#tvQrCode {
+  max-width: 160px;
+  padding: 8px;
+  background: white;
+  border-radius: 12px;
+}
+#tvQrCode svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#saveStatus {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.header-right,
+.voting-actions-top {
+  flex-wrap: wrap;
+}
+.connection-lost #tvConnectionStatus,
+.tv-status.disconnected {
+  color: var(--accent-red);
+}
+.sealed-sector {
+  width: 40px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+}
+.tv-page-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+.tv-page-controls select {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-bright);
+  padding: 5px;
+}
+.tv-players-grid {
+  align-content: start;
+}
+.tv-player-card .tv-slot-title {
+  font-size: clamp(0.9rem, 1.1vw, 1.25rem);
+  white-space: normal;
+}
+.tv-player-card .tv-player-name {
+  font-size: clamp(1rem, 1.4vw, 1.6rem);
+}
+.tv-player-card .tv-slot-cat-name {
+  font-size: 0.75rem;
+}
+.tv-card-slot-item {
+  min-height: 40px;
+}
+.tv-player-card.vote-candidate {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
+}
+.tv-player-slots-grid {
+  overflow: visible;
+}
+.tv-main-grid-area {
+  min-height: 0;
+}
+#tvConnectionStatus {
+  font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  .app-header {
+    position: static;
+  }
+  .timer-bar {
+    top: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .timer-left {
+    flex-basis: 100%;
+  }
+  .timer-center {
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+  .timer-controls {
+    flex-wrap: wrap;
+  }
+  .timer-display {
+    min-width: 75px;
+  }
+  .main-content {
+    padding: 12px;
+    min-width: 0;
+  }
+  .player-header {
+    flex-wrap: wrap;
+  }
+  .player-title-box {
+    min-width: 0;
+  }
+  .player-header-actions {
+    flex-wrap: wrap;
+  }
+  .player-name-input {
+    width: 130px;
+    min-width: 0;
+  }
+  .phase-selector-group {
+    min-width: 0;
+  }
+  .select-control {
+    max-width: 100%;
+  }
+  .schedule-inputs-row {
+    gap: 4px;
+  }
+  .round-exile-col {
+    min-width: 0;
+    padding: 5px 2px;
+  }
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal-body {
+    padding: 14px;
+  }
+  .modal-footer {
+    flex-wrap: wrap;
+  }
+  .modal-header h3 {
+    font-size: 1rem;
+  }
+  .player-names-grid {
+    grid-template-columns: 1fr;
+  }
+  .header-right {
+    justify-content: flex-start;
+  }
+  .history-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vote-btn,
+  .timer-btn,
+  .slot-btn,
+  .btn {
+    min-height: 40px;
+  }
+  .login-card {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.player-manual-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-dim);
+}
+.player-manual-actions > span {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.btn-exile-toggle {
+  min-height: 44px;
+  padding: 10px 16px;
+  font-weight: 800;
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  background: #35171d;
+  color: #fecaca;
+  cursor: pointer;
+}
+.btn-exile-toggle.action-readmit {
+  border-color: #34d399;
+  background: #123029;
+  color: #a7f3d0;
+}
+.tv-main-grid-area:has(.overview) {
+  min-height: 0;
+  overflow: hidden;
+}
+.tv-players-grid.overview {
+  flex: 1;
+  min-height: 0;
+  gap: 6px;
+}
+.overview .tv-player-card {
+  min-width: 0;
+  min-height: 0;
+  padding: 6px;
+  gap: 4px;
+}
+.overview .tv-player-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: clamp(12px, 1vw, 18px);
+}
+.overview .tv-player-header {
+  flex-shrink: 0;
+}
+.overview .tv-player-slots-grid {
+  flex: 1;
+  min-height: 0;
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+}
+.overview .tv-card-slot-item {
+  min-height: 0;
+  padding: 2px 4px;
+}
+.overview-dense .tv-slot-cat-name,
+.overview-dense .tv-slot-thumb-img {
+  display: none;
+}
+.overview-dense .tv-slot-title,
+.overview-dense .tv-slot-unrevealed-text {
+  font-size: 12px;
+}
+.overview .tv-slot-title {
+  white-space: nowrap;
+}
+.tv-volume-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+.tv-volume-control input {
+  width: 85px;
+  accent-color: #fbbf24;
+}
+.overview-dense .tv-player-id-pill {
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+}
+.overview .tv-player-card.active-speaker {
+  transform: none;
+}
+.overview .tv-player-identity {
+  min-width: 0;
+  gap: 5px;
+}
+.overview .tv-player-name {
+  min-width: 0;
+}
+.overview-dense .tv-player-status-tag {
+  display: none;
+}
+.overview-dense .tv-card-slot-item {
+  padding: 0 3px;
+  overflow: hidden;
+  gap: 4px;
+}
+.overview-dense .tv-slot-title,
+.overview-dense .tv-slot-unrevealed-text {
+  line-height: 1.1;
+}
+.overview-dense .tv-slot-cat-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+@media (max-height: 800px) {
+  .overview-dense .tv-player-card {
+    padding: 4px;
+    gap: 3px;
+  }
+  .overview-dense .tv-player-header {
+    padding-bottom: 2px;
+  }
+  .overview-dense .tv-player-id-pill {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    font-size: 10px;
+  }
+  .overview-dense .tv-player-slots-grid {
+    gap: 1px;
+  }
+  .overview-dense .tv-card-slot-item {
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .overview-dense .tv-slot-title,
+  .overview-dense .tv-slot-unrevealed-text,
+  .overview-dense .tv-slot-cat-icon {
+    font-size: 11px;
+    line-height: 1;
+  }
+}
+.tv-protocol-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: none;
+  place-items: center;
+  overflow: hidden;
+  background: #03080df5;
+  color: #fbbf24;
+  cursor: pointer;
+  --protocol-color: #fbbf24;
+}
+.tv-protocol-overlay.active {
+  display: grid;
+}
+.tv-protocol-overlay[data-scene='catastrofe'],
+.tv-protocol-overlay[data-scene='amenintare'] {
+  --protocol-color: #ef4444;
+}
+.tv-protocol-overlay[data-scene='bunker'],
+.tv-protocol-overlay[data-scene='readmit'],
+.tv-protocol-overlay[data-scene='finale'] {
+  --protocol-color: #34d399;
+}
+.protocol-door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: repeating-linear-gradient(0deg, #141c25 0 48px, #26313b 49px 51px);
+  border: 8px solid #39424b;
+}
+.protocol-door-left {
+  left: 0;
+}
+.protocol-door-right {
+  right: 0;
+}
+.active .protocol-door-left {
+  animation: protocolDoorLeft 1.3s cubic-bezier(0.6, 0, 0.25, 1) forwards;
+}
+.active .protocol-door-right {
+  animation: protocolDoorRight 1.3s cubic-bezier(0.6, 0, 0.25, 1) forwards;
+}
+.protocol-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.protocol-sweep {
+  position: absolute;
+  inset: -100% 0 auto;
+  height: 100%;
+  background: linear-gradient(transparent, var(--protocol-color), transparent);
+  opacity: 0.09;
+}
+.active .protocol-sweep {
+  animation: protocolSweep 2.5s linear;
+}
+.protocol-content {
+  position: relative;
+  text-align: center;
+  width: min(90%, 1000px);
+  color: var(--protocol-color);
+}
+.active .protocol-content {
+  animation: protocolBoot 1.1s both;
+}
+.protocol-emblem {
+  font-size: clamp(50px, 9vw, 130px);
+  filter: drop-shadow(0 0 25px var(--protocol-color));
+}
+.protocol-kicker {
+  font: 700 clamp(12px, 1.5vw, 22px) monospace;
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+.protocol-content h1 {
+  font-size: clamp(28px, 5vw, 76px);
+  margin: 0;
+  text-shadow: 0 0 30px var(--protocol-color);
+}
+.protocol-content p {
+  font-size: clamp(16px, 2vw, 30px);
+  color: #e2e8f0;
+  margin: 20px 0;
+}
+.protocol-loading {
+  margin: 30px auto 16px;
+  height: 6px;
+  width: 70%;
+  background: #ffffff15;
+  overflow: hidden;
+}
+.protocol-loading span {
+  display: block;
+  height: 100%;
+  background: var(--protocol-color);
+}
+.active .protocol-loading span {
+  animation: protocolProgress 3.2s linear both;
+}
+.protocol-footer {
+  font: 12px monospace;
+  letter-spacing: 3px;
+  color: #94a3b8;
+}
+.tv-cinematic-modal-overlay.active .tv-cinematic-box {
+  animation: protocolBoot 0.7s both;
+}
+.tv-exile-overlay {
+  z-index: 10002;
+}
+.player-card.exiled .slot-btn:disabled,
+.player-card.exiled .slot-btn-add:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.tv-cinematic-modal-overlay {
+  padding: 3vh 3vw;
+}
+.tv-cinematic-box {
+  width: 94vw;
+  max-width: none;
+  max-height: 94vh;
+  gap: 4vw;
+}
+.tv-card-spotlight {
+  max-width: 46vw;
+}
+.tv-modal-card-img {
+  height: 84vh;
+  max-width: 46vw;
+  width: auto;
+  object-fit: contain;
+}
+.tv-card-details-panel {
+  min-width: 0;
+  max-height: 84vh;
+  overflow: auto;
+  gap: 2vh;
+}
+.tv-modal-card-title {
+  font-size: clamp(32px, 3vw, 116px);
+  overflow-wrap: anywhere;
+}
+.tv-modal-card-desc {
+  font-size: clamp(20px, 1.65vw, 64px);
+  line-height: 1.4;
+}
+.tv-modal-badge {
+  font-size: clamp(16px, 1.15vw, 44px);
+}
+.tv-modal-player-tag {
+  font-size: clamp(18px, 1.4vw, 54px);
+}
+.tv-modal-hint {
+  font-size: clamp(14px, 1vw, 32px);
+}
+.tv-protocol-overlay[data-scene='speaker'] .protocol-loading span {
+  animation-duration: 4.2s;
+}
+@keyframes protocolDoorLeft {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes protocolDoorRight {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes protocolSweep {
+  to {
+    top: 100%;
+  }
+}
+@keyframes protocolBoot {
+  0%,
+  20% {
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes protocolProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

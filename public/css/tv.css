@@ -1,0 +1,935 @@
+/* TV / BIG SCREEN CINEMATIC STYLES */
+
+.tv-body {
+  background: #06090e;
+  color: #f1f5f9;
+  font-family: var(--font-main);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+}
+
+.tv-screen-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Tactical HUD Header */
+.tv-hud-header {
+  background: linear-gradient(180deg, #111822, #0d121a);
+  border-bottom: 2px solid var(--border-bright);
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hud-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bunker-symbol {
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+  animation: pulseBio 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseBio {
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+
+.hud-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.hud-main-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hud-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-cyan);
+}
+
+/* Speaker Live Alert Banner in TV Header */
+.hud-speaker-bar {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-full);
+  padding: 6px 20px;
+  box-shadow: var(--shadow-glow-gold);
+  animation: bannerGlow 2s infinite alternate;
+}
+
+.hud-speaker-bar.active {
+  display: flex;
+}
+
+@keyframes bannerGlow {
+  from { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+  to { box-shadow: 0 0 25px rgba(245, 158, 11, 0.7); }
+}
+
+.speaker-indicator-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 8px var(--accent-gold);
+  animation: speakerPulse 1s infinite alternate;
+}
+
+@keyframes speakerPulse {
+  from { transform: scale(0.85); opacity: 0.7; }
+  to { transform: scale(1.25); opacity: 1; }
+}
+
+.speaker-label-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speaker-caption {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+.speaker-player-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.speaker-timer-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.speaker-timer-digits {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  min-width: 65px;
+  text-align: center;
+}
+
+.speaker-timer-progress {
+  width: 80px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent-gold);
+  width: 100%;
+  transition: width 1s linear;
+}
+
+/* Header Right Stats */
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hud-stat-box {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 5px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hud-stat-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-dim);
+}
+
+.hud-stat-val {
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+}
+
+.text-gold { color: var(--accent-gold); }
+.text-cyan { color: var(--accent-cyan); }
+.text-emerald { color: var(--accent-emerald); }
+
+.tv-fullscreen-btn {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-bright);
+  color: var(--text-muted);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tv-fullscreen-btn:hover {
+  background: var(--accent-cyan);
+  color: #000;
+}
+
+/* TV Main Content Layout */
+.tv-content-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Left Sidebar (Catastrophe + Bunker cards) */
+.tv-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background: #0a0f16;
+  border-right: 1px solid var(--border-dim);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* Catastrophe Card on TV */
+.tv-catastrophe-card {
+  background: #111722;
+  border: 2px solid rgba(220, 38, 38, 0.5);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-card-header {
+  background: linear-gradient(90deg, #7f1d1d, #991b1b);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-alert-icon {
+  font-size: 1.1rem;
+}
+
+.cat-alert-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.cat-card-art-wrap {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.cat-card-art {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-card-info {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cat-card-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fca5a5;
+  line-height: 1.2;
+}
+
+.cat-card-desc {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Bunker Cards Rack on TV */
+.tv-bunker-rack {
+  background: #111722;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.bunker-rack-header {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bunker-rack-badge {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.bunker-cards-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.tv-bunker-item {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.tv-bunker-item.revealed {
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.tv-bunker-thumb {
+  width: 32px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #000;
+}
+
+.tv-bunker-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tv-bunker-round-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.tv-bunker-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Central Area: Survivors Grid */
+.tv-main-grid-area {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.survivors-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 8px;
+}
+
+.survivors-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.survivors-status-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dot-alive { background: var(--accent-emerald); }
+.dot-speaking { background: var(--accent-gold); box-shadow: 0 0 6px var(--accent-gold); }
+.dot-exiled { background: var(--accent-red); }
+
+/* Grid of Player Dossiers */
+.tv-players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 14px;
+}
+
+/* Compact styling for 11-16 players */
+.tv-players-grid.compact {
+  gap: 10px;
+}
+.tv-players-grid.compact .tv-player-card {
+  padding: 8px;
+  gap: 6px;
+}
+.tv-players-grid.compact .tv-card-slot-item {
+  min-height: 32px;
+  padding: 3px 6px;
+}
+.tv-players-grid.compact .tv-slot-thumb-img {
+  width: 18px;
+  height: 25px;
+}
+.tv-players-grid.compact .tv-slot-title {
+  font-size: 0.75rem;
+}
+
+/* Ultra-compact styling for 17-22 players */
+.tv-players-grid.ultra-compact {
+  gap: 8px;
+}
+.tv-players-grid.ultra-compact .tv-player-card {
+  padding: 6px 8px;
+  gap: 4px;
+}
+.tv-players-grid.ultra-compact .tv-card-slot-item {
+  min-height: 28px;
+  padding: 2px 5px;
+}
+.tv-players-grid.ultra-compact .tv-slot-thumb-img {
+  width: 16px;
+  height: 22px;
+}
+.tv-players-grid.ultra-compact .tv-slot-title {
+  font-size: 0.7rem;
+}
+.tv-players-grid.ultra-compact .tv-slot-cat-name {
+  font-size: 0.55rem;
+}
+.tv-players-grid.ultra-compact .tv-player-name {
+  font-size: 0.9rem;
+}
+.tv-players-grid.ultra-compact .tv-player-id-pill {
+  width: 22px;
+  height: 22px;
+  font-size: 0.72rem;
+}
+
+/* Individual Survivor Dossier Card on TV */
+.tv-player-card {
+  background: #111722;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+.tv-player-card.active-speaker {
+  border-color: var(--accent-gold);
+  background: #151e2c;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+.tv-player-card.exiled {
+  opacity: 0.65;
+  border-color: rgba(239, 68, 68, 0.4);
+  filter: grayscale(0.2);
+}
+
+/* Exile Stencil Stamp */
+.exile-stamp {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  border: 4px solid #ef4444;
+  color: #ef4444;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
+  background: rgba(239, 68, 68, 0.15);
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+  pointer-events: none;
+  z-index: 10;
+  animation: stampImpact 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes stampImpact {
+  from { transform: translate(-50%, -50%) rotate(-18deg) scale(2); opacity: 0; }
+  to { transform: translate(-50%, -50%) rotate(-18deg) scale(1); opacity: 1; }
+}
+
+.tv-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 6px;
+}
+
+.tv-player-identity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tv-player-id-pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-bright);
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tv-player-name {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* Category Slots Grid for TV */
+.tv-player-slots-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.tv-card-slot-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-dim);
+  border-left: 3px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  min-height: 38px;
+  transition: all 0.2s;
+}
+
+.tv-card-slot-item.revealed {
+  background: #141c27;
+  border-color: var(--border-bright);
+}
+
+.tv-slot-cat-icon {
+  font-size: 0.85rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+.tv-slot-thumb-img {
+  width: 22px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid var(--border-dim);
+}
+
+.tv-slot-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+}
+
+.tv-slot-cat-name {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.tv-slot-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tv-slot-unrevealed-text {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* FULLSCREEN CINEMATIC CARD MODAL (POPUP FOR REVEALS) */
+.tv-cinematic-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 6, 10, 0.92);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tv-cinematic-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tv-cinematic-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  width: 90%;
+  animation: cinematicEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cinematicEnter {
+  from { transform: scale(0.85) translateY(30px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.tv-card-spotlight {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tv-card-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(245, 158, 11, 0.4);
+  border: 3px solid rgba(245, 158, 11, 0.6);
+  background: #000;
+}
+
+.tv-modal-card-img {
+  height: 520px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.tv-card-details-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tv-modal-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-sm);
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  align-self: flex-start;
+}
+
+.tv-modal-player-tag {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+}
+
+.tv-modal-card-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.tv-modal-card-desc {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.tv-modal-hint {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 15px;
+}
+
+/* ==========================================================================
+   CINEMATIC EXILE ALERT OVERLAY & ANIMATIONS
+   ========================================================================== */
+.tv-exile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tv-exile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tv-exile-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 2, 2, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.tv-exile-strobe {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: tvRedStrobe 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes tvRedStrobe {
+  0% { background: rgba(220, 38, 38, 0.08); }
+  100% { background: rgba(220, 38, 38, 0.28); }
+}
+
+.tv-exile-card-container {
+  position: relative;
+  z-index: 10;
+  max-width: 860px;
+  width: 90%;
+  background: linear-gradient(155deg, #240a0a, #110303);
+  border: 3px solid #ef4444;
+  border-radius: 20px;
+  padding: 38px 45px;
+  box-shadow: 0 0 70px rgba(239, 68, 68, 0.55), 0 30px 60px rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  animation: tvContainerImpact 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.25);
+  overflow: hidden;
+}
+
+@keyframes tvContainerImpact {
+  from { transform: scale(0.65) translateY(50px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.tv-exile-hazard-stripes {
+  width: 100%;
+  height: 10px;
+  background: repeating-linear-gradient(45deg, #ef4444, #ef4444 14px, #000000 14px, #000000 28px);
+  border-radius: 4px;
+}
+
+.tv-exile-alert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 26px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  border-radius: 30px;
+  color: #fca5a5;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+}
+
+.tv-exile-alert-badge .hazard-icon {
+  font-size: 1.3rem;
+  color: #ef4444;
+}
+
+.tv-exile-dossier-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 10px 0;
+}
+
+.tv-exile-player-pill {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.8);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.tv-exile-player-details {
+  text-align: left;
+}
+
+.tv-exile-player-name {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.tv-exile-player-sub {
+  font-size: 1.3rem;
+  color: #f87171;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.tv-exile-warning-banner {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px dashed rgba(239, 68, 68, 0.6);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.tv-exile-giant-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  border: 8px solid #ef4444;
+  color: #ef4444;
+  font-size: 5.5rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  padding: 12px 50px;
+  border-radius: 14px;
+  background: rgba(220, 38, 38, 0.28);
+  text-shadow: 0 0 25px rgba(239, 68, 68, 0.95), 0 0 60px rgba(239, 68, 68, 0.7);
+  box-shadow: 0 0 45px rgba(239, 68, 68, 0.75), inset 0 0 25px rgba(239, 68, 68, 0.4);
+  pointer-events: none;
+  z-index: 25;
+  opacity: 0;
+}
+
+.tv-exile-overlay.active .tv-exile-giant-stamp {
+  animation: tvGiantStampSlam 0.4s 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+@keyframes tvGiantStampSlam {
+  0% { transform: translate(-50%, -50%) rotate(-18deg) scale(3.8); opacity: 0; filter: blur(8px); }
+  65% { transform: translate(-50%, -50%) rotate(-12deg) scale(0.92); opacity: 1; filter: blur(0); }
+  100% { transform: translate(-50%, -50%) rotate(-12deg) scale(1); opacity: 1; filter: blur(0); }
+}
+
+/* Screen shake effect on exile */
+.tv-screen-shake {
+  animation: screenShake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0); }
+  15% { transform: translate(-10px, 6px); }
+  30% { transform: translate(10px, -6px); }
+  45% { transform: translate(-8px, -4px); }
+  60% { transform: translate(8px, 4px); }
+  75% { transform: translate(-4px, 2px); }
+}

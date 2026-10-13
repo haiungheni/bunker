@@ -1,0 +1,297 @@
+{
+  "id": "game_2026-10-05_11-01-24",
+  "savedAt": "2026-10-05T08:01:24.476Z",
+  "formattedDate": "05.10.2026 11:01",
+  "mode": "basic",
+  "goal": "renastere",
+  "roundReached": 1,
+  "totalRounds": 5,
+  "phase": "bunker_reveal",
+  "playerCount": 11,
+  "bunkerCapacity": 5,
+  "expectedExiles": 6,
+  "exileSchedule": [
+    0,
+    1,
+    1,
+    2,
+    2
+  ],
+  "catastrophe": {
+    "id": "card_096",
+    "title": "Trezierea lui Cthulhu",
+    "description": "Entitățile cosmice ancestrale s-au trezit din adâncurile oceanului, distrugând marile metropole și rațiunea colectivă.",
+    "image": "/cards/Catastrofe/D.png"
+  },
+  "bunkerCards": [
+    {
+      "round": 1,
+      "title": "Buncăr Înclinat la 45 Grade",
+      "revealed": false,
+      "description": "În urma mișcărilor tectonice buncărul este parțial înclinat, ceea ce îngreunează deplasarea dar creează unghiuri defensive."
+    },
+    {
+      "round": 2,
+      "title": "Lămpi cu Kerosen",
+      "revealed": false,
+      "description": "Iluminat autonom independent de rețeaua electrică, util în caz de pană totală de curent sau impuls EMP."
+    },
+    {
+      "round": 3,
+      "title": "Resturi Industriale & Reciclare",
+      "revealed": false,
+      "description": "O cameră plină cu componente electronice, carcase și materiale din care se pot improviza dispozitive utile."
+    },
+    {
+      "round": 4,
+      "title": "Depozitul Contrabandistului",
+      "revealed": false,
+      "description": "Ascunzătoarea secretă a unui fost contrabandist cu hărți, unelte rare și indicii despre căi de ieșire nemarcate."
+    },
+    {
+      "round": 5,
+      "title": "Stație Radio de Mare Putere",
+      "revealed": false,
+      "description": "Receptor radio pe unde scurte capabil să intercepteze transmisii de urgență din întreaga lume."
+    }
+  ],
+  "threatsRevealed": [],
+  "survivors": [
+    {
+      "id": 2,
+      "name": "Jucător 2",
+      "cards": {}
+    },
+    {
+      "id": 3,
+      "name": "Jucător 3",
+      "cards": {}
+    },
+    {
+      "id": 4,
+      "name": "Jucător 4",
+      "cards": {}
+    },
+    {
+      "id": 5,
+      "name": "Jucător 5",
+      "cards": {}
+    },
+    {
+      "id": 6,
+      "name": "Jucător 6",
+      "cards": {}
+    },
+    {
+      "id": 7,
+      "name": "Jucător 7",
+      "cards": {}
+    },
+    {
+      "id": 8,
+      "name": "Jucător 8",
+      "cards": {}
+    },
+    {
+      "id": 9,
+      "name": "Jucător 9",
+      "cards": {}
+    },
+    {
+      "id": 10,
+      "name": "Jucător 10",
+      "cards": {}
+    },
+    {
+      "id": 11,
+      "name": "Jucător Extra",
+      "cards": {}
+    }
+  ],
+  "exiled": [
+    {
+      "id": 1,
+      "name": "Jucător 1",
+      "exiledInRound": 1,
+      "cards": {}
+    }
+  ],
+  "fullPlayersData": [
+    {
+      "id": 1,
+      "name": "Jucător 1",
+      "status": "exiled",
+      "exiledInRound": 1,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jucător 2",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 3,
+      "name": "Jucător 3",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 4,
+      "name": "Jucător 4",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 5,
+      "name": "Jucător 5",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 6,
+      "name": "Jucător 6",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 7,
+      "name": "Jucător 7",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 8,
+      "name": "Jucător 8",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 9,
+      "name": "Jucător 9",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 10,
+      "name": "Jucător 10",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    },
+    {
+      "id": 11,
+      "name": "Jucător Extra",
+      "status": "alive",
+      "exiledInRound": null,
+      "votes": 0,
+      "cards": {
+        "profesie": null,
+        "biologie": null,
+        "sanatate": null,
+        "hobby": null,
+        "bagaj": null,
+        "fapte": null,
+        "conditii_speciale": null
+      }
+    }
+  ]
+}

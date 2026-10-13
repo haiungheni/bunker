@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunker TV - Sistem Monitorizare Buncăr</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tv.css" />
+    <link rel="stylesheet" href="/css/improvements.css" />
+  </head>
+  <body class="tv-body">
+    <div class="tv-screen-container">
+      <!-- Top Tactical HUD Banner -->
+      <header class="tv-hud-header">
+        <div class="hud-left">
+          <div class="bunker-symbol">☣</div>
+          <div class="hud-title-box">
+            <div class="hud-main-title">BUNKER • UNITATEA SUPRAVIEȚUIRE</div>
+            <div class="hud-subtitle">MONITORIZARE SUPRAVIEȚUITORI & RESURSE</div>
+          </div>
+        </div>
+
+        <!-- Active Speaker Live Alert Banner -->
+        <div class="hud-speaker-bar" id="tvSpeakerBar">
+          <div class="speaker-indicator-pulse"></div>
+          <div class="speaker-label-box">
+            <span class="speaker-caption">LA CUVÂNT:</span>
+            <span class="speaker-player-name" id="tvSpeakerName">Jucător 1</span>
+          </div>
+          <div class="speaker-timer-box">
+            <span class="speaker-timer-digits" id="tvSpeakerTimer">00:30</span>
+            <div class="speaker-timer-progress">
+              <div class="progress-bar-fill" id="tvTimerBarFill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-right">
+          <span id="tvConnectionStatus" role="status">Conectare…</span>
+          <button id="tvEnableSound" class="btn btn-secondary btn-sm">Activați sunetul</button>
+          <label class="tv-volume-control"
+            >Volum
+            <input
+              id="tvVolume"
+              type="range"
+              min="0"
+              max="100"
+              value="70"
+              aria-label="Volumul efectelor sonore"
+          /></label>
+          <div class="hud-stat-box">
+            <span class="hud-stat-label">RUNDA</span>
+            <span class="hud-stat-val text-gold" id="tvRoundVal">1 / 5</span>
+          </div>
+          <div class="hud-stat-box">
+            <span class="hud-stat-label">FAZA</span>
+            <span class="hud-stat-val text-cyan" id="tvPhaseVal">Dezvăluire</span>
+          </div>
+          <div class="hud-stat-box">
+            <span class="hud-stat-label">CAPACITATE BUNCĂR</span>
+            <span class="hud-stat-val text-emerald" id="tvBunkerCapVal">4 / 8</span>
+          </div>
+          <button class="tv-fullscreen-btn" id="btnTvFullscreen" title="Ecran Complet (Fullscreen)">
+            ⛶
+          </button>
+        </div>
+      </header>
+
+      <!-- Main TV Body Layout (Sidebar + Survivors Grid) -->
+      <div class="tv-content-layout">
+        <!-- Left Sidebar: Catastrophe & Bunker Modules -->
+        <aside class="tv-sidebar">
+          <!-- Catastrophe Widget -->
+          <div class="tv-catastrophe-card" id="tvCatastropheCard">
+            <div class="cat-card-header">
+              <span class="cat-alert-icon">⚠️</span>
+              <span class="cat-alert-title">CATASTROFĂ PLANETARĂ</span>
+            </div>
+            <div class="cat-card-art-wrap">
+              <img src="" alt="Catastrofă" id="tvCatastropheImg" class="cat-card-art" />
+            </div>
+            <div class="cat-card-info">
+              <div class="cat-card-title" id="tvCatastropheTitle">Se încarcă catastrofa...</div>
+              <div class="cat-card-desc" id="tvCatastropheDesc">
+                Descrierea evenimentului apocaliptic...
+              </div>
+            </div>
+          </div>
+
+          <!-- Bunker Researched Cards -->
+          <div class="tv-bunker-rack">
+            <div class="bunker-rack-header">
+              <span>MODUL BUNCĂR (5 RUNDE)</span>
+              <span class="bunker-rack-badge" id="tvBunkerRevealedCount">1/5 Cercetate</span>
+            </div>
+            <div class="bunker-cards-mini-list" id="tvBunkerCardsList">
+              <!-- 5 Bunker round cards -->
+            </div>
+          </div>
+        </aside>
+
+        <!-- Central Section: Survivors Grid -->
+        <main class="tv-main-grid-area">
+          <div class="tv-page-controls">
+            <button
+              id="tvPreviousPage"
+              class="btn btn-secondary btn-sm"
+              aria-label="Pagina precedentă"
+            >
+              ◀
+            </button>
+            <span id="tvPageIndicator"></span>
+            <button id="tvNextPage" class="btn btn-secondary btn-sm" aria-label="Pagina următoare">
+              ▶
+            </button>
+            <label
+              >Afișare
+              <select id="tvPageSize">
+                <option value="auto" selected>Automată</option>
+                <option value="all">Toți jucătorii</option>
+                <option value="2">2 dosare</option>
+                <option value="4">4 dosare</option>
+                <option value="6">6 dosare</option>
+                <option value="8">8 dosare</option>
+                <option value="12">12 dosare</option>
+              </select></label
+            >
+            <label><input id="tvAutoPage" type="checkbox" checked /> Schimbare automată</label>
+            <span id="tvVotingStatus" role="status"></span>
+          </div>
+          <div class="survivors-header-bar">
+            <div class="survivors-title">DOSARELE CANDIDAȚILOR LA BUNCĂR</div>
+            <div class="survivors-status-legend">
+              <span class="legend-item"><span class="dot dot-alive"></span> Candidat Activ</span>
+              <span class="legend-item"><span class="dot dot-speaking"></span> La Cuvânt</span>
+              <span class="legend-item"
+                ><span class="dot dot-exiled"></span> Exilat din Buncăr</span
+              >
+            </div>
+          </div>
+
+          <div class="tv-players-grid" id="tvPlayersGrid">
+            <!-- Dynamically populated survivor cards for each player -->
+          </div>
+        </main>
+      </div>
+
+      <div id="tvProtocolOverlay" class="tv-protocol-overlay" aria-live="polite">
+        <div class="protocol-door protocol-door-left"></div>
+        <div class="protocol-door protocol-door-right"></div>
+        <div class="protocol-grid"></div>
+        <div class="protocol-sweep"></div>
+        <div class="protocol-content">
+          <div class="protocol-emblem" id="protocolEmblem">☣</div>
+          <div class="protocol-kicker" id="protocolKicker">PROTOCOL BUNCĂR</div>
+          <h1 id="protocolTitle"></h1>
+          <p id="protocolSubtitle"></p>
+          <div class="protocol-loading"><span></span></div>
+          <div class="protocol-footer">SISTEM CENTRAL • CONEXIUNE SECURIZATĂ</div>
+        </div>
+      </div>
+      <!-- FULLSCREEN DRAMATIC CARD MODAL (POPUP ON CARD REVEAL) -->
+      <div class="tv-cinematic-modal-overlay" id="tvCinematicModal">
+        <div class="tv-cinematic-box">
+          <div class="tv-card-spotlight">
+            <div class="tv-card-frame">
+              <img src="" alt="Carte mărită" id="tvModalCardImg" class="tv-modal-card-img" />
+            </div>
+          </div>
+          <div class="tv-card-details-panel">
+            <div class="tv-modal-badge" id="tvModalCategoryBadge">PROFESIE</div>
+            <div class="tv-modal-player-tag" id="tvModalPlayerTag">Dezvăluită de Jucător 1</div>
+            <h2 class="tv-modal-card-title" id="tvModalCardTitle">AUTOMECANIC</h2>
+            <div class="tv-modal-card-desc" id="tvModalCardDesc"></div>
+            <div class="tv-modal-hint">Apasă oriunde pentru a închide</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULLSCREEN DRAMATIC EXILE ALERT OVERLAY (POPUP ON PLAYER EXILE) -->
+      <div class="tv-exile-overlay" id="tvExileOverlay">
+        <div class="tv-exile-backdrop"></div>
+        <div class="tv-exile-strobe"></div>
+        <div class="tv-exile-card-container">
+          <div class="tv-exile-hazard-stripes"></div>
+          <div class="tv-exile-alert-badge">
+            <span class="hazard-icon">☣</span>
+            <span>ALARMĂ PROTOCOL EXCLUDERE • RUNDA <span id="tvExileRoundNum">1</span></span>
+            <span class="hazard-icon">☣</span>
+          </div>
+
+          <div class="tv-exile-dossier-box">
+            <div class="tv-exile-player-pill" id="tvExilePlayerBadge">#1</div>
+            <div class="tv-exile-player-details">
+              <h1 class="tv-exile-player-name" id="tvExilePlayerName">Jucător 1</h1>
+              <div class="tv-exile-player-sub" id="tvExilePlayerSub">
+                Automecanic • Acces interzis
+              </div>
+            </div>
+          </div>
+
+          <div class="tv-exile-warning-banner">
+            ACCES REVOCAT PRIN VOTUL COMUNITĂȚII • EXPULZARE IMEDIATĂ AFARĂ DIN BUNCĂR
+          </div>
+
+          <div class="tv-exile-giant-stamp" id="tvExileGiantStamp">EXILAT</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/sound.js"></script>
+    <script src="/js/cards-db.js"></script>
+    <script src="/js/game-rules.js"></script>
+    <script src="/js/client.js"></script>
+    <script src="/js/tv.js"></script>
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunker - Consola Moderatorului</title>
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/moderator.css">
+  <link rel="stylesheet" href="/css/improvements.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-box">
+          <span class="logo-icon">☣</span>
+          <div class="logo-text">
+            <span class="logo-title">BUNKER</span>
+            <span class="logo-sub">MODERATOR PANEL</span>
+          </div>
+        </div>
+        <div class="tv-status" id="tvStatusBadge">
+          <span class="status-dot"></span>
+          <span class="status-text" role="status">Conectare…</span>
+        </div>
+      </div>
+
+      <!-- Quick Game Status Bar in Header -->
+      <div class="header-center">
+        <div class="status-chip round-chip" id="headerRoundInfo">
+          <span class="chip-label">RUNDA</span>
+          <span class="chip-val" id="headerRoundVal">1 / 5</span>
+        </div>
+        <div class="status-chip phase-chip" id="headerPhaseInfo">
+          <span class="chip-label">FAZA</span>
+          <span class="chip-val" id="headerPhaseVal">Dezvăluire Cărți</span>
+        </div>
+        <div class="status-chip bunker-chip" id="headerBunkerCap">
+          <span class="chip-label">LOCURI BUNCĂR</span>
+          <span class="chip-val" id="headerBunkerVal">4 / 8</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <span id="saveStatus" role="status"></span>
+        <button class="btn btn-danger-outline btn-sm" id="btnStopTvDisplay" disabled>Oprește afișarea TV</button>
+        <button class="btn btn-secondary btn-sm" id="btnUndo" disabled>↶ Anulează</button>
+        <button class="btn btn-secondary btn-sm" id="btnHistory">Istoric</button>
+        <button class="btn btn-secondary btn-sm" id="btnAudioMute" title="Sunet Activ/Mut">
+          <span id="audioIcon">🔊</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" id="btnSoundFx" title="Efecte Sonore Rapide">
+          <span>🔔 Sunete</span>
+        </button>
+        <a href="/rules" target="_blank" class="btn btn-secondary btn-sm" title="Deschide Regulamentul Oficial">
+          <span>📖 Reguli</span>
+        </a>
+        <button class="btn btn-primary btn-sm" id="btnGameSetup" title="Setări Joc / Jucători">
+          <span>⚙ Configurare</span>
+        </button>
+        <button class="btn btn-danger-outline btn-sm" id="btnResetGame" title="Arhivează în JSON și resetează jocul">
+          <span>🔄 Joc Nou / Reset</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Global Floating Timer Bar -->
+    <div class="timer-bar" id="timerBar">
+      <div class="timer-left">
+        <div class="speaker-tag" id="timerSpeakerName">
+          <span class="pulse-speaker-icon">🎙️</span>
+          <span id="timerSpeakerText">Niciun vorbitor activ</span>
+        </div>
+      </div>
+      <div class="timer-center">
+        <div class="timer-display" id="timerDisplay">00:30</div>
+        <div class="timer-controls">
+          <button class="timer-btn" id="btnTimerToggle" title="Start / Pauză">▶</button>
+          <button class="timer-btn" id="btnTimerAdd15" title="+15 Secunde">+15s</button>
+          <button class="timer-btn" id="btnTimerReset" title="Resetează">↺</button>
+          <button class="timer-btn timer-btn-preset" id="btnTimer30" title="Setează 30s Cuvânt">30s</button>
+          <button class="timer-btn timer-btn-preset" id="btnTimer60" title="Setează 60s Discuție">60s</button>
+        </div>
+      </div>
+      <div class="timer-right">
+        <button class="btn btn-danger btn-sm" id="btnStopSpeaker">Încheie Cuvântul</button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="tab-players">
+        <span class="tab-icon">👥</span> Jucători (<span id="tabPlayerCount">8</span>)
+      </button>
+      <button class="nav-tab" data-tab="tab-bunker">
+        <span class="tab-icon">🛡️</span> Buncăr & Catastrofă
+      </button>
+      <button class="nav-tab" data-tab="tab-voting">
+        <span class="tab-icon">🗳️</span> Votare Asistată
+      </button>
+      <button class="nav-tab" data-tab="tab-finale">
+        <span class="tab-icon">🏆</span> Final Joc & Supraviețuire
+      </button>
+      <button class="nav-tab" data-tab="tab-screen-info">
+        <span class="tab-icon">📺</span> Conectare TV
+      </button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- TAB 1: JUCĂTORI (CONTROLLER PRINCIPAL) -->
+      <section class="tab-content active" id="tab-players">
+        <!-- Controls for phase and rounds -->
+        <div class="phase-bar">
+          <div class="phase-selector-group">
+            <span class="phase-bar-label">Rundă & Fază Curentă:</span>
+            <select id="selectRound" class="select-control">
+              <option value="1">Runda 1 (Profesii)</option>
+              <option value="2">Runda 2</option>
+              <option value="3">Runda 3</option>
+              <option value="4">Runda 4</option>
+              <option value="5">Runda 5 (Finală)</option>
+            </select>
+            <select id="selectPhase" class="select-control">
+              <option value="bunker_reveal">1. Cercetare Buncăr</option>
+              <option value="card_reveal">2. Deschidere Cărți (30s/jucător)</option>
+              <option value="discussion">3. Discuție Generală Vot (60s)</option>
+              <option value="voting">4. Faza de Votare</option>
+              <option value="round_end">6. Încheiere Rundă</option>
+              <option value="finale">7. Epilog / Faza Finală</option>
+            </select>
+            <button class="btn btn-primary btn-sm" id="btnApplyPhase">Schimbă Fază</button>
+          </div>
+          <div class="phase-actions">
+            <button class="btn btn-secondary btn-sm" id="btnNextRound">Runda Următoare ➔</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Player Roster Management Bar -->
+        <div class="roster-bar">
+          <div class="roster-bar-left">
+            <span class="roster-badge" id="rosterCountBadge">10 Jucători în joc</span>
+            <span class="roster-subtext">Poți adăuga sau șterge jucători oricând în funcție de câți sunteți la masă.</span>
+          </div>
+          <div class="roster-bar-right">
+            <button class="btn btn-secondary btn-sm" id="btnRosterRemovePlayer" title="Șterge ultimul jucător din joc">
+              <span>➖ Șterge Ultimul</span>
+            </button>
+            <button class="btn btn-primary btn-sm" id="btnRosterAddPlayer" title="Adaugă un jucător nou la masă">
+              <span>➕ Adaugă Jucător</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Players List Grid -->
+        <div class="players-container" id="playersContainer">
+          <!-- Dynamically populated player cards -->
+        </div>
+      </section>
+
+      <!-- TAB 2: BUNCĂR & CATASTROFĂ -->
+      <section class="tab-content" id="tab-bunker">
+        <div class="bunker-tab-layout">
+          <!-- Active Catastrophe Card -->
+          <div class="bunker-card-box catastrophe-box">
+            <div class="box-header">
+              <div class="box-title">
+                <span class="box-icon">🌋</span>
+                <span>CATASTROFA PLANETARĂ</span>
+              </div>
+              <div class="box-actions">
+                <button class="btn btn-secondary btn-sm" id="btnShowCatastropheOnTv">📺 Arată pe TV</button>
+                <button class="btn btn-secondary btn-sm" id="btnChangeCatastrophe">Schimbă Catastrofă</button>
+                <button class="btn btn-secondary btn-sm" id="btnRandomCatastrophe">🎲 Aleatoriu</button>
+              </div>
+            </div>
+            <div class="catastrophe-body" id="catastropheContent">
+              <!-- Rendered Catastrophe details -->
+            </div>
+          </div>
+
+          <!-- Bunker Cards (5 rounds) -->
+          <div class="bunker-card-box bunker-cards-box">
+            <div class="box-header">
+              <div class="box-title">
+                <span class="box-icon">🏢</span>
+                <span>CĂRȚILE BUNCĂRULUI (5 RUNDE)</span>
+              </div>
+              <div class="box-hint">Se dezvăluie câte una la începutul fiecărei runde</div>
+            </div>
+            <div class="bunker-deck-grid" id="bunkerDeckGrid">
+              <!-- Rendered 5 bunker cards -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: VOTARE ASISTATĂ -->
+      <section class="tab-content" id="tab-voting">
+        <div class="voting-panel">
+          <div class="voting-header-card">
+            <div class="voting-info-left">
+              <h3>MODUL ASISTAT DE VOTARE • RUNDA <span id="votingRoundNum">1</span></h3>
+              <p id="votingScheduleText" class="voting-schedule-hint">
+                Conform regulilor oficiale pentru acest număr de jucători...
+              </p>
+            </div>
+            <div class="voting-actions-top">
+              <button class="btn btn-primary" id="btnStartVoting">Pornește un vot nou</button>
+              <button class="btn btn-secondary" id="btnCloseVoting" disabled>Închide votarea</button>
+              <button class="btn btn-primary" id="btnStartVoteDiscussion">
+                ⏱️ Pornește Discuția de 60s
+              </button>
+              <button class="btn btn-secondary" id="btnResetVoteCounts">
+                Resetează Voturile
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Exile Schedule Banner & Editor -->
+          <div class="voting-schedule-banner" id="votingScheduleBanner">
+            <div class="schedule-banner-text">
+              <span class="plan-title">📋 Plan Excluderi pe Runde:</span>
+              <span id="votingScheduleSummaryText" class="plan-summary">R1: 0 | R2: 1 | R3: 1 | R4: 1 | R5: 1</span>
+              <span class="badge badge-gold" id="roundExileQuotaBadge">Excluderi prevăzute în această rundă: 1</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="btnOpenScheduleQuickEdit">
+              ✏️ Ajustează Câți Dăm Afară
+            </button>
+          </div>
+
+          <p id="voteSessionStatus" class="vote-session-status" role="status"></p>
+          <!-- Voting Tally Table -->
+          <div class="voting-candidates-grid" id="votingCandidatesGrid">
+            <!-- Dynamically populated candidates with vote counters -->
+          </div>
+
+          <!-- Voting Resolution Bar -->
+          <div class="voting-summary-bar" id="votingSummaryBar">
+            <div class="summary-left">
+              <span class="summary-label">Rezultat provizoriu:</span>
+              <span class="summary-candidate" id="topVotedCandidate">Niciun vot înregistrat</span>
+            </div>
+            <div class="summary-right">
+              <button class="btn btn-danger" id="btnExileTopCandidate">
+                ⚠️ Confirmă Exilarea Jucătorului
+              </button>
+              <button class="btn btn-secondary" id="btnTiebreakTimer">
+                ⚖️ Egalitate: Balotaj (30s Apărare)
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: FINAL JOC & SUPRAVIEȚUIRE -->
+      <section class="tab-content" id="tab-finale">
+        <div class="finale-panel">
+          <div class="finale-header">
+            <h2>SFÂRȘITUL JOCULUI & REZULTATE SUPRAVIEȚUIRE</h2>
+            <p>Verifică cine a intrat în buncăr, dacă s-au îndeplinit condițiile de reproducere și gestionează amenințările.</p>
+          </div>
+
+          <div class="finale-grid">
+            <!-- Bunker Survivors -->
+            <div class="finale-card survivors-card">
+              <div class="finale-card-title">
+                <span>🛡️ SUPRAVIEȚUITORI ÎN BUNCĂR</span>
+                <span class="badge badge-emerald" id="survivorsCountBadge">4 Jucători</span>
+              </div>
+              <div class="survivors-list" id="bunkerSurvivorsList">
+                <!-- List of non-exiled players -->
+              </div>
+              <div class="reproduction-check" id="reproductionCheckResult">
+                <!-- Check if man + woman fertile pair exists -->
+              </div>
+            </div>
+
+            <!-- Exiled players -->
+            <div class="finale-card exiled-card">
+              <div class="finale-card-title">
+                <span>🚪 JUCĂTORI EXILAȚI (RĂMAȘI AFARĂ)</span>
+                <span class="badge badge-red" id="exiledCountBadge">4 Jucători</span>
+              </div>
+              <div class="exiled-list" id="exiledPlayersList">
+                <!-- List of exiled players -->
+              </div>
+            </div>
+
+            <!-- Threats section (Survival mode) -->
+            <div class="finale-card threats-card">
+              <div class="finale-card-title">
+                <span>⚠️ AMENINȚĂRI SUPLIMENTARE (MODUL SUPRAVIEȚUIRE)</span>
+                <button class="btn btn-primary btn-sm" id="btnDrawThreat">Extrage Amenințare 🎲</button>
+              </div>
+              <div class="threats-list" id="threatsList">
+                <!-- List of drawn threats -->
+              </div>
+            </div>
+
+            <!-- Finale Game Actions: Save to JSON & Reset -->
+            <div class="finale-actions-bar" style="grid-column: 1 / -1; margin-top: 15px;">
+              <button class="btn btn-primary" id="btnFinaleSaveReset" style="width: 100%; padding: 14px 24px; font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span>💾 Salvează Jocul în Istoric & Începe Joc Nou</span> <span>🔄</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: CONECTARE TV -->
+      <section class="tab-content" id="tab-screen-info">
+        <div class="tv-connect-box">
+          <div id="tvQrCode" aria-label="Cod QR pentru conectarea televizorului"></div>
+          <h2>📺 CONECTARE ECRAN MARE (TV)</h2>
+          <p>Pentru a afișa jocul pe un Smart TV sau ecran mare conectat prin rețea / cablu HDMI:</p>
+
+          <div class="url-cards-grid">
+            <div class="url-card">
+              <div class="url-label">Pe Smart TV (Browser-ul televizorului sau alt dispozitiv conectat la WiFi):</div>
+              <div class="url-display" id="networkTvUrl">http://.../tv</div>
+              <button class="btn btn-secondary btn-sm copy-btn" data-copy="networkTvUrl">Copiază Link</button>
+            </div>
+            <div class="url-card">
+              <div class="url-label">Pe acest laptop / PC (dacă e conectat cu HDMI la TV):</div>
+              <div class="url-display" id="localTvUrl">http://localhost:3000/tv</div>
+              <button class="btn btn-secondary btn-sm copy-btn" data-copy="localTvUrl">Copiază Link</button>
+              <a href="/tv" target="_blank" class="btn btn-primary btn-sm">Deschide Ecran TV</a>
+            </div>
+          </div>
+
+          <div class="tv-features-list">
+            <h3>Ce va apărea pe ecranul TV:</h3>
+            <ul>
+              <li>✅ Tabloul complet al tuturor jucătorilor cu fișele lor de personaje.</li>
+              <li>✅ Cărțile dezvăluite cu imaginea originală din joc și titlul în română.</li>
+              <li>✅ Catastrofa curentă cu imagine, titlu și descriere mare citibilă de la distanță.</li>
+              <li>✅ Cărțile buncărului cercetate și numărul de locuri rămase libere.</li>
+              <li>✅ Vorbitorul activ evidențiat cu chenar auriu radiant și cronometru vizual mare (30s).</li>
+              <li>✅ Pop-up cinematic spectaculos când bifezi o carte nouă pentru un jucător!</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL: CARD PICKER (TOUCH OPTIMIZED SELECTOR) -->
+  <div class="modal-overlay" id="cardPickerModal">
+    <div class="modal-box card-picker-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 id="cardPickerTitle">Selectează Cartea</h3>
+          <span class="modal-subtitle" id="cardPickerSubtitle">pentru Jucător</span>
+        </div>
+        <button class="modal-close" id="btnCloseCardPicker">&times;</button>
+      </div>
+
+      <div class="modal-search-bar">
+        <input maxlength="60" type="text" id="cardSearchInput" class="search-input" placeholder="🔍 Caută după titlu sau text... (ex: automecanic, femeie, alcoolism)">
+        <select id="cardCategoryFilter" class="category-filter-select">
+          <option value="all">Toate Categoriile</option>
+          <option value="profesie">Profesie</option>
+          <option value="biologie">Biologie</option>
+          <option value="sanatate">Sănătate</option>
+          <option value="hobby">Hobby</option>
+          <option value="bagaj">Bagaj</option>
+          <option value="fapte">Informație Personală</option>
+          <option value="conditii_speciale">Condiție Specială</option>
+          <option value="bunker">Buncăr</option>
+          <option value="catastrofe">Catastrofă</option>
+        </select>
+      </div>
+
+      <div class="modal-body card-picker-body">
+        <div class="card-picker-grid" id="cardPickerGrid">
+          <!-- Cards rendered here -->
+        </div>
+      </div>
+
+      <div class="modal-footer card-picker-footer">
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkShowOnTv" checked>
+          <span>Afișează imediat pe ecranul TV mărit</span>
+        </label>
+        <button class="btn btn-secondary" id="btnCancelCardPicker">Anulează</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: GAME SETUP / CONFIG -->
+  <div class="modal-overlay" id="gameSetupModal">
+    <div class="modal-box setup-modal-box">
+      <div class="modal-header">
+        <h3>Configurarea partidei curente</h3>
+        <button class="modal-close" id="btnCloseSetup">&times;</button>
+      </div>
+      <div class="modal-body setup-modal-body">
+        <div class="form-group">
+          <label class="form-label">Număr de Jucători (4 - 22):</label>
+          <input type="number" id="inputPlayerCount" class="input-control" min="4" max="22" value="10">
+          <span class="form-hint" id="setupCapacityHint">Locuri în buncăr: 5 • Exilați prevăzuți: 5</span>
+        </div>
+
+        <!-- FORMULAR DE EXCLUDERE PE RUNDE -->
+        <div class="form-group exile-schedule-box">
+          <div class="schedule-box-header">
+            <label class="form-label">Plan de Excludere pe Runde (Câți dăm afară):</label>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnAutoCalcSchedule">
+              ⚡ Calcul Automat (50%)
+            </button>
+          </div>
+          <p class="form-hint">Stabilește câți jucători vor fi exilați prin vot în fiecare rundă:</p>
+          <div class="schedule-inputs-row">
+            <div class="round-exile-col">
+              <span class="round-label">Runda 1</span>
+              <input type="number" id="exileR1" class="input-control exile-round-input" min="0" max="10" value="0">
+            </div>
+            <div class="round-exile-col">
+              <span class="round-label">Runda 2</span>
+              <input type="number" id="exileR2" class="input-control exile-round-input" min="0" max="10" value="1">
+            </div>
+            <div class="round-exile-col">
+              <span class="round-label">Runda 3</span>
+              <input type="number" id="exileR3" class="input-control exile-round-input" min="0" max="10" value="1">
+            </div>
+            <div class="round-exile-col">
+              <span class="round-label">Runda 4</span>
+              <input type="number" id="exileR4" class="input-control exile-round-input" min="0" max="10" value="1">
+            </div>
+            <div class="round-exile-col">
+              <span class="round-label">Runda 5</span>
+              <input type="number" id="exileR5" class="input-control exile-round-input" min="0" max="10" value="1">
+            </div>
+          </div>
+          <div class="exile-summary-tags">
+            <span class="badge badge-red" id="badgeTotalExiles">Total Exilați: 4</span>
+            <span class="badge badge-emerald" id="badgeBunkerCap">Locuri în Buncăr: 4</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Scopul Jocului:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="setupGoal" value="salvare" id="goalSalvare">
+              <span><strong>Salvare</strong> (orice supraviețuitor în buncăr câștigă)</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="setupGoal" value="renastere" id="goalRenastere" checked>
+              <span><strong>Renaștere</strong> (necesită obligatoriu un cuplu bărbat + femeie fertil)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Modul Finalului:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="setupMode" value="basic" checked>
+              <span><strong>Modul de Bază</strong> (final scurt direct în buncăr)</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="setupMode" value="survival">
+              <span><strong>Istoria Supraviețuirii</strong> (amenințări + evaluare utilitate)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nume Jucători:</label>
+          <div class="player-names-grid" id="playerNamesSetupGrid">
+            <!-- Inputs for player names -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCancelSetup">Închide</button>
+        <button class="btn btn-primary" id="btnSaveSetup">Salvează & Pornește Jocul</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: QUICK SCHEDULE ADJUSTMENT DURING GAME -->
+  <div class="modal-overlay" id="quickScheduleModal">
+    <div class="modal-box" style="max-width: 550px;">
+      <div class="modal-header">
+        <h3>Ajustează Planul de Excludere pe Runde</h3>
+        <button class="modal-close" id="btnCloseQuickSchedule">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="form-hint" style="margin-bottom:15px;">
+          Poți modifica numărul de excluderi prevăzute pentru fiecare rundă în orice moment al jocului:
+        </p>
+        <div class="schedule-inputs-row">
+          <div class="round-exile-col">
+            <span class="round-label">Runda 1</span>
+            <input type="number" id="quickExileR1" class="input-control exile-round-input" min="0" max="10" value="0">
+          </div>
+          <div class="round-exile-col">
+            <span class="round-label">Runda 2</span>
+            <input type="number" id="quickExileR2" class="input-control exile-round-input" min="0" max="10" value="1">
+          </div>
+          <div class="round-exile-col">
+            <span class="round-label">Runda 3</span>
+            <input type="number" id="quickExileR3" class="input-control exile-round-input" min="0" max="10" value="1">
+          </div>
+          <div class="round-exile-col">
+            <span class="round-label">Runda 4</span>
+            <input type="number" id="quickExileR4" class="input-control exile-round-input" min="0" max="10" value="1">
+          </div>
+          <div class="round-exile-col">
+            <span class="round-label">Runda 5</span>
+            <input type="number" id="quickExileR5" class="input-control exile-round-input" min="0" max="10" value="1">
+          </div>
+        </div>
+        <div class="exile-summary-tags" style="margin-top:15px;">
+          <span class="badge badge-red" id="quickBadgeTotalExiles">Total Exilați: 4</span>
+          <span class="badge badge-emerald" id="quickBadgeBunkerCap">Locuri în Buncăr: 4</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCancelQuickSchedule">Anulează</button>
+        <button class="btn btn-primary" id="btnSaveQuickSchedule">Aplică Noul Plan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: QUICK SOUND FX MENU -->
+  <div class="modal-overlay" id="soundFxModal">
+    <div class="modal-box sound-modal-box">
+      <div class="modal-header">
+        <h3>Efecte Sonore Atmosferice</h3>
+        <button class="modal-close" id="btnCloseSoundFx">&times;</button>
+      </div>
+      <div class="modal-body sound-grid-body">
+        <button class="sound-card-btn" data-cue="speaker_start">
+          <span class="sound-icon">🎙️</span>
+          <span class="sound-name">Start Vorbitor</span>
+        </button>
+        <button class="sound-card-btn" data-cue="gong">
+          <span class="sound-icon">🔔</span>
+          <span class="sound-name">Gong / Sfârșit Timp</span>
+        </button>
+        <button class="sound-card-btn" data-cue="card_reveal">
+          <span class="sound-icon">🃏</span>
+          <span class="sound-name">Dezvăluire Carte</span>
+        </button>
+        <button class="sound-card-btn" data-cue="exile_stamp">
+          <span class="sound-icon">🚪</span>
+          <span class="sound-name">Ștampilă Exilare</span>
+        </button>
+        <button class="sound-card-btn" data-cue="catastrophe_alarm">
+          <span class="sound-icon">🚨</span>
+          <span class="sound-name">Alarmă Sirenă</span>
+        </button>
+        <button class="sound-card-btn" data-cue="bunker_reveal">
+          <span class="sound-icon">💨</span>
+          <span class="sound-name">Poartă Buncăr</span>
+        </button>
+        <button class="sound-card-btn" data-cue="victory">
+          <span class="sound-icon">🎺</span>
+          <span class="sound-name">Fanfară Victorie</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="moderatorLogin" class="login-overlay" hidden>
+    <form id="loginForm" class="login-card" aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Acces moderator</h2>
+      <p id="loginMessage">Introdu PIN-ul afișat în terminalul serverului.</p>
+      <label for="moderatorPin">PIN moderator</label>
+      <input id="moderatorPin" type="password" inputmode="numeric" autocomplete="off" required class="input-control">
+      <button class="btn btn-primary" type="submit">Conectează</button>
+    </form>
+  </div>
+  <div class="modal-overlay" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+    <div class="modal-box">
+      <div class="modal-header"><h2 id="historyTitle">Partide arhivate</h2><button class="btn btn-secondary" id="btnCloseHistory" aria-label="Închide istoricul">✕</button></div>
+      <div class="modal-body" id="historyList"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/sound.js"></script>
+  <script src="/js/cards-db.js"></script>
+  <script src="/js/game-rules.js"></script>
+  <script src="/vendor/qrcode.js"></script>
+  <script src="/js/client.js"></script>
+  <script src="/js/moderator.js"></script>
+</body>
+</html>

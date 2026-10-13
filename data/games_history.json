@@ -1,0 +1,122 @@
+[
+  {
+    "id": "game_2026-10-13_09-30-56_189d41ef",
+    "filename": "game_2026-10-13_09-30-56_189d41ef.json",
+    "savedAt": "2026-10-13T06:30:56.708Z",
+    "formattedDate": "13.10.2026 09:30",
+    "playerCount": 12,
+    "survivorsCount": 12,
+    "exiledCount": 0,
+    "bunkerCapacity": 6,
+    "catastropheTitle": "Război Informațional & Colaps Digital",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-06_10-05-17_b16e9db7",
+    "filename": "game_2026-10-06_10-05-17_b16e9db7.json",
+    "savedAt": "2026-10-06T07:05:17.225Z",
+    "formattedDate": "06.10.2026 10:05",
+    "playerCount": 12,
+    "survivorsCount": 12,
+    "exiledCount": 0,
+    "bunkerCapacity": 6,
+    "catastropheTitle": "Război Informațional & Colaps Digital",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-06_09-57-25_56b4561f",
+    "filename": "game_2026-10-06_09-57-25_56b4561f.json",
+    "savedAt": "2026-10-06T06:57:25.447Z",
+    "formattedDate": "06.10.2026 09:57",
+    "playerCount": 12,
+    "survivorsCount": 12,
+    "exiledCount": 0,
+    "bunkerCapacity": 6,
+    "catastropheTitle": "Pandemie Letală Globală",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-06_09-39-56_c7574511",
+    "filename": "game_2026-10-06_09-39-56_c7574511.json",
+    "savedAt": "2026-10-06T06:39:56.504Z",
+    "formattedDate": "06.10.2026 09:39",
+    "playerCount": 12,
+    "survivorsCount": 10,
+    "exiledCount": 2,
+    "bunkerCapacity": 6,
+    "catastropheTitle": "Erupția Supervulcanilor",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-06_09-36-04_747a75d8",
+    "filename": "game_2026-10-06_09-36-04_747a75d8.json",
+    "savedAt": "2026-10-06T06:36:04.895Z",
+    "formattedDate": "06.10.2026 09:36",
+    "playerCount": 12,
+    "survivorsCount": 11,
+    "exiledCount": 1,
+    "bunkerCapacity": 6,
+    "catastropheTitle": "Zombi Apocalipsa",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-06_09-24-06_6664992c",
+    "filename": "game_2026-10-06_09-24-06_6664992c.json",
+    "savedAt": "2026-10-06T06:24:06.567Z",
+    "formattedDate": "06.10.2026 09:24",
+    "playerCount": 9,
+    "survivorsCount": 7,
+    "exiledCount": 2,
+    "bunkerCapacity": 4,
+    "catastropheTitle": "Revolta Algoritmilor (AI Suprem)",
+    "goal": "salvare"
+  },
+  {
+    "id": "game_2026-10-06_09-21-44_29607c95",
+    "filename": "game_2026-10-06_09-21-44_29607c95.json",
+    "savedAt": "2026-10-06T06:21:44.865Z",
+    "formattedDate": "06.10.2026 09:21",
+    "playerCount": 7,
+    "survivorsCount": 7,
+    "exiledCount": 0,
+    "bunkerCapacity": 3,
+    "catastropheTitle": "Potopul Global",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-05_11-02-57",
+    "filename": "game_2026-10-05_11-02-57.json",
+    "savedAt": "2026-10-05T08:02:57.269Z",
+    "formattedDate": "05.10.2026 11:02",
+    "playerCount": 10,
+    "survivorsCount": 9,
+    "exiledCount": 1,
+    "bunkerCapacity": 5,
+    "catastropheTitle": "Mutanți",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-05_11-01-24",
+    "filename": "game_2026-10-05_11-01-24.json",
+    "savedAt": "2026-10-05T08:01:24.476Z",
+    "formattedDate": "05.10.2026 11:01",
+    "playerCount": 11,
+    "survivorsCount": 10,
+    "exiledCount": 1,
+    "bunkerCapacity": 5,
+    "catastropheTitle": "Trezierea lui Cthulhu",
+    "goal": "renastere"
+  },
+  {
+    "id": "game_2026-10-05_11-00-51",
+    "filename": "game_2026-10-05_11-00-51.json",
+    "savedAt": "2026-10-05T08:00:51.360Z",
+    "formattedDate": "05.10.2026 11:00",
+    "playerCount": 22,
+    "survivorsCount": 21,
+    "exiledCount": 1,
+    "bunkerCapacity": 11,
+    "catastropheTitle": "Război Informațional & Colaps Digital",
+    "goal": "renastere"
+  }
+]

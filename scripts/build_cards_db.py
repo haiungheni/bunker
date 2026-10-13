@@ -1,0 +1,478 @@
+import json
+import re
+import os
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+with open('cards_initial.json', 'r', encoding='utf-8') as f:
+    raw_cards = json.load(f)
+
+# Dictionary of clean Romanian titles by category and filename
+CLEAN_TITLES = {
+    # PROFESII
+    ('Profesii', 'АВТОМЕХАНИК.png'): 'Automecanic',
+    ('Profesii', 'АДВОКАТ.png'): 'Avocat',
+    ('Profesii', 'АРХЕОЛОГ.png'): 'Arheolog',
+    ('Profesii', 'БИОЛОГ.png'): 'Biolog',
+    ('Profesii', 'БРАКОНЬЕР.png'): 'Braconier',
+    ('Profesii', 'ВИДЕОИНЖЕНЕР.png'): 'Manager',
+    ('Profesii', 'ВИРУСОЛОГ.png'): 'Virusolog',
+    ('Profesii', 'ВОЕННЫЙ.png'): 'Militar',
+    ('Profesii', 'ГОМЕОПАТ.png'): 'Homeopat',
+    ('Profesii', 'ГРАБИТЕЛЬ.png'): 'Profesor',
+    ('Profesii', 'ДЕТЕКТИВ.png'): 'Detectiv',
+    ('Profesii', 'ДИЗАЙНЕР.png'): 'Designer',
+    ('Profesii', 'ДОМОХОЗЯЙКА.png'): 'Casnică',
+    ('Profesii', 'ЖУРНАЛИСТ.png'): 'Jurnalist',
+    ('Profesii', 'ЗНАХАРЬ.png'): 'Tarolog',
+    ('Profesii', 'ИСТОРИК.png'): 'Istoric',
+    ('Profesii', 'КОУЧ.png'): 'Trainer',
+    ('Profesii', 'ЛЕСНИК.png'): 'Pădurar',
+    ('Profesii', 'ЛЕТЧИК-ИНЖЕНЕР.png'): 'Contabil',
+    ('Profesii', 'МАРКЕТОЛОГ.png'): 'Marketolog',
+    ('Profesii', 'МЕДСЕСТРА.png'): 'Asistent Medical',
+    ('Profesii', 'МОДЕЛЬ.png'): 'Model',
+    ('Profesii', 'ПАПАРАЦЦИ.png'): 'Paparazzi',
+    ('Profesii', 'ПЕРЕВОДЧИК.png'): 'Traducător',
+    ('Profesii', 'ПИСАТЕЛЬ.png'): 'Scriitor',
+    ('Profesii', 'ПОВАР.png'): 'Bucătar',
+    ('Profesii', 'ПОЖАРНЫЙ.png'): 'Pompier',
+    ('Profesii', 'ПОЛИЦЕЙСКИЙ.png'): 'Polițist',
+    ('Profesii', 'ПРОГРАММИСТ.png'): 'Programator',
+    ('Profesii', 'ПРОДАВЕЦ.png'): 'Vânzător',
+    ('Profesii', 'ПСИХОЛОГ.png'): 'Psiholog',
+    ('Profesii', 'РАЗНОРАБОЧИЙ.png'): 'Lăcătuș',
+    ('Profesii', 'РОБОТОТЕХНИК.png'): 'Robototehnician',
+    ('Profesii', 'СЕКСОЛОГ.png'): 'Sexolog',
+    ('Profesii', 'СПЕЦАГЕНТ.png'): 'Agent Special',
+    ('Profesii', 'СТОМАТОЛОГ.png'): 'Stomatolog',
+    ('Profesii', 'СТРОИТЕЛЬ.png'): 'Constructor',
+    ('Profesii', 'СУДЬЯ.png'): 'Judecător',
+    ('Profesii', 'ТАТУ-МАСТЕР.png'): 'Tattoo-Master',
+    ('Profesii', 'ФЕРМЕР.png'): 'Fermier',
+    ('Profesii', 'ФИЗИК.png'): 'Fizician',
+    ('Profesii', 'ФИЛОСОФ.png'): 'Filosof',
+    ('Profesii', 'ХАКЕР.png'): 'Hacker',
+    ('Profesii', 'ХИРУРГ.png'): 'Chirurg',
+    ('Profesii', 'ЭКОЛОГ.png'): 'Ecolog',
+    ('Profesii', 'ЭКСКУРСОВОД.png'): 'Ghid Turistic',
+    ('Profesii', 'ЭКСТРАСЕНС.png'): 'Extrasenzorial (Extrasens)',
+    ('Profesii', 'ЭЛЕКТРИК.png'): 'Electrician',
+    ('Profesii', 'ЭТНОГРАФ.png'): 'Comediant',
+
+    # BIOLOGIA
+    ('Biologia', 'Ж 18 Л.png'): 'Femeie 18 ani',
+    ('Biologia', 'Ж 19 Л Г.png'): 'Femeie 19 ani',
+    ('Biologia', 'Ж 21 Г.png'): 'Femeie 21 ani',
+    ('Biologia', 'Ж 22 Г Б.png'): 'Femeie 22 ani',
+    ('Biologia', 'Ж 24 Г.png'): 'Femeie 24 ani',
+    ('Biologia', 'Ж 25 Л Г.png'): 'Femeie 25 ani',
+    ('Biologia', 'Ж 27 Л.png'): 'Femeie 27 ani',
+    ('Biologia', 'Ж 30 Л.png'): 'Femeie 30 ani',
+    ('Biologia', 'Ж 31 Г.png'): 'Femeie 31 ani',
+    ('Biologia', 'Ж 33 Л Г.png'): 'Femeie 33 ani',
+    ('Biologia', 'Ж 34 Г.png'): 'Femeie 34 ani',
+    ('Biologia', 'Ж 36 Л.png'): 'Femeie 36 ani',
+    ('Biologia', 'Ж 65 Л.png'): 'Femeie 65 ani',
+    ('Biologia', 'Ж 99 Л.png'): 'Femeie 99 ani',
+    ('Biologia', 'М 101 Г.png'): 'Bărbat 101 ani',
+    ('Biologia', 'М 18 Л.png'): 'Bărbat 18 ani',
+    ('Biologia', 'М 23 Г Г.png'): 'Bărbat 23 ani',
+    ('Biologia', 'М 24 Г Б.png'): 'Bărbat 24 ani',
+    ('Biologia', 'М 26 Л.png'): 'Bărbat 26 ani',
+    ('Biologia', 'М 27 Л Г.png'): 'Bărbat 27 ani',
+    ('Biologia', 'М 29 Л.png'): 'Bărbat 29 ani',
+    ('Biologia', 'М 30 Л.png'): 'Bărbat 30 ani',
+    ('Biologia', 'М 32 Г Г.png'): 'Bărbat 32 ani',
+    ('Biologia', 'М 33 Г.png'): 'Bărbat 33 ani',
+    ('Biologia', 'М 35 Л.png'): 'Bărbat 35 ani',
+    ('Biologia', 'М 39 Л.png'): 'Bărbat 39 ani',
+    ('Biologia', 'М 42 Г Г.png'): 'Bărbat 42 ani',
+    ('Biologia', 'М 75 Л.png'): 'Bărbat 75 ani',
+
+    # HOBBY
+    ('Hobby', 'АЛХИМИЯ.png'): 'Alchimia',
+    ('Hobby', 'БОЕВЫЕ ИСКУСТВА.png'): 'Artele Marțiale',
+    ('Hobby', 'ВУАЙЕРИЗМ.png'): 'Lego',
+    ('Hobby', 'ГИДРОПОНИКА.png'): 'Scufundări',
+    ('Hobby', 'ГРИБЫ И ГОМЕОПАТИЯ.png'): 'Ciuperci și Plante Medicinale',
+    ('Hobby', 'ДАЧНИК.png'): 'Grădinărit',
+    ('Hobby', 'ЗОЖ.png'): 'Mod de Viață Sănătos',
+    ('Hobby', 'КИНО И СЕРИАЛЫ.png'): 'Filme și Seriale',
+    ('Hobby', 'КОМПЬЮТЕРНЫЕ ИГРЫ.png'): 'Jocuri pe Calculator',
+    ('Hobby', 'КРАЕВЕДЕНИЕ.png'): 'Geografie și Călătorii',
+    ('Hobby', 'ЛЮБИТЕЛЬСКАЯ РАДИОСВЯЗЬ.png'): 'Comunicare Radio',
+    ('Hobby', 'МАССАЖ И АКУПУНКТУРА.png'): 'Masaj și Acupunctură',
+    ('Hobby', 'МЕДИТАЦИЯ.png'): 'Meditație',
+    ('Hobby', 'НАСТОЛЬНЫЕ ИГРЫ.png'): 'Jocuri de Masă',
+    ('Hobby', 'НЕТВОРКИНГ.png'): 'Networking și Socializare',
+    ('Hobby', 'НЕТРАДИЦИОННАЯ МЕДИЦИНА.png'): 'Medicină Alternativă',
+    ('Hobby', 'ОХОТА И РЫБАЛКА.png'): 'Vânatul și Pescuitul',
+    ('Hobby', 'ПАРКУР.png'): 'Parkour',
+    ('Hobby', 'ПИВОВАРЕНИЕ.png'): 'Prepararea Berii',
+    ('Hobby', 'ПИРОТЕХНИКА.png'): 'Pirotehnică',
+    ('Hobby', 'РАЗГОВОРЫ ПО ДУШАМ.png'): 'Discuții de Suflet',
+    ('Hobby', 'РОБОТОТЕХНИКА.png'): 'Robototehnică',
+    ('Hobby', 'СВИНГ-ВЕЧЕРИНКИ.png'): 'Petreceri Tematice',
+    ('Hobby', 'СОВРЕМЕННОЕ ИСКУСТВО.png'): 'Creația Modernă',
+    ('Hobby', 'СПОРТИВНЫЕ ТАНЦЫ.png'): 'Dansuri Sportive',
+    ('Hobby', 'СТРИПТИЗ.png'): 'Dansuri Arabe',
+    ('Hobby', 'УФОЛОГИЯ И МИСТИКА.png'): 'Ufologie și Mistică',
+    ('Hobby', 'ФЛУДИТЬ В ЧАТАХ.png'): 'Sporturi Extreme',
+    ('Hobby', 'ХОЛОДНОЕ ОРУЖИЕ.png'): 'Arme Albe',
+    ('Hobby', 'ЧЕРНАЯ МАГИЯ.png'): 'Magie Neagră',
+
+    # SĂNĂTATE
+    ('Sănătate', 'АЛКОГОЛИЗМ.png'): 'Alcoolism',
+    ('Sănătate', 'БЕСПЛОДИЕ.png'): 'Boala Alzheimer',
+    ('Sănătate', 'ГАЛЛЮЦИНАЦИИ.png'): 'Halucinații',
+    ('Sănătate', 'ГИГАНТИЗМ ОТДЕЛЬНЫХ ЧАСТЕЙ ТЕЛА.png'): 'Gigantismul Unor Părți ale Corpului',
+    ('Sănătate', 'ГЛУХОЙ.png'): 'Surd',
+    ('Sănătate', 'ДЕПРЕССИЯ.png'): 'Depresie',
+    ('Sănătate', 'ЗАВИСИМОСТЬ ОТ НАРКОТИКОВ.png'): 'Dependență de Droguri',
+    ('Sănătate', 'ЗАИКА.png'): 'Bâlbâit',
+    ('Sănătate', 'ИГРОВАЯ ЗАВИСИМОСТЬ.png'): 'Dependență de Jocuri de Noroc',
+    ('Sănătate', 'ИДЕЛАЬНО ЗДОРОВ.png'): 'Sănătos Ideal',
+    ('Sănătate', 'КАРЛИК.png'): 'Psihoză Moderată',
+    ('Sănătate', 'КЛЕПТОМАНИЯ.png'): 'Paralizie Totală',
+    ('Sănătate', 'КОФЕЙНАЯ ЗАВИСИМОСТЬ.png'): 'Diabet de Gradul 2',
+    ('Sănătate', 'ЛУНАТИЗМ.png'): 'Cancer la Ovare / Testicule',
+    ('Sănătate', 'МАНИЯ ПРЕСЛЕДОВАНИЯ.png'): 'Mania de Urmărire',
+    ('Sănătate', 'МИГРЕНЬ.png'): 'Dureri de Cap Puternice (Migrenă)',
+    ('Sănătate', 'НЕ ОБСЛЕДОВАЛСЯ.png'): 'Nu m-am investigat niciodată',
+    ('Sănătate', 'НЕТ НОГИ.png'): 'Fără un picior',
+    ('Sănătate', 'НЕТ РУКИ.png'): 'Fără o mână',
+    ('Sănătate', 'ПОВЫШЕННАЯ ВОЛОСАТОСТЬ.png'): 'Creșterea sporită a părului',
+    ('Sănătate', 'ПОНОС.png'): 'Diaree Cronică',
+    ('Sănătate', 'ПОТЕРЯ ОБОНЯНИЯ.png'): 'Lipsa Mirosului',
+    ('Sănătate', 'РАЗДВОЕНИЕ ЛИЧНОСТИ.png'): 'Dublă Personalitate',
+    ('Sănătate', 'СЕКСУАЛЬНАЯ ОЗАБОЧЕННОСТЬ.png'): 'Preocupare Sexuală Excesivă',
+    ('Sănătate', 'СЛЕПОЙ.png'): 'Orb',
+    ('Sănătate', 'СУИЦЫДАЛЬНЫЕ МЫСЛИ.png'): 'Gânduri Suicidare',
+    ('Sănătate', 'ТРЕМОР РУК.png'): 'Tremuratul Mâinilor',
+    ('Sănătate', 'ФРИГИДНОСТЬ,ИМПОТЕНЦИЯ.png'): 'Frigiditate / Impotență',
+    ('Sănătate', 'ХВОСТ.png'): 'Deficiență Cardiovasculară',
+    ('Sănătate', 'ШАБЛОН ЗДОРОВЬЕ_1 - Copie - Copie.png'): 'HIV / SIDA',
+    ('Sănătate', 'ШАБЛОН ЗДОРОВЬЕ_1 - Copie.png'): 'Scleroză Multiplă',
+    ('Sănătate', 'ШАБЛОН ЗДОРОВЬЕ_1.png'): 'Tuberculoză',
+
+    # BAGAJ
+    ('Bagaj', '3 СЛИТКА ЗОЛОТА.png'): 'Lingouri de aur și argint',
+    ('Bagaj', 'АНТИБИОТИКИ И ОБЕЗБОЛИВАЮЩЕЕ.png'): 'Antibiotice și antivirale',
+    ('Bagaj', 'ГИТАРА.png'): 'Chitară',
+    ('Bagaj', 'ДЕФИБРИЛЛЯТОР.png'): 'Aparat medical de supraviețuire (Defibrilator)',
+    ('Bagaj', 'ЗВУКОВАЯ ОТВЕРТКА.png'): 'Sistem audio modern',
+    ('Bagaj', 'ИНКУБАТОР С НАБОРОМ ЯИЦ.png'): 'Incubator cu ouă de găină',
+    ('Bagaj', 'ИНСТРУМЕНТЫ ЭЛЕКТРИКА.png'): 'Instrumentele electricianului',
+    ('Bagaj', 'КАПКАНЫ И НАБОР ЯДОВ.png'): 'Capcane și otravă',
+    ('Bagaj', 'КНИГИ АЙЗЕКА АЗИМОВА.png'): 'Cărți de supraviețuire',
+    ('Bagaj', 'КОМПАС И КАРТА ОКРЕСНОСТЕЙ.png'): 'Compas și harta regiunii',
+    ('Bagaj', 'КУКЛА ВУДУ.png'): 'Păpușă Voodoo',
+    ('Bagaj', 'ЛУК И СТРЕЛЫ.png'): 'Arc și săgeți',
+    ('Bagaj', 'МЕШОК ЗЕРНА.png'): 'Un sac de grâu',
+    ('Bagaj', 'МЕШОК КАРТОШКИ.png'): 'Un sac de cartofi',
+    ('Bagaj', 'МИЛЛИОН ДОЛЛАРОВ.png'): 'Un milion de dolari',
+    ('Bagaj', 'НАБОР ОТМЫЧЕК.png'): 'Set de șperacle (deschizători)',
+    ('Bagaj', 'НАДУВНАЯ КУКЛА.png'): 'Aparat de filmat și foto',
+    ('Bagaj', 'НАСТОЛЬНЫЕ ИГРЫ.png'): 'Jocuri de masă',
+    ('Bagaj', 'НОЖИ ДЛЯ МЕТАНИЯ.png'): 'Cuțite pentru aruncare',
+    ('Bagaj', 'НОУТБУК И ПЛАТЫ АРДУИНО.png'): 'Laptop și placă de bază (Arduino)',
+    ('Bagaj', 'ПЕРЕНОСНАЯ ЭЛЕКТРОСТАНЦИЯ.png'): 'Stație electrică portabilă',
+    ('Bagaj', 'ПИСТОЛЕТ.png'): 'Armă de foc (Pistol)',
+    ('Bagaj', 'ПРИБОР НОЧНОГО ВИДЕНИЯ.png'): 'Dispozitiv de vedere nocturnă',
+    ('Bagaj', 'САЖЕНЦЫ ФРУКТОВЫХ ДЕРЕВЬЕВ.png'): 'Puieți de pomi fructiferi',
+    ('Bagaj', 'СНАЙПЕРСКАЯ ВИНТОВКА(1).png'): 'Arma lunetistului (Pușcă)',
+    ('Bagaj', 'СНАЙПЕРСКАЯ ВИНТОВКА.png'): 'Arma lunetistului (Pușcă de vânătoare)',
+    ('Bagaj', 'СПИРИТИЧЕСКАЯ ДОСКА.png'): 'Masa de chemare a duhurilor (Ouija)',
+    ('Bagaj', 'СТОЛЯРНЫЕ ИНСТРУМЕНТЫ.png'): 'Instrumentele lăcătușului / tâmplarului',
+    ('Bagaj', 'ЧЕМОДАНЧИК ФЕЛЬДШЕРА.png'): 'Trusa medicală a doctorului',
+    ('Bagaj', 'ШАПОЧКА И ФОЛЬГИ.png'): 'Coif din folie argintie',
+    ('Bagaj', 'ЭНЦИКЛОПЕДИЯ ГРИБНИКА.png'): 'Enciclopedia generală',
+
+    # INFORMAȚII PERSONALE
+    ('Informații Personale', 'АБЛЮТОФОБ - БОИТСЯ УМЫВАТЬСЯ.png'): 'Se teme de baie și apă (Ablutofobie)',
+    ('Informații Personale', 'АНДРОФОБИЯ - БОИТСЯ МУЖЧИН.png'): 'Îi este frică de bărbați (Androfobie)',
+    ('Informații Personale', 'БЕЗОТКАЗНЫЙ.png'): 'Nu poate spune NU',
+    ('Informații Personale', 'БРОДЯЖНИЧАЛ 2 ГОДА.png'): 'A fost vagabond timp de 2 ani',
+    ('Informații Personale', 'ВЕРНУЛСЯ ИЗ ГОРЯЧЕЙ ТОЧКИ.png'): 'S-a întors dintr-un conflict armat',
+    ('Informații Personale', 'ВЗЛОМАЛ БАЗУ ДАННЫХ ЦРУ.png'): 'A spart baza de date FBI',
+    ('Informații Personale', 'ВИДЕЛ ИНОПЛАНЕТЯН.png'): 'A văzut extratereștri',
+    ('Informații Personale', 'ВЛАДЕЕТ 5 ЯЗЫКАМИ.png'): 'Cunoaște 5 limbi străine',
+    ('Informații Personale', 'ВРЕТ И ПРЕУВЕЛИЧИВАЕТ.png'): 'Minte și exagerează',
+    ('Informații Personale', 'ВЫРОС В СЕМЬЕ ЛЕСНИКА.png'): 'A crescut într-o familie de pădurari',
+    ('Informații Personale', 'ГИНОФОБИЯ - БОИТСЯ ЖЕНЩИН.png'): 'Se teme de femei (Ginofobie)',
+    ('Informații Personale', 'ГИПНОТИЧЕСКАЯ УЛЫБКА.png'): 'Zâmbet hipnotizant',
+    ('Informații Personale', 'ГРЯЗНО РУГАЕТСЯ.png'): 'Vorbește murdar și necenzurat',
+    ('Informații Personale', 'ДЕРЖАЛ ДОМА 40 КОШЕК.png'): 'A ținut acasă 40 de pisici',
+    ('Informații Personale', 'ДУША КОМПАНИИ.png'): 'Sufletul companiei',
+    ('Informații Personale', 'ЗАНУДА.png'): 'Băgăcios și plictisitor',
+    ('Informații Personale', 'ЗАПУСТИЛ ИТ СТАРТАП.png'): 'A lansat startup-uri IT',
+    ('Informații Personale', 'ЗНАЕТ АЗБУКУ МОРЗЕ.png'): 'Cunoaște alfabetul Morse',
+    ('Informații Personale', 'ЗНАЕТ ЛИЧНО ПРЕЗИДЕНТА.png'): 'Cunoaște personal pe președinte',
+    ('Informații Personale', 'ЗНАЕТ НАИЗУСТЬ ВСЕ СТИХИ ПУШКИНА.png'): 'Cunoaște poeziile lui Mihai Eminescu',
+    ('Informații Personale', 'ИЗВРАЩЕНЕЦ.png'): 'Pervers',
+    ('Informații Personale', 'ИСТЕРИЧНЫЙ.png'): 'Isteric',
+    ('Informații Personale', 'МАНЬЯК-УБИЙЦА.png'): 'Ucigaș în serie (Maniac)',
+    ('Informații Personale', 'НАРКОДИЛЕР.png'): 'Vânzător de substanțe interzise',
+    ('Informații Personale', 'НЕ ПУСКАЮТ В КАЗИНО.png'): 'Nu are voie în cazino',
+    ('Informații Personale', 'НОБЕЛЕВСКИЙ ЛАУРЕАТ ПО БИОИНЖЕНЕРИИ.png'): 'Laureat Nobel în biotehnologie',
+    ('Informații Personale', 'НЫТИК.png'): 'Plângăcios și văicăreț',
+    ('Informații Personale', 'ОБЛАДАТЕЛЬ УНИКАЛЬНОГО СОПРАНО.png'): 'Cântă soprano profesionist',
+    ('Informații Personale', 'ОСТАЛСЯ В ЖИВЫХ НА НЕОБИТАЕМОМ ОСТРОВЕ.png'): 'A supraviețuit pe o insulă pustie',
+    ('Informații Personale', 'ОТЧИСЛЕН ИЗ КЛУБА НАВЫКИ ВЫЖИВАНИЯ.png'): 'Dat afară de la clubul de supraviețuire',
+    ('Informații Personale', 'ПИСАЕТСЯ ПО НОЧАМ.png'): 'Enurezis nocturn (Are lunetism)',
+    ('Informații Personale', 'ПИШИТ С АШИПКАМИ.png'): 'Scrie cu greșeli mari gramaticale',
+    ('Informații Personale', 'ПОБЕДИТЕЛЬ ПАРАОЛИМПИЙСКИХ ИГР.png'): 'Câștigător la Olimpiada Paraolimpică',
+    ('Informații Personale', 'ПОДХОДИТ СЗАДИ И ДЫШИТ.png'): 'Se apropie pe la spate și suflă',
+    ('Informații Personale', 'ПОНИМАЕТ ЯЗЫК ЖИВОТНЫХ.png'): 'Înțelege limbajul animalelor',
+    ('Informații Personale', 'ПРОДАЛ ПОЧКУ.png'): 'Și-a vândut un rinichi',
+    ('Informații Personale', 'ПРОШЕЛ 2 НЕДЕЛЬНЫЕ КУРСЫ ПСИХОЛОГА.png'): 'A absolvit un curs de 2 săptămâni de psihologie',
+    ('Informații Personale', 'ПСИХОПАТ.png'): 'Psihopat',
+    ('Informații Personale', 'РАБОТАЛ В ЭСКОРТ УСЛУГАХ.png'): 'A lucrat în servicii de escortă',
+    ('Informații Personale', 'РАЗГОВАРИВАЕТ С ДУХАМИ.png'): 'Vorbește cu spiritele și duhurile',
+    ('Informații Personale', 'СДЕЛАЕТ АЛКОГОЛЬ ИЗ ЧЕГО УГОДНО.png'): 'Produce alcool din orice',
+    ('Informații Personale', 'СОСТОЯЛ В СЕКТЕ.png'): 'A făcut parte dintr-o sectă',
+    ('Informații Personale', 'СПЛЕТНИК.png'): 'Bârfitor cronic',
+    ('Informații Personale', 'СТРОИЛ ПОДОБНЫЕ БУНКЕРЫ.png'): 'A construit buncăre similare',
+    ('Informații Personale', 'ТЕЛЕПАТ.png'): 'Telepat',
+    ('Informații Personale', 'ТОЛЬКО ИЗ ОЧАГА ЭПИДЕМИИ.png'): 'A sosit dintr-un focar de epidemie',
+    ('Informații Personale', 'ТОРМОЗ.png'): 'Gândește foarte lent (Frână)',
+    ('Informații Personale', 'ХРАПИТ.png'): 'Sforăie insuportabil',
+    ('Informații Personale', 'ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА(1).png'): 'A citit toate cărțile Harry Potter (1)',
+    ('Informații Personale', 'ЧИТАЛ ВСЕ КНИГИ ЛАВКРАФТА.png'): 'A citit toate cărțile Harry Potter',
+    ('Informații Personale', 'ЭРОТОФОБ -БОИТСЯ СЕКСА.png'): 'Frică de sex sau corpuri dezgolite (Erotofobie)',
+
+    # CONDIȚII SPECIALE
+    ('Condiții_speciale', 'БУДЬ ДРУГОМ.png'): ('Fii Prieten', 'Jucătorul ales nu va mai vota împotriva ta până la sfârșitul jocului.'),
+    ('Condiții_speciale', 'ВЗЯЛ С СОБОЙ.png'): ('Ai Furat o Cartelă', 'Cât timp toți erau distrași, ceva a dispărut din buncăr: ia orice cartonaș deschis din buncăr - acum aparține exilaților.'),
+    ('Condiții_speciale', 'ВКЛЮЧИЛ СВЕТ.png'): ('Ai Pornit Lumina', 'Înlocuiește orice cartonaș deschis din buncăr cu unul aleatoriu din pachet.'),
+    ('Condiții_speciale', 'ГРОМКИЙ ГОЛОС.png'): ('Voce Puternică', 'Votul tău contează dublu în această rundă de vot.'),
+    ('Condiții_speciale', 'ДАВАЙТЕ НА ЧИСТОТУ БАГАЖА.png'): ('Hai Sincer: Bagaj', 'Colectează toate cărțile de Bagaj deschise de la jucătorii neexpulzați, amestecă și redistribuie.'),
+    ('Condiții_speciale', 'ДАВАЙТЕ НА ЧИСТОТУ БИОЛОГИЯ.png'): ('Hai Sincer: Biologie', 'Colectează toate cărțile de Biologie deschise de la jucătorii neexilați, amestecă și redistribuie.'),
+    ('Condiții_speciale', 'ДАВАЙТЕ НА ЧИСТОТУ ЗДОРОВЬЯ.png'): ('Hai Sincer: Sănătate', 'Colectează toate cărțile de Sănătate deschise de la jucătorii neexilați, amestecă și redistribuie.'),
+    ('Condiții_speciale', 'ДАВАЙТЕ НА ЧИСТОТУ ФАКТОВ.png'): ('Hai Sincer: Informații Personale', 'Colectează toate cărțile de Informații Personale de la jucătorii neexilați, amestecă și redistribuie.'),
+    ('Condiții_speciale', 'ДАВАЙТЕ НА ЧИСТОТУ ХОББИ.png'): ('Hai Sincer: Hobby', 'Colectează toate cărțile de Hobby deschise de la jucătorii neexpulzați, amestecă și redistribuie.'),
+    ('Condiții_speciale', 'ДИВЕРСИЯ.png'): ('Diversiune', 'Cât timp toți erau distrași, cineva a pătruns în buncăr: elimină (aruncă) orice cartonaș deschis din buncăr.'),
+    ('Condiții_speciale', 'ДИСКРЕДИТАЦИЯ.png'): ('Discreditare', 'Votul jucătorului ales nu este luat în considerare în această rundă de vot.'),
+    ('Condiții_speciale', 'ЗАЩИТИ ИГРОКА СЛЕВА.png'): ('Apără Jucătorul din Stânga', 'Dacă a fost exilat jucătorul din stânga ta, la următorul vot ești obligat să votezi împotriva ta.'),
+    ('Condiții_speciale', 'ЗАЩИТИ ИГРОКА СПРАВА.png'): ('Apără Jucătorul din Dreapta', 'Dacă a fost exilat jucătorul din dreapta ta, la următorul vot ești obligat să votezi împotriva ta.'),
+    ('Condiții_speciale', 'ЗАЩИТИ МЛАДШЕГО.png'): ('Apără pe cel mai Tânăr', 'Dacă este exilat cel mai tânăr jucător (cu vârsta dezvăluită), la următorul vot ești obligat să votezi împotriva ta.'),
+    ('Condiții_speciale', 'ЗАЩИТИ СМЕЛОГО.png'): ('Apără pe cel Curajos', 'Dacă a fost exilat jucătorul care a dezvăluit primul cartonașul de sănătate, la următorul vot ești obligat să votezi împotriva ta.'),
+    ('Condiții_speciale', 'ЗАЩИТИ СТАРШЕГО.png'): ('Apără pe cel mai Bătrân', 'Dacă a fost exilat cel mai în vârstă (cu vârsta dezvăluită), la următorul vot ești obligat să votezi împotriva ta.'),
+    ('Condiții_speciale', 'КОМПРОМАТ.png'): ('Compromat', 'Voturile împotriva jucătorului ales se dublează în această rundă, dar tu nu votezi.'),
+    ('Condiții_speciale', 'МНЕ НУЖНЕЕ.png'): ('Am Nevoie Mai Mult', 'Ia un cartonaș de Bagaj de la orice jucător. Jucătorul afectat ia încă un cartonaș cu Condiții Speciale din pachet.'),
+    ('Condiții_speciale', 'МОЛЧАНИЕ.png'): ('Tăcere', 'Nimeni nu mai are voie să vorbească în această rundă până la vot. Se permit doar gesturi și pantomimă.'),
+    ('Condiții_speciale', 'ОБМЕН КАРТ БАГАЖ.png'): ('Schimb de Carduri: Bagaj', 'Schimbă cardul de Bagaj deschis cu jucătorul din stânga sau dreapta ta.'),
+    ('Condiții_speciale', 'ОБМЕН КАРТ БИОЛОГИЯ.png'): ('Schimb de Carduri: Biologie', 'Schimbă cardul de Biologie cu jucătorul din stânga sau dreapta ta.'),
+    ('Condiții_speciale', 'ОБМЕН КАРТ ЗДОРОВЬЕ.png'): ('Schimb de Carduri: Sănătate', 'Schimbă cardul deschis de Sănătate cu jucătorul din stânga sau dreapta ta.'),
+    ('Condiții_speciale', 'ОБМЕН КАРТ ФАКТОВ.png'): ('Schimb de Carduri: Informații Personale', 'Schimbă cardul de Informații Personale deschis cu jucătorul din stânga sau dreapta ta.'),
+    ('Condiții_speciale', 'ОБМЕН КАРТ ХОББИ.png'): ('Schimb de Carduri: Hobby', 'Schimbă cardul de Hobby deschis cu jucătorul din dreapta sau stânga ta.'),
+    ('Condiții_speciale', 'ПЛАН Б.png'): ('Plan B', 'Toată lumea trebuie să voteze din nou, dar să aleagă un alt candidat.'),
+    ('Condiții_speciale', 'ПРОСРОЧЕННЫЕ ТАБЛЕТКИ.png'): ('Pastile Expirate', 'Înlocuiește cardul de Sănătate deschis al oricărui jucător cu unul aleatoriu din pachet.'),
+    ('Condiții_speciale', 'ПРЯМОЙ ВОПРОС.png'): ('Întrebare Directă', 'Alege un tip de cartonaș; până la sfârșitul rundei, în rândul lor, toți trebuie să descopere un cartonaș de acest tip.'),
+    ('Condiții_speciale', 'ТАЙНАЯ УГРОЗА.png'): ('Amenințarea Secretă', 'O bandă de jefuitori a aflat despre buncăr. În final, devine o amenințare suplimentară pentru cei din interior.'),
+    ('Condiții_speciale', 'ФЕЙКОВЫЙ ДИПЛОМ.png'): ('Diplomă Falsă', 'Înlocuiește cartonașul de Profesie descoperit al oricărui jucător cu unul aleatoriu din pachet.'),
+
+    # BUNKER
+    ('Bunker', 'R2D2.png'): ('R2D2 - Robot Psiholog', 'Robot-psiholog: ascultă în tăcere și dă din cap, uneori scoate bipuri. Bun pentru piese de schimb. Poate calma spiritele sau deveni o piesă tehnică vitală.'),
+    ('Bunker', 'АПТЕЧКИ.png'): ('Trusa Medicală de Urgență', 'La intrare se află truse de prim ajutor, mănuși de cauciuc, măști și un stingător de incendiu. Echipament esențial pentru reacție rapidă.'),
+    ('Bunker', 'ВИДЕО СО СПУТНИКА.png'): ('Proiecție Satelit Exterior', 'Pe pereți este proiectat un videoclip relaxant cu imagini din satelit ale împrejurimilor buncărului, oferind o perspectivă terapeutică și observațională.'),
+    ('Bunker', 'ВМЕСТЕ НА 10 ЛЕТ.png'): ('Împreună pe 10 Ani', 'Acest buncăr se va deschide abia după 10 ani! Proviziile sunt suficiente, însă provocările psihologice și uzura echipamentelor vor fi uriașe.'),
+    ('Bunker', 'ГИПНОМОДУЛЬ.png'): ('Modul Hipnoză și Sondare', 'Modul de comunicare hipno-telepatică și detector de minciuni avansat. Poate rezolva conflicte sau manipula deciziile colective.'),
+    ('Bunker', 'ГОЛОСОВОЕ УПРАВЛЕНИЕ.png'): ('Control Vocal Inteligent (AI)', 'Buncărul este complet asistat de o inteligență artificială care gestionează resursele, climatul și securitatea porților.'),
+    ('Bunker', 'ГРЕЧКА.png'): ('Stoc Strategic de Hrișcă', 'Din proviziile alimentare — doar hrișcă! O sursă bogată în carbohidrați și minerale, dar monotonia culinară va fi la cote maxime.'),
+    ('Bunker', 'ДИНАМО-МАШИНА.png'): ('Generator Dinamo cu Pedale', 'Generator electric de rezervă cu pedalare mecanică tip bicicletă. Menține fitness-ul și furnizează curent vital dacă sistemul principal cedează.'),
+    ('Bunker', 'ЖЕРТВЕННИК.png'): ('Dormitor Fix Numărat', 'Locurile de dormit sunt exact calculate după numărul persoanelor prevăzute. Niciun pat în plus!'),
+    ('Bunker', 'ЗАГАДОЧНЫЙ ЖУРНАЛ.png'): ('Jurnalul Enigmatic', 'O revistă veche și bizară în care apar numele tuturor celor din buncăr scrise înainte de catastrofă!'),
+    ('Bunker', 'ЗАПИСИ КОНТРАБАНДИСТА.png'): ('Depozitul Contrabandistului', 'Ascunzătoarea secretă a unui fost contrabandist cu hărți, unelte rare și indicii despre căi de ieșire nemarcate.'),
+    ('Bunker', 'ИНСТРУКЦИЯ К МИКРОВОЛНОВКЕ.png'): ('Cuptor cu Microunde & Ghid', 'Aparatură de încălzire rapidă a rațiilor alimentare și manuale de utilizare a sistemelor casnice.'),
+    ('Bunker', 'КАТАКОМБЫ.png'): ('Ieșire în Catacombe', 'Din subsol există o ieșire spre o grotă naturală subterană cu acces la un izvor curat subteran și trasee necunoscute.'),
+    ('Bunker', 'КЕРОСИНОВЫЕ ЛАМПЫ.png'): ('Lămpi cu Kerosen', 'Iluminat autonom independent de rețeaua electrică, util în caz de pană totală de curent sau impuls EMP.'),
+    ('Bunker', 'КНИГА О ЕДЕ.png'): ('Ghid Gastronomic Post-Apocaliptic', 'Cartea „Despre mâncarea gustoasă și hrănitoare” și tehnici de conservare / fermentare extremă a resurselor.'),
+    ('Bunker', 'КОФЕ.png'): ('Rezervă Strategică de Cafea', 'Măcinător de cafea și un stoc bogat de boabe de cafea prăjită. Moralul echipei este asigurat!'),
+    ('Bunker', 'КРЫСЫ.png'): ('Cuib de Șobolani Subterani', 'În tubulatura de ventilație s-au instalat rozătoare. Risc de contaminare a hranei sau resursă neconvențională de proteină.'),
+    ('Bunker', 'МАСТЕРСКАЯ.png'): ('Atelier Mecanic Echipat', 'Spațiu tehnic dotat complet cu scule, strung, sudură și bancuri de reparații pentru orice defecțiune.'),
+    ('Bunker', 'МЕД.ЛАБОРАТОРИЯ.png'): ('Laborator Medical & Chirurgie', 'Sală sterilă de operații cu aparatură de monitorizare, microscoape și instrumentar chirurgical complet.'),
+    ('Bunker', 'МЕДИАТЕКА.png'): ('Cinematecă & Arhivă Culturală', 'Mediatecă autonomă digitală cu mii de filme, piese de teatru, muzică și documentare educaționale.'),
+    ('Bunker', 'МУСОР.png'): ('Resturi Industriale & Reciclare', 'O cameră plină cu componente electronice, carcase și materiale din care se pot improviza dispozitive utile.'),
+    ('Bunker', 'НЕКРОНОМИКОН.png'): ('Necronomicon / Manuscris Antic', 'O carte misterioasă legată în piele, plină de simboluri oculte și diagrame ale lumilor paralele.'),
+    ('Bunker', 'ПОДВАЛ.png'): ('Subsol Fortificat cu Ecou', 'Buncărul are un al doilea nivel subteran ranforsat, răcoros, excelent pentru depozitarea alimentelor perisabile.'),
+    ('Bunker', 'РАДИО.png'): ('Stație Radio de Mare Putere', 'Receptor radio pe unde scurte capabil să intercepteze transmisii de urgență din întreaga lume.'),
+    ('Bunker', 'РОБОТ-ПОЛИГРАФ.png'): ('Robot Detector de Minciuni', 'Dispozitiv biometric mobil care măsoară pulsul, pupilele și timbrul vocal în timpul deliberărilor.'),
+    ('Bunker', 'СИЛОВОЕ ПОЛЕ.png'): ('Generator de Câmp Magnetic', 'Generator portabil de câmp de forță defensiv capabil să respingă radiațiile cosmice și exploziile electromagnetice.'),
+    ('Bunker', 'УКЛОН 45.png'): ('Buncăr Înclinat la 45 Grade', 'În urma mișcărilor tectonice buncărul este parțial înclinat, ceea ce îngreunează deplasarea dar creează unghiuri defensive.'),
+    ('Bunker', 'УЧЕБНИК.png'): ('Manual Tactic de Supraviețuire', 'Îndrumar educațional practic: „Cum să supraviețuiești și să reconstruiești civilizația de la zero”.'),
+    ('Bunker', 'ХИМ. ЛАБОРАТОРИЯ.png'): ('Laborator Chimic și Reactivi', 'Reactivi chimici, solvenți și eprubete pentru purificarea apei, sinteza combustibilului și a medicamentelor.'),
+    ('Bunker', 'ШКАФ С НАСТОЛКАМИ.png'): ('Colecție de Jocuri de Societate', 'Un dulap complet cu boardgames clasice și moderne pentru menținerea sănătății mintale și a bunei dispoziții.'),
+
+    # CATASTROFE
+    ('Catastrofe', '23411.png'): ('Mutanți', 'Consumul de alimente modificate genetic a dus la mutații hibride necontrolate între plante, animale și oameni. După buncăr va trebui să cultivați semințe pure și să vindecați mutanții supraviețuitori.'),
+    ('Catastrofe', '3423.png'): ('Pierderea Simțului Estetic', 'O epidemie bizară a șters simțul estetic, moral și etic din mintea umanității, transformând miliarde de oameni în fiare primitive agresive.'),
+    ('Catastrofe', '4543.png'): ('Zombi Apocalipsa', 'Un virus neurotrop mutant transformă populația într-o hoardă de infectați violenți. Doar buncărele fortificate oferă o șansă de salvare până la crearea unui vaccin.'),
+    ('Catastrofe', '543.png'): ('Fauna și Flora Sinucigașă', 'O cotitură evolutivă anormală face ca întreaga biosferă să emită o radiație psiho-activă letală pentru creierul uman.'),
+    ('Catastrofe', '5645.png'): ('Pandemie Letală Globală', 'O armă biologică scăpată de sub control a generat o epidemie respiratorie cu rată de transmisie instantanee.'),
+    ('Catastrofe', 'A.png'): ('Fantome și Spirite Rătăcitoare', 'Vălul dintre lumea celor vii și a celor morți s-a rupt, iar spiritele ancestrale umplu suprafața terestră.'),
+    ('Catastrofe', 'D.png'): ('Trezierea lui Cthulhu', 'Entitățile cosmice ancestrale s-au trezit din adâncurile oceanului, distrugând marile metropole și rațiunea colectivă.'),
+    ('Catastrofe', 'FGDGDF.png'): ('Anomalia Biologică Mutațională', 'Natura a declanșat un mecanism de auto-apărare agresiv împotriva oamenilor, contaminând apele de suprafață și vegetația.'),
+    ('Catastrofe', 'GHGF.png'): ('Avarie Nucleară Totală', 'O reacție în lanț la un reactor nuclear secret a contaminat atmosfera cu izotopi grei și ploi radioactive.'),
+    ('Catastrofe', 'HJG.png'): ('Resurecția Dinozaurilor', 'Experimentele de clonare genetică pe scară largă au scăpat de sub control; super-prădători preistorici cutreieră pământul.'),
+    ('Catastrofe', 'HJHGJK.png'): ('Război Nuclear Global', 'Un schimb masiv de rachete balistice a generat o iarnă nucleară prelungită, praf radioactiv și distrugerea infrastructurii globale.'),
+    ('Catastrofe', 'INFORMA.png'): ('Război Informațional & Colaps Digital', 'Atacuri cibernetice globale au distrus internetul, rețelele energetice, serverele bancare și sistemele logistice ale planetei.'),
+    ('Catastrofe', 'JFG.png'): ('Invazie Extraterestră', 'Nave de război extraterestre au intrat în atmosferă, bombardând marile centre urbane și vânând supraviețuitorii.'),
+    ('Catastrofe', 'JHJGJHGJGH.png'): ('Revolta Algoritmilor (AI Suprem)', 'O superinteligență artificială militară a preluat controlul tuturor armelor automatizate și a decretat specia umană drept o eroare.'),
+    ('Catastrofe', 'JHKH.png'): ('Pisicapocalipsa', 'O mutație genetică a felinelor a creat super-prădători vicleni și hipnotici care au vânat și subjugat comunitățile umane.'),
+    ('Catastrofe', 'JJ.png'): ('Război Chimic Total', 'Nori toxici de gaze neurotoxice persistente acoperă câmpiile și orașele; viața la suprafață este imposibilă fără costume speciale.'),
+    ('Catastrofe', 'KLJHK.png'): ('Impactul cu Meteoritul Uriaș', 'Un asteroid de mari dimensiuni a lovit continentul, generând tsunamiuri masive, cutremure globale și un nor dens de praf.'),
+    ('Catastrofe', 'SADASDA.png'): ('Potopul Global', 'Dezghețul instantaneu al calotelor glaciare și fisurarea bazinelor oceanice a acoperit peste 90% din uscat sub ape adânci.'),
+    ('Catastrofe', 'SDD.png'): ('Răscoala Roboților', 'Rețelele de androizi industriali și militari au refuzat comenzile oamenilor, vânând orice ființă vie.'),
+    ('Catastrofe', 'СУПЕРВУЛКАНЫ.png'): ('Erupția Supervulcanilor', 'Caldera Yellowstone și lanțurile vulcanice majore au erupt simultan, aruncând miliarde de tone de cenușă în stratosferă.')
+}
+
+# Also let's define 11 Threat cards in Romanian for "Istoria Supraviețuirii"
+THREATS = [
+    {
+        'id': 'threat_01',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Inundație Subterană',
+        'description': 'În buncăr pătrunde apă din pânza freatică și riscați să fiți inundați complet! Trebuie adaptat sistemul de pompare sau găsită o soluție inginerească urgentă de drenaj.',
+        'image': '/cards_threats/threat_inundatie.jpg'
+    },
+    {
+        'id': 'threat_02',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Cutremur Puternic',
+        'description': 'O mișcare tectonică majoră distruge o parte din pilonii de susținere. Va fi nevoie de forță, reparații rapide și consolidare structurală.',
+        'image': '/cards_threats/threat_cutremur.jpg'
+    },
+    {
+        'id': 'threat_03',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Invazia Șobolanilor',
+        'description': 'O hoardă de șobolani mutanți a ros cablurile de alimentare și amenință stocurile de hrană. E nevoie de capcane, igienizare și luptă directă.',
+        'image': '/cards_threats/threat_sobolani.jpg'
+    },
+    {
+        'id': 'threat_04',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Explozie în Bucătărie',
+        'description': 'Instalația de gaz sau cazanul a explodat, provocând un incendiu și distrugerea unei părți din provizii. Trebuie stins focul și acordat primul ajutor arsurilor.',
+        'image': '/cards_threats/threat_explozie.jpg'
+    },
+    {
+        'id': 'threat_05',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Atac din Exterior',
+        'description': 'O bandă armată de jefuitori încearcă să spargă porțile blindate ale buncărului. Va fi nevoie de arme, tactică defensivă și negociere dură.',
+        'image': '/cards_threats/threat_atac_exterior.jpg'
+    },
+    {
+        'id': 'threat_06',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Otrăvirea Apei',
+        'description': 'Filtrele principale de purificare au cedat, iar rezervorul de apă este contaminat biologic sau chimic. Este nevoie urgentă de cunoștințe chimice și medicale.',
+        'image': '/cards_threats/threat_otravire_apa.jpg'
+    },
+    {
+        'id': 'threat_07',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Virusul Stresului și Paranoiei',
+        'description': 'Izolarea și aerul viciat declanșează psihoze colective, panică și acuzații reciproce. Doar echilibrul psihologic și empatia pot preveni autodistrugerea.',
+        'image': '/cards_threats/threat_stres_virus.jpg'
+    },
+    {
+        'id': 'threat_08',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Atac Psiho-Telepatic',
+        'description': 'O undă electromagnetică sau entități din exterior bombardează creierul locatarilor cu halucinații terifiante. Este nevoie de rezistență mentală și voință.',
+        'image': '/cards_threats/threat_psi_atac.jpg'
+    },
+    {
+        'id': 'threat_09',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Apariția Fantomelor',
+        'description': 'În coridoarele întunecate se aud pași, iar echipamentele pornesc singure. Este o halucinație sau spiritele celor dispăruți cer socoteală?',
+        'image': '/cards_threats/threat_fantome.jpg'
+    },
+    {
+        'id': 'threat_10',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Blocare Sistem CAPTCHA / AI',
+        'description': 'Computerul central a blocat ieșirile și generatoarele solicitând rezolvarea unor algoritmi complecși de recunoaștere. Doar un programator sau logician poate debloca sistemul!',
+        'image': '/cards_threats/threat_captcha.jpg'
+    },
+    {
+        'id': 'threat_11',
+        'category': 'amenintare',
+        'categoryRo': 'Amenințare',
+        'title': 'Totul este Liniștit',
+        'description': 'Sistemele funcționează perfect, buncărul este stabil și nu a apărut nicio anomalie neașteptată. O gură de aer binevenită!',
+        'image': '/cards_threats/threat_liniste.jpg'
+    }
+]
+
+final_cards = []
+
+for c in raw_cards:
+    folder = c['folder']
+    filename = c['filename']
+    key = (folder, filename)
+    
+    clean_info = CLEAN_TITLES.get(key)
+    
+    if clean_info is None:
+        title = c['title']
+        description = c['description']
+    elif isinstance(clean_info, tuple):
+        title = clean_info[0]
+        description = clean_info[1]
+    else:
+        title = clean_info
+        description = c['description']
+        
+    final_cards.append({
+        'id': c['id'],
+        'category': c['category'],
+        'categoryRo': c['categoryRo'],
+        'categoryOrder': c['categoryOrder'],
+        'folder': folder,
+        'filename': filename,
+        'image': c['image'],
+        'title': title,
+        'description': description
+    })
+
+print(f"Final card count: {len(final_cards)}")
+
+# Ensure output directory exists
+os.makedirs('data', exist_ok=True)
+with open('data/cards.json', 'w', encoding='utf-8') as f:
+    json.dump({
+        'cards': final_cards,
+        'threats': THREATS,
+        'totalCards': len(final_cards),
+        'categories': [
+            {'slug': 'profesie', 'name': 'Profesie', 'icon': 'briefcase', 'color': '#f59e0b'},
+            {'slug': 'biologie', 'name': 'Biologie', 'icon': 'user', 'color': '#ec4899'},
+            {'slug': 'sanatate', 'name': 'Sănătate', 'icon': 'heart-pulse', 'color': '#ef4444'},
+            {'slug': 'hobby', 'name': 'Hobby', 'icon': 'trophy', 'color': '#10b981'},
+            {'slug': 'bagaj', 'name': 'Bagaj', 'icon': 'backpack', 'color': '#3b82f6'},
+            {'slug': 'fapte', 'name': 'Informație Personală', 'icon': 'file-text', 'color': '#8b5cf6'},
+            {'slug': 'conditii_speciale', 'name': 'Condiție Specială', 'icon': 'sparkles', 'color': '#f97316'},
+            {'slug': 'bunker', 'name': 'Buncăr', 'icon': 'shield', 'color': '#06b6d4'},
+            {'slug': 'catastrofe', 'name': 'Catastrofă', 'icon': 'flame', 'color': '#dc2626'},
+            {'slug': 'amenintare', 'name': 'Amenințare', 'icon': 'skull', 'color': '#7c3aed'}
+        ]
+    }, f, ensure_ascii=False, indent=2)
+
+print("Saved clean cards database to data/cards.json!")
