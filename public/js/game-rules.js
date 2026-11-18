@@ -84,6 +84,12 @@
     const max = Math.max(0, ...eligible.map((p) => p.votes || 0));
     return max ? eligible.filter((p) => p.votes === max).map((p) => p.id) : [];
   }
+  function showVoteTally(state) {
+    return (
+      ['voting', 'tiebreak'].includes(state.phase) &&
+      ['collecting', 'result'].includes(state.voteSession?.stage)
+    );
+  }
   // Unknown card metadata remains unknown: never derive game outcomes from age or real-world assumptions.
   function fertility(player) {
     const biology = player.cards.biologie?.gameTraits;
@@ -113,6 +119,7 @@
     validateSchedule,
     exilesInRound,
     topCandidates,
+    showVoteTally,
     normalize,
     reproduction,
   };

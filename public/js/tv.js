@@ -3,19 +3,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   const socket = window.BunkerClient.create('tv');
   const escapeHtml = window.BunkerClient.escapeHtml;
   let page = 0,
-    pageSize =
-      window.innerHeight < 800 ? 2 : window.innerHeight < 1000 || window.innerWidth < 1600 ? 4 : 6,
+    pageSize = automaticPageSize(),
     lastSpeakerId = null;
   let currentState = null;
+  let detailsOpen = false;
+  let detailsOwnFullscreen = false;
   let displayMode = 'auto';
   try {
     displayMode = localStorage.getItem('bunkerTvDisplay') || 'auto';
   } catch {}
   if (!['auto', 'all', '2', '4', '6', '8', '12'].includes(displayMode)) displayMode = 'auto';
   const sound = window.soundEngine;
-
-  // Initialize Cards Database
-  // Bind events before connecting; the catalog is included in init.
 
   // Socket Events
   socket.on('init', ({ state }) => {
@@ -82,6 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tvBunkerCapVal = document.getElementById('tvBunkerCapVal');
 
   const tvSpeakerBar = document.getElementById('tvSpeakerBar');
+  const tvSpeakerCaption = document.getElementById('tvSpeakerCaption');
   const tvSpeakerName = document.getElementById('tvSpeakerName');
   const tvSpeakerTimer = document.getElementById('tvSpeakerTimer');
   const tvTimerBarFill = document.getElementById('tvTimerBarFill');
@@ -93,6 +92,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tvBunkerCardsList = document.getElementById('tvBunkerCardsList');
   const tvBunkerRevealedCount = document.getElementById('tvBunkerRevealedCount');
   const tvPlayersGrid = document.getElementById('tvPlayersGrid');
+  const tvPlayersArea = document.getElementById('tvPlayersArea');
+  const tvShowDetails = document.getElementById('tvShowDetails');
+  const tvVotingStatus = document.getElementById('tvVotingStatus');
+  const tvVoteTally = document.getElementById('tvVoteTally');
+  const tvVoteCounts = document.getElementById('tvVoteCounts');
 
   // Cinematic Modal
   const tvCinematicModal = document.getElementById('tvCinematicModal');
@@ -125,10 +129,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderTv() {
     if (!currentState) return;
 
+    const mode = currentState.tvDisplay?.mode || 'local';
+    document.body.classList.toggle('tv-controlled', mode !== 'local');
+    document.body.classList.toggle('tv-votes-only', mode === 'votes');
+    document.body.classList.toggle(
+      'tv-details-open',
+      detailsOpen || ['all', 'pages'].includes(mode),
+    );
+    const coveringCard = Boolean(
+      currentState.cardModal &&
+      currentState.cardModal.timestamp === currentState.tvDisplay?.coveredCardAt,
+    );
+    document.body.classList.toggle('tv-card-covered', coveringCard);
+    if (mode === 'votes' || coveringCard) hideProtocol();
     renderHud();
     renderCatastrophe();
     renderBunkerRack();
+    renderVoteTally();
     renderPlayersGrid();
+    tvShowDetails.disabled = false;
   }
 
   function renderHud() {
@@ -139,6 +158,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     tvBunkerCapVal.textContent = `${currentState.bunkerCapacity} locuri / ${aliveCount} rămași`;
 
     // Active speaker bar
+    tvSpeakerCaption.hidden = !currentState.activeSpeakerId;
     if (currentState.activeSpeakerId) {
       const speaker = currentState.players.find((p) => p.id === currentState.activeSpeakerId);
       if (speaker) {
@@ -151,12 +171,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     } else {
       const timer = currentState.timer;
+      const expiredSpeech = timer.type === 'speech' && timer.timeLeft === 0 && !timer.isRunning;
       tvSpeakerBar.classList.toggle(
         'active',
-        timer.type !== 'speech' && (timer.isRunning || timer.timeLeft !== timer.duration),
+        expiredSpeech ||
+          (timer.type !== 'speech' && (timer.isRunning || timer.timeLeft !== timer.duration)),
       );
-      tvSpeakerName.textContent =
-        timer.type === 'defense'
+      tvSpeakerName.textContent = expiredSpeech
+        ? 'Timp expirat'
+        : timer.type === 'defense'
           ? 'Apărare în balotaj'
           : timer.type === 'discussion'
             ? 'Discuție de grup'
@@ -180,8 +203,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function renderCatastrophe() {
     const cat = currentState.catastrophe;
+    tvCatastropheImg.hidden = !cat?.image;
+    if (cat?.image) tvCatastropheImg.src = cat.image;
     if (cat) {
-      tvCatastropheImg.src = cat.image;
       tvCatastropheTitle.textContent = cat.title;
       tvCatastropheDesc.textContent = cat.description || '';
     } else {
@@ -212,9 +236,58 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  function renderVoteTally() {
+    const { phase, voteSession, players } = currentState;
+    const voting = phase === 'voting' || phase === 'tiebreak';
+    const stage = voteSession?.stage;
+    const label = {
+      idle: 'Pregătire',
+      collecting: 'Voturi în direct',
+      result: 'Rezultat închis',
+      defense: 'Apărarea candidaților',
+    }[stage];
+    const status = voting ? `${phase === 'tiebreak' ? 'BALOTAJ' : 'VOTARE'} • ${label}` : '';
+    if (tvVotingStatus.textContent !== status) tvVotingStatus.textContent = status;
+
+    const showTally = window.BunkerRules.showVoteTally(currentState);
+    document.body.classList.toggle('tv-vote-visible', showTally);
+    if (showTally && tvVoteTally.hidden) tvPlayersArea.scrollTop = 0;
+    tvVoteTally.hidden = !showTally;
+    if (!showTally) {
+      tvVoteCounts.replaceChildren();
+      return;
+    }
+
+    const candidates = voteSession.candidates;
+    const leaders = window.BunkerRules.topCandidates(currentState);
+    if (stage === 'collecting' && leaders.length && protocol.dataset.scene === 'voting')
+      hideProtocol();
+    tvVoteCounts.innerHTML = players
+      .filter(
+        (player) =>
+          player.status === 'alive' && (!candidates.length || candidates.includes(player.id)),
+      )
+      .map((player) => {
+        const votes = player.votes || 0;
+        return `<li class="tv-vote-entry${leaders.includes(player.id) ? ' leading' : ''}">
+          <span class="tv-vote-name"><span class="tv-vote-seat">#${player.seat || player.id}</span> ${escapeHtml(player.name)}</span>
+          <strong class="tv-vote-value">${votes}<span class="tv-vote-unit"> ${votes === 1 ? 'vot' : 'voturi'}</span></strong>
+        </li>`;
+      })
+      .join('');
+  }
+
+  function automaticPageSize() {
+    if (window.innerHeight < 800) return 2;
+    return window.innerHeight < 1000 || window.innerWidth < 1600 ? 4 : 6;
+  }
+
   function renderPlayersGrid() {
     tvPlayersGrid.innerHTML = '';
-    const overview = displayMode === 'all';
+    const remote = currentState.tvDisplay;
+    const remotePages = remote?.mode === 'pages';
+    const detailed = detailsOpen || remote?.mode === 'all' || remotePages;
+    const overview = displayMode === 'all' && !detailed;
     if (overview) {
       pageSize = currentState.players.length;
       page = 0;
@@ -227,30 +300,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     lastSpeakerId = currentState.activeSpeakerId;
     page = Math.min(page, pageCount - 1);
     tvPlayersGrid.classList.remove('ultra-compact', 'compact');
-    const columns = overview
-      ? Math.max(2, Math.ceil(Math.sqrt(pageSize * 1.2)))
-      : pageSize <= 4
-        ? 2
-        : pageSize <= 8
-          ? 3
-          : 4;
+    const playerCount = currentState.players.length;
+    const size = remotePages ? remote.size : pageSize;
+    const pageTotal = Math.max(1, Math.ceil(playerCount / size));
+    const visiblePage = remotePages ? Math.min(remote.page, pageTotal - 1) : page;
+    const showAll = detailed && !remotePages;
+    let columns = size <= 4 ? 2 : size <= 8 ? 3 : 4;
+    if (detailed) {
+      const ideal = Math.ceil(Math.sqrt(showAll ? playerCount : size));
+      columns = Math.min(ideal, Math.max(1, Math.floor(window.innerWidth / 225)));
+    } else if (overview) columns = Math.max(2, Math.ceil(Math.sqrt(pageSize * 1.2)));
     tvPlayersGrid.classList.toggle('overview', overview);
     tvPlayersGrid.classList.toggle('overview-dense', overview && pageSize > 12);
+    tvPlayersGrid.classList.toggle('detail-dense', showAll && playerCount > 12);
     tvPlayersGrid.style.gridTemplateColumns = `repeat(${columns}, minmax(0, 1fr))`;
     tvPlayersGrid.style.gridTemplateRows = overview
       ? `repeat(${Math.ceil(pageSize / columns)}, minmax(0, 1fr))`
       : '';
     for (const id of ['tvNextPage', 'tvPreviousPage', 'tvAutoPage'])
       document.getElementById(id).disabled = overview;
-    document.getElementById('tvPageIndicator').textContent = overview
-      ? `Toți cei ${currentState.players.length} jucători`
-      : `Pagina ${page + 1} / ${pageCount} • ${currentState.players.length} dosare`;
-    document.getElementById('tvVotingStatus').textContent = ['voting', 'tiebreak'].includes(
-      currentState.phase,
-    )
-      ? `${currentState.phase === 'tiebreak' ? 'BALOTAJ' : 'VOTARE'} • ${{ idle: 'Pregătire', collecting: 'Înregistrare voturi', result: 'Rezultat închis', defense: 'Apărarea candidaților' }[currentState.voteSession?.stage] || ''}`
-      : '';
-    const visible = currentState.players.slice(page * pageSize, (page + 1) * pageSize);
+    document.getElementById('tvPageIndicator').textContent =
+      showAll || overview
+        ? `Toți cei ${playerCount} jucători`
+        : `Pagina ${visiblePage + 1} / ${pageTotal} • ${playerCount} dosare`;
+    const visible = showAll
+      ? currentState.players
+      : currentState.players.slice(visiblePage * size, (visiblePage + 1) * size);
     visible.forEach((player) => {
       const cardEl = document.createElement('div');
       const isSpeaking = currentState.activeSpeakerId === player.id;
@@ -285,7 +360,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           slotsHtml += `
             <div class="tv-card-slot-item cat-${cat.slug} revealed">
               <span class="tv-slot-cat-icon">${cat.icon}</span>
-              <img src="${escapeHtml(revealedCard.image)}" alt="${escapeHtml(revealedCard.title)}" class="tv-slot-thumb-img" loading="lazy">
+              ${!detailed && revealedCard.image ? `<img src="${escapeHtml(revealedCard.image)}" alt="${escapeHtml(revealedCard.title)}" class="tv-slot-thumb-img" loading="lazy">` : ''}
               <div class="tv-slot-info">
                 <span class="tv-slot-cat-name">${cat.name}</span>
                 <span class="tv-slot-title" title="${escapeHtml(revealedCard.title)}">${escapeHtml(revealedCard.title)}</span>
@@ -311,10 +386,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     // Reduce page density when long revealed titles would push a dossier off-screen.
     if (
+      !detailed &&
       displayMode === 'auto' &&
       pageSize > 2 &&
       [...tvPlayersGrid.children].some(
-        (el) => el.getBoundingClientRect().bottom > window.innerHeight - 8,
+        (el) =>
+          el.getBoundingClientRect().bottom + tvPlayersArea.scrollTop > window.innerHeight - 8,
       )
     ) {
       pageSize = pageSize === 6 ? 4 : 2;
@@ -332,7 +409,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   function showCinematicModal(modalData) {
     if (!modalData || !modalData.card) return;
 
-    tvModalCardImg.src = modalData.card.image;
+    tvModalCardImg.closest('.tv-card-spotlight').hidden = !modalData.card.image;
+    if (modalData.card.image) tvModalCardImg.src = modalData.card.image;
     tvModalCategoryBadge.textContent =
       modalData.card.categoryRo ||
       (modalData.category ? modalData.category.toUpperCase() : 'CARTE');
@@ -448,13 +526,39 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+      const dismissingOverlay =
+        (tvCinematicModal.classList.contains('active') && !isPersistentModal()) ||
+        tvExileOverlay.classList.contains('active') ||
+        protocol.classList.contains('active');
       if (!isPersistentModal()) hideCinematicModal();
       hideCinematicExile();
       hideProtocol();
+      if (detailsOpen && !dismissingOverlay) setDetails(false);
     }
   });
 
-  // Fullscreen button
+  function setDetails(open) {
+    detailsOpen = open;
+    tvShowDetails.setAttribute('aria-pressed', String(open));
+    tvShowDetails.textContent = open
+      ? 'Revino la afișarea normală'
+      : 'Toate dosarele pe tot ecranul';
+    tvPlayersArea.scrollTop = 0;
+    renderTv();
+    if (open && !document.fullscreenElement && document.fullscreenEnabled) {
+      document.documentElement
+        .requestFullscreen()
+        .then(() => {
+          if (detailsOpen) detailsOwnFullscreen = true;
+          else return document.exitFullscreen();
+        })
+        .catch(() => {});
+    } else if (!open && detailsOwnFullscreen && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+  tvShowDetails.onclick = () => setDetails(!detailsOpen);
+
   const btnTvFullscreen = document.getElementById('btnTvFullscreen');
   btnTvFullscreen.addEventListener('click', () => {
     if (!document.fullscreenElement) {
@@ -471,6 +575,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
       btnTvFullscreen.textContent = '⛶';
+      detailsOwnFullscreen = false;
+      if (detailsOpen) setDetails(false);
     } else {
       btnTvFullscreen.textContent = '🗗';
     }
@@ -489,18 +595,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       localStorage.setItem('bunkerTvDisplay', displayMode);
     } catch {}
-    pageSize =
-      displayMode === 'auto'
-        ? window.innerHeight < 800
-          ? 2
-          : window.innerHeight < 1000 || window.innerWidth < 1600
-            ? 4
-            : 6
-        : displayMode === 'all'
-          ? currentState.players.length
-          : Number(displayMode);
+    if (displayMode === 'auto') pageSize = automaticPageSize();
     page = 0;
-    renderPlayersGrid();
+    if (currentState) renderPlayersGrid();
   };
   document.getElementById('tvEnableSound').onclick = () => {
     sound.init();
@@ -524,10 +621,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   setInterval(() => {
     if (
       !currentState ||
+      detailsOpen ||
+      (currentState.tvDisplay?.mode && currentState.tvDisplay.mode !== 'local') ||
       displayMode === 'all' ||
       currentState.activeSpeakerId ||
       document.getElementById('tvAutoPage').checked === false ||
-      tvCinematicModal.classList.contains('active')
+      (tvCinematicModal.classList.contains('active') &&
+        !window.BunkerRules.showVoteTally(currentState))
     )
       return;
     const count = Math.max(1, Math.ceil(currentState.players.length / pageSize));
@@ -556,6 +656,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   function showProtocol(data) {
     const scene = protocolScenes[data.scene];
     if (!scene) return;
+    if (
+      currentState &&
+      window.BunkerRules.showVoteTally(currentState) &&
+      (currentState.tvDisplay?.mode === 'votes' ||
+        ['bunker', 'catastrofe', 'amenintare', 'speaker'].includes(data.scene))
+    )
+      return;
     hideProtocol();
     protocol.dataset.scene = data.scene;
     document.getElementById('protocolEmblem').textContent = scene[0];
@@ -568,6 +675,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   protocol.onclick = hideProtocol;
   window.addEventListener('resize', () => {
+    if (displayMode === 'auto') pageSize = automaticPageSize();
     if (currentState) renderPlayersGrid();
   });
   document.getElementById('tvPageSize').value = displayMode;

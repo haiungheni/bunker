@@ -808,6 +808,7 @@
 
 .search-input {
   flex: 1;
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-bright);
   color: #ffffff;
@@ -835,6 +836,50 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 14px;
+}
+
+.tv-remote-controls,
+.tv-remote-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tv-remote-controls {
+  flex-direction: column;
+  margin-block: 16px;
+}
+
+.tv-remote-actions [aria-pressed='true'] {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.card-picker-create-prompt {
+  margin-bottom: 14px;
+}
+
+.card-picker-empty {
+  grid-column: 1 / -1;
+  color: var(--text-dim);
+}
+
+.card-create-form {
+  display: grid;
+  gap: 12px;
+  max-width: 560px;
+}
+
+.card-create-form textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.card-create-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .picker-card-item {

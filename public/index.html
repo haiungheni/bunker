@@ -85,6 +85,7 @@
       </div>
       <div class="timer-right">
         <button class="btn btn-danger btn-sm" id="btnStopSpeaker">Încheie Cuvântul</button>
+        <button class="btn btn-secondary btn-sm" id="btnNextSpeaker" disabled>Următorul vorbitor</button>
       </div>
     </div>
 
@@ -209,6 +210,7 @@
             <div class="voting-actions-top">
               <button class="btn btn-primary" id="btnStartVoting">Pornește un vot nou</button>
               <button class="btn btn-secondary" id="btnCloseVoting" disabled>Închide votarea</button>
+              <button class="btn btn-secondary" id="btnShowVotingOnTv" disabled>Arată votul pe TV</button>
               <button class="btn btn-primary" id="btnStartVoteDiscussion">
                 ⏱️ Pornește Discuția de 60s
               </button>
@@ -330,6 +332,22 @@
             </div>
           </div>
 
+          <div class="tv-remote-controls">
+            <h3>Dosare pe TV</h3>
+            <div class="tv-remote-actions">
+              <button type="button" class="btn btn-secondary btn-sm" data-tv-view="all" aria-pressed="false">Toate dosarele</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-tv-view="4" aria-pressed="false">4 pe pagină</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-tv-view="6" aria-pressed="false">6 pe pagină</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-tv-view="local" aria-pressed="true">Control de la TV</button>
+            </div>
+            <div class="tv-remote-actions" id="tvRemotePagination" hidden>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnTvRemotePrevious" aria-label="Pagina TV precedentă">◀</button>
+              <span id="tvRemotePage" role="status"></span>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnTvRemoteNext" aria-label="Pagina TV următoare">▶</button>
+            </div>
+            <button type="button" class="btn btn-danger-outline btn-sm" id="btnRevokeModeratorSessions" hidden>Revocă celelalte sesiuni de moderator</button>
+          </div>
+
           <div class="tv-features-list">
             <h3>Ce va apărea pe ecranul TV:</h3>
             <ul>
@@ -347,7 +365,7 @@
   </div>
 
   <!-- MODAL: CARD PICKER (TOUCH OPTIMIZED SELECTOR) -->
-  <div class="modal-overlay" id="cardPickerModal">
+  <div class="modal-overlay" id="cardPickerModal" inert>
     <div class="modal-box card-picker-box">
       <div class="modal-header">
         <div class="modal-title-wrap">
@@ -374,6 +392,19 @@
       </div>
 
       <div class="modal-body card-picker-body">
+        <div id="cardPickerCreatePrompt" class="card-picker-create-prompt" hidden>
+          <button type="button" class="btn btn-secondary" id="btnOpenCardCreate">Creează cartonaș</button>
+        </div>
+        <form id="cardCreateForm" class="card-create-form" hidden>
+          <label for="cardCreateTitle">Titlu</label>
+          <input id="cardCreateTitle" class="search-input" type="text" maxlength="60" required>
+          <label for="cardCreateDescription">Descriere (opțional)</label>
+          <textarea id="cardCreateDescription" class="search-input" maxlength="600" rows="4"></textarea>
+          <div class="card-create-actions">
+            <button type="submit" class="btn btn-primary" id="btnSaveCardCreate">Salvează și folosește</button>
+            <button type="button" class="btn btn-secondary" id="btnCancelCardCreate">Înapoi la căutare</button>
+          </div>
+        </form>
         <div class="card-picker-grid" id="cardPickerGrid">
           <!-- Cards rendered here -->
         </div>

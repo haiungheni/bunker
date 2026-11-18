@@ -117,9 +117,215 @@ a:focus-visible {
 }
 .tv-main-grid-area {
   min-height: 0;
+  min-width: 0;
 }
 #tvConnectionStatus {
   font-size: 0.8rem;
+}
+
+#tvVotingStatus {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+.tv-vote-tally {
+  flex-shrink: 0;
+}
+.tv-vote-counts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 6px;
+  list-style: none;
+}
+.tv-vote-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+.tv-vote-entry.leading {
+  border-color: var(--accent-gold);
+}
+.tv-vote-visible .tv-cinematic-modal-overlay,
+.tv-card-covered .tv-cinematic-modal-overlay {
+  visibility: hidden;
+  pointer-events: none;
+}
+.tv-controlled .tv-paging-control,
+.tv-controlled #tvShowDetails,
+.tv-votes-only #tvPageIndicator,
+.tv-votes-only .tv-sidebar,
+.tv-votes-only .survivors-header-bar,
+.tv-votes-only .tv-players-grid {
+  display: none;
+}
+.tv-votes-only .tv-vote-counts {
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+  gap: 10px;
+}
+.tv-votes-only .tv-vote-entry {
+  padding: 10px 12px;
+  font-size: clamp(16px, 1.4vw, 26px);
+}
+.tv-votes-only .tv-vote-value {
+  font-size: 1.25em;
+}
+.tv-vote-name {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.tv-vote-seat,
+.tv-vote-unit {
+  font-size: 0.75em;
+  color: var(--text-dim);
+}
+.tv-vote-value {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  font-variant-numeric: tabular-nums;
+}
+.tv-main-grid-area:has(.overview):has(.tv-vote-tally:not([hidden])) {
+  overflow-y: auto;
+}
+.tv-vote-tally:not([hidden]) ~ .tv-players-grid.overview {
+  min-height: 420px;
+}
+
+.tv-details-open:not(.connection-lost) .tv-hud-header:not(:has(.hud-speaker-bar.active)),
+.tv-details-open .hud-left,
+.tv-details-open:not(.connection-lost) .hud-right,
+.tv-details-open .hud-right > :not(#tvConnectionStatus),
+.tv-details-open .tv-sidebar,
+.tv-details-open .survivors-header-bar,
+.tv-details-open .tv-paging-control {
+  display: none;
+}
+.tv-details-open .tv-hud-header {
+  justify-content: center;
+  padding: 4px 10px;
+}
+.tv-details-open .tv-main-grid-area {
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+.tv-details-open .tv-page-controls {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  flex-shrink: 0;
+  padding: 6px 0;
+  background: #06090e;
+}
+.tv-details-open .tv-players-grid {
+  flex: 1 0 auto;
+  align-content: stretch;
+  gap: 8px;
+}
+.tv-details-open .tv-player-card {
+  min-width: 0;
+  gap: 5px;
+  padding: 8px;
+}
+.tv-details-open .tv-player-card.exiled {
+  opacity: 1;
+  filter: none;
+}
+.tv-details-open .tv-player-card.active-speaker {
+  transform: none;
+}
+.tv-details-open .exile-stamp,
+.tv-details-open .tv-slot-cat-icon {
+  display: none;
+}
+.tv-details-open .tv-player-header {
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-bottom: 4px;
+}
+.tv-details-open .tv-player-identity {
+  min-width: 0;
+}
+.tv-details-open .tv-player-id-pill {
+  flex-shrink: 0;
+}
+.tv-details-open .tv-player-name {
+  overflow-wrap: anywhere;
+}
+.tv-details-open .tv-player-slots-grid {
+  flex: 1;
+  gap: 3px;
+}
+.tv-details-open .tv-card-slot-item {
+  min-height: 0;
+  padding: 3px 6px;
+}
+.tv-details-open .tv-slot-info {
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  overflow: visible;
+}
+.tv-details-open .tv-slot-cat-name {
+  flex: 0 0 clamp(74px, 7vw, 130px);
+  font-size: clamp(11px, 0.95vw, 18px);
+  line-height: 1.15;
+  color: var(--text-muted);
+}
+.tv-details-open .tv-slot-title,
+.tv-details-open .tv-slot-unrevealed-text {
+  flex: 1 1 75px;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  font-size: clamp(14px, 1.25vw, 24px);
+  line-height: 1.2;
+}
+.detail-dense .tv-player-card {
+  gap: 3px;
+  padding: 5px;
+}
+.detail-dense .tv-player-name {
+  font-size: clamp(15px, 1vw, 24px);
+  line-height: 1.2;
+}
+.detail-dense .tv-player-slots-grid {
+  gap: 1px;
+}
+.detail-dense .tv-card-slot-item {
+  padding: 0 4px;
+}
+.detail-dense .tv-slot-cat-name {
+  flex-basis: clamp(82px, 6vw, 160px);
+  font-size: clamp(10px, 0.7vw, 17px);
+}
+.detail-dense .tv-slot-title,
+.detail-dense .tv-slot-unrevealed-text {
+  font-size: clamp(13px, 0.85vw, 22px);
+  line-height: 1.15;
+}
+@media (max-height: 900px) {
+  .detail-dense .tv-player-card {
+    gap: 3px;
+    padding: 4px;
+  }
+  .detail-dense .tv-player-id-pill {
+    width: 20px;
+    height: 20px;
+  }
+  .detail-dense .tv-player-slots-grid {
+    gap: 1px;
+  }
+  .detail-dense .tv-card-slot-item {
+    padding-block: 0;
+  }
+  .detail-dense .tv-slot-title,
+  .detail-dense .tv-slot-unrevealed-text {
+    line-height: 1.1;
+  }
 }
 @media (max-width: 768px) {
   .app-header {
@@ -512,6 +718,7 @@ a:focus-visible {
 .tv-modal-card-desc {
   font-size: clamp(20px, 1.65vw, 64px);
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 .tv-modal-badge {
   font-size: clamp(16px, 1.15vw, 44px);

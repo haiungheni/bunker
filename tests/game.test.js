@@ -7,6 +7,7 @@ const {
   applyCommand,
   publicState,
   updateTimer,
+  finishTimer,
   Rules,
 } = require('../lib/game');
 const catalog = JSON.parse(fs.readFileSync(require.resolve('../data/cards.json'), 'utf8'));
@@ -172,9 +173,13 @@ test('public state hides unrevealed bunker identities without mutating full stat
   assert.ok(s.bunkerCards[0].id);
 });
 test('migration accepts the existing game and pauses legacy timers without deadlines', () => {
-  const saved = JSON.parse(fs.readFileSync(require.resolve('../data/gamestate.json'), 'utf8'));
+  const saved = createState(catalog, 8);
+  delete saved.gameId;
+  delete saved.lastSpeakerId;
+  delete saved.exileSchedule;
   const s = migrate(saved);
   assert.equal(s.schemaVersion, 2);
+  assert.ok(s.gameId);
   assert.ok(s.nextPlayerId > Math.max(...s.players.map((p) => p.id)));
   const legacy = createState(catalog, 8);
   delete legacy.timer.endsAt;
@@ -183,6 +188,31 @@ test('migration accepts the existing game and pauses legacy timers without deadl
   assert.throws(() => migrate({ ...legacy, players: null }));
   assert.throws(() => migrate({ ...legacy, bunkerCards: [null, null, null, null, null] }));
   assert.throws(() => migrate({ ...legacy, votesRegistry: { 1: -1 } }));
+});
+test('expired speeches release the floor and advance to the next eligible player', () => {
+  let s = createState(catalog, 8);
+  s = apply(s, 'player:toggle_exile', { playerId: 2, force: true });
+  s = apply(s, 'speaker:set', { playerId: 1 });
+  updateTimer(s, 40000);
+  finishTimer(s);
+  assert.equal(s.timer.timeLeft, 0);
+  assert.equal(s.activeSpeakerId, null);
+  assert.equal(s.lastSpeakerId, 1);
+  s = apply(s, 'speaker:next', {});
+  assert.equal(s.activeSpeakerId, 3);
+  assert.equal(s.timer.isRunning, true);
+});
+test('closed vote totals are retained until a reset is confirmed', () => {
+  let s = apply(createState(catalog, 8), 'game:set_phase', { round: 2, phase: 'voting' });
+  s = apply(s, 'votes:adjust', { playerId: 1, delta: 1 });
+  assert.throws(() => apply(s, 'votes:start', {}));
+  s = apply(s, 'votes:result', {});
+  assert.throws(() => apply(s, 'votes:record', { votes: {} }), { code: 'OVERRIDE_REQUIRED' });
+  assert.throws(() => apply(s, 'votes:start', {}), { code: 'OVERRIDE_REQUIRED' });
+  assert.equal(s.players[0].votes, 1);
+  s = apply(s, 'votes:record', { votes: {}, force: true });
+  assert.equal(s.voteSession.stage, 'collecting');
+  assert.equal(s.players[0].votes, 0);
 });
 test('reproduction remains unknown until explicit card metadata exists', () => {
   const s = createState(catalog, 4);

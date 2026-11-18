@@ -52,9 +52,16 @@ window.BunkerClient = (() => {
     }
   }
   function create(role) {
-    const socket = io({ autoConnect: false, query: { role }, auth: { token: storedToken() } });
+    const socket = io({
+      autoConnect: false,
+      query: { role },
+      auth: { token: role === 'moderator' ? storedToken() : '' },
+    });
     let televisions = 0,
-      loggingIn = false;
+      loggingIn = false,
+      gameId;
+    socket.on('init', ({ state }) => (gameId = state.gameId));
+    socket.on('game:state', (state) => (gameId = state.gameId));
     const updateConnection = () => {
       const badge = document.getElementById(role === 'tv' ? 'tvConnectionStatus' : 'tvStatusBadge');
       if (!badge) return;
@@ -77,34 +84,45 @@ window.BunkerClient = (() => {
       socket.emit('get:state');
     });
     socket.on('disconnect', updateConnection);
-    socket.on('connect_error', async (error) => {
+    async function reconnectModerator() {
+      if (role !== 'moderator' || loggingIn) return;
+      loggingIn = true;
+      storedToken('');
+      socket.disconnect();
+      socket.auth = { token: await authenticate() };
+      loggingIn = false;
+      socket.connect();
+    }
+    socket.on('session:expired', reconnectModerator);
+    socket.on('connect_error', (error) => {
       updateConnection();
-      if (role === 'moderator' && error.message === 'AUTH_REQUIRED' && !loggingIn) {
-        loggingIn = true;
-        storedToken('');
-        socket.auth = { token: await authenticate() };
-        loggingIn = false;
-        socket.connect();
-      }
+      if (error.message === 'AUTH_REQUIRED') reconnectModerator();
     });
     const emit = socket.emit.bind(socket);
     socket.emit = (event, payload = {}, callback) => {
       if (event === 'get:state') return emit(event, payload, callback);
       if (!socket.connected) {
         notify('Comanda nu a fost trimisă: serverul este deconectat. Reîncearcă după reconectare.');
+        callback?.({ success: false });
         return socket;
       }
+      const command = { gameId, ...payload };
       socket.timeout(5000);
-      emit(event, payload, (error, result) => {
+      emit(event, command, (error, result) => {
         if (error) {
           notify(
             'Confirmarea comenzii nu a sosit. Verifică starea partidei înainte de a repeta acțiunea.',
           );
+          callback?.({ success: false });
           return;
         }
         if (!result.success) {
           if (result.code === 'OVERRIDE_REQUIRED' && confirm(result.message))
-            socket.emit(event, { ...payload, force: true }, callback);
+            socket.emit(
+              event,
+              { ...command, force: true, confirmationRevision: result.revision },
+              callback,
+            );
           else {
             notify(result.message);
             if (callback) callback(result);

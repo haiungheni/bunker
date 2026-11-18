@@ -3,5 +3,8 @@ test-results/
 playwright-report/
 artifacts/
 *.tmp
-data/*.bak
-data/history/*.bak
+/local-data/
+/data/gamestate.json*
+/data/games_history.json*
+/data/custom_cards.json*
+/data/history/

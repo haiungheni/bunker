@@ -43,13 +43,18 @@ test('moderator and TV initialize, synchronize safely, vote, undo, archive and r
   await expect(tv.locator('#tvSpeakerName')).toHaveText('Discuție de grup');
   await page.locator('#btnStartVoting').click();
   await expect(page.locator('#voteSessionStatus')).toContainText('Votare deschisă');
+  await expect(tv.locator('#tvVoteCounts li')).toHaveCount(10);
   await page.locator('.candidate-box .vote-btn').nth(1).click();
+  await expect(tv.locator('#tvVoteCounts li').first()).toContainText('1 vot');
   await page.locator('.candidate-box .vote-btn').nth(3).click();
   await page.locator('#btnCloseVoting').click();
+  await expect(tv.locator('#tvVotingStatus')).toContainText('Rezultat închis');
   await expect(page.locator('#topVotedCandidate')).toContainText('BALOTAJ');
   await page.locator('#btnTiebreakTimer').click();
   await expect(page.locator('#votingCandidatesGrid .candidate-box')).toHaveCount(2);
   await page.locator('#btnStartVoting').click();
+  await expect(tv.locator('#tvVoteCounts li')).toHaveCount(2);
+  await expect(tv.locator('#tvVoteCounts li').first()).toContainText('0 voturi');
   await page.locator('#votingCandidatesGrid .vote-btn').nth(1).click();
   await page.locator('#btnCloseVoting').click();
   page.once('dialog', (dialog) => dialog.accept());
@@ -237,7 +242,102 @@ test('card picker searches without diacritics, reveals images and retains state 
   await tv.screenshot({ path: 'artifacts/bunker-tv-revealed.png' });
 });
 
-test('a moderator outside localhost must enter a valid PIN', async ({ page }) => {
+test('creates a missing card and shows all details and live votes on TV', async ({
+  page,
+  context,
+  request,
+}) => {
+  const { token } = await (await request.post('/api/session', { data: {} })).json();
+  const authorization = { Authorization: `Bearer ${token}` };
+  const reset = (playerCount) => request.post('/api/reset', {
+    headers: authorization,
+    data: { playerCount },
+  });
+  expect((await reset(20)).ok()).toBe(true);
+  await page.goto('/');
+  const tv = await context.newPage();
+  await tv.setViewportSize({ width: 1920, height: 1080 });
+  await tv.goto('/tv');
+  await tv.locator('#tvPageSize').selectOption('2');
+  await expect(tv.locator('.tv-player-card')).toHaveCount(2);
+
+  const title = 'Restaurator de hărți și manuscrise din arhive subterane';
+  const description = 'Poate reface planurile vechi ale buncărului.';
+  const profession = page.locator('.player-card').nth(19).locator('.card-slot.cat-profesie');
+  await profession.locator('.slot-btn-add').click();
+  await page.locator('#cardSearchInput').fill(title);
+  await expect(page.locator('.card-picker-empty')).toBeVisible();
+  await page.locator('#btnOpenCardCreate').click();
+  await expect(page.locator('#cardCreateTitle')).toHaveValue(title);
+  await page.locator('#cardCreateDescription').fill(description);
+  await page.locator('#btnSaveCardCreate').click();
+  await expect(page.locator('#cardPickerModal')).not.toHaveClass(/active/);
+  await expect(profession.locator('.slot-title')).toHaveText(title);
+  await expect(tv.locator('#tvModalCardTitle')).toHaveText(title);
+  await expect(tv.locator('#tvModalCardDesc')).toHaveText(description);
+  await expect(tv.locator('#tvModalCardImg')).toBeHidden();
+  await tv.keyboard.press('Escape');
+
+  await tv.locator('#tvShowDetails').click();
+  const cards = tv.locator('.tv-player-card');
+  await expect(cards).toHaveCount(20);
+  await expect(tv.locator('.tv-card-slot-item')).toHaveCount(20 * 7);
+  await expect(tv.locator('.tv-sidebar')).toBeHidden();
+  const lastTitle = cards.last().locator('.cat-profesie .tv-slot-title');
+  await expect(lastTitle).toHaveText(title);
+  await expect(cards.last().locator('.cat-conditii_speciale .tv-slot-cat-name')).toBeVisible();
+  expect(await lastTitle.evaluate((el) => ({
+    whiteSpace: getComputedStyle(el).whiteSpace,
+    overflow: el.scrollWidth > el.clientWidth,
+  }))).toEqual({ whiteSpace: 'normal', overflow: false });
+  expect(await cards.last().evaluate((el) => el.getBoundingClientRect().bottom))
+    .toBeLessThanOrEqual(1080);
+  await tv.locator('#tvShowDetails').click();
+  await expect.poll(() => tv.evaluate(() => Boolean(document.fullscreenElement))).toBe(false);
+  await tv.setViewportSize({ width: 1024, height: 600 });
+  await tv.locator('#tvShowDetails').click();
+  await lastTitle.scrollIntoViewIfNeeded();
+  await expect(lastTitle).toBeInViewport();
+  await tv.locator('#tvShowDetails').click();
+  await expect(tv.locator('#tvPageSize')).toHaveValue('2');
+  await expect(cards).toHaveCount(2);
+
+  await page.reload();
+  await expect(profession.locator('.slot-title')).toHaveText(title);
+  await profession.locator('button[title="Schimbă cartea"]').click();
+  await page.locator('#cardSearchInput').fill(title);
+  await expect(page.locator('#cardPickerGrid .picker-card-title')).toHaveText(title);
+  await expect(page.locator('#btnOpenCardCreate')).toBeHidden();
+  await page.locator('#btnCancelCardPicker').click();
+
+  await page.locator('#btnNextRound').click();
+  await expect(page.locator('#headerRoundVal')).toHaveText('2 / 5');
+  await tv.keyboard.press('Escape');
+  await page.locator('[data-tab="tab-voting"]').click();
+  await page.locator('#btnStartVoting').click();
+  const tally = tv.locator('#tvVoteCounts li');
+  await expect(tally).toHaveCount(20);
+  const lastCandidate = page.locator('#votingCandidatesGrid .candidate-box').last();
+  await lastCandidate.locator('.vote-btn').last().click();
+  await expect(tally.last()).toContainText('Jucător 20');
+  await expect(tally.last()).toContainText('1 vot');
+  await lastCandidate.locator('.vote-btn').first().click();
+  await expect(tally.last()).toContainText('0 voturi');
+
+  expect((await reset(6)).ok()).toBe(true);
+  await expect(tv.locator('#tvVoteTally')).toBeHidden();
+  await tv.locator('#tvShowDetails').click();
+  await expect(cards).toHaveCount(6);
+  await expect(tv.locator('.tv-card-slot-item')).toHaveCount(6 * 7);
+});
+
+test('a moderator outside localhost must enter a valid PIN', async ({ page, request }) => {
+  const { token } = await (await request.post('/api/session', { data: {} })).json();
+  const reset = await request.post('/api/reset', {
+    headers: { Authorization: `Bearer ${token}` },
+    data: { playerCount: 8 },
+  });
+  expect(reset.ok()).toBe(true);
   await page.goto('http://127.0.0.2:43187/');
   await expect(page.locator('#moderatorLogin')).toBeVisible();
   await page.locator('#moderatorPin').fill('000000');
@@ -247,6 +347,84 @@ test('a moderator outside localhost must enter a valid PIN', async ({ page }) =>
   await page.locator('#loginForm button').click();
   await expect(page.locator('.player-card')).toHaveCount(8);
   await expect(page.locator('#moderatorLogin')).toBeHidden();
+});
+
+test('moderators can preserve vote focus, control the TV, and discard drafts from an old game', async ({ page, context, request }) => {
+  const { token } = await (await request.post('/api/session', { data: {} })).json();
+  const headers = { Authorization: `Bearer ${token}` };
+  expect((await request.post('/api/reset', { headers, data: { playerCount: 20 } })).ok()).toBe(true);
+  const second = await context.newPage();
+  const tv = await context.newPage();
+  await tv.setViewportSize({ width: 1280, height: 720 });
+  await Promise.all([page.goto('/'), second.goto('/'), tv.goto('/tv')]);
+  await expect(page.locator('.player-card')).toHaveCount(20);
+
+  await page.locator('[data-tab="tab-screen-info"]').click();
+  await page.locator('[data-tv-view="4"]').click();
+  await expect(tv.locator('.tv-player-card')).toHaveCount(4);
+  await page.locator('#btnTvRemoteNext').click();
+  await expect(tv.locator('.tv-player-name').first()).toHaveText('Jucător 5');
+  await page.locator('[data-tv-view="6"]').click();
+  await expect(tv.locator('.tv-player-card')).toHaveCount(6);
+  await page.locator('[data-tv-view="all"]').click();
+  await expect(tv.locator('.tv-player-card')).toHaveCount(20);
+  await page.locator('[data-tv-view="local"]').click();
+
+  await page.locator('[data-tab="tab-players"]').click();
+  await page.locator('#btnNextRound').click();
+  await expect(second.locator('#headerRoundVal')).toHaveText('2 / 5');
+  await second.locator('#selectRound').selectOption('3');
+  await page.locator('#btnTimerAdd15').click();
+  await expect(second.locator('#timerDisplay')).toHaveText('00:45');
+  await expect(second.locator('#selectRound')).toHaveValue('3');
+
+  await page.locator('[data-tab="tab-bunker"]').click();
+  await page.locator('#btnShowCatastropheOnTv').click();
+  await expect(tv.locator('#tvCinematicModal')).toHaveClass(/active/);
+  await page.locator('[data-tab="tab-voting"]').click();
+  await page.locator('#btnStartVoting').click();
+  const firstPlus = page.getByRole('button', { name: 'Adaugă un vot pentru Jucător 1', exact: true });
+  await expect(firstPlus).toBeEnabled();
+  await firstPlus.focus();
+  await page.keyboard.press('Enter');
+  await expect(tv.locator('.tv-vote-value').first()).toHaveText('1 vot');
+  await expect(firstPlus).toBeFocused();
+  await expect(tv.locator('#tvCinematicModal')).toBeHidden();
+  await page.locator('#btnShowVotingOnTv').click();
+  await expect(tv.locator('body')).toHaveClass(/tv-votes-only/);
+  await expect(tv.locator('.tv-vote-entry')).toHaveCount(20);
+  await page.locator('#btnCloseVoting').click();
+  await expect(page.locator('#btnTiebreakTimer')).toBeDisabled();
+  const dismissed = page.waitForEvent('dialog').then((dialog) => dialog.dismiss());
+  await page.locator('#btnResetVoteCounts').click();
+  await dismissed;
+  await expect(page.locator('#voteSessionStatus')).toContainText('Rezultat confirmabil');
+  await expect(tv.locator('.tv-vote-value').first()).toHaveText('1 vot');
+  const confirmed = page.waitForEvent('dialog').then((dialog) => dialog.accept());
+  await page.locator('#btnResetVoteCounts').click();
+  await confirmed;
+  await expect(tv.locator('.tv-vote-value').first()).toHaveText('0 voturi');
+
+  await second.locator('.player-card').first().locator('.cat-profesie .slot-btn-add').click();
+  await expect(second.locator('#cardPickerModal')).toHaveClass(/active/);
+  page.once('dialog', (dialog) => dialog.accept());
+  await page.locator('#btnResetGame').click();
+  await expect(second.locator('#headerRoundVal')).toHaveText('1 / 5');
+  await expect(second.locator('#cardPickerModal')).not.toHaveClass(/active/);
+  await expect(tv.locator('body')).not.toHaveClass(/tv-votes-only/);
+
+  await page.evaluate(async (moderatorToken) => {
+    const client = io({ auth: { token: moderatorToken }, query: { role: 'moderator' } });
+    await new Promise((resolve) => client.once('connect', resolve));
+    await client.timeout(3000).emitWithAck('speaker:set', { playerId: 1 });
+    await client.timeout(3000).emitWithAck('timer:control', { action: 'set', duration: 1, type: 'speech' });
+    client.disconnect();
+  }, token);
+  await expect(page.locator('#timerSpeakerText')).toHaveText('Timp expirat');
+  await expect(tv.locator('#tvSpeakerName')).toHaveText('Timp expirat');
+  await expect(tv.locator('.tv-player-card.active-speaker')).toHaveCount(0);
+  await page.locator('#btnNextSpeaker').click();
+  await expect(page.locator('#timerSpeakerText')).toHaveText('Jucător 2 este la cuvânt');
 });
 
 test('TV honors manual density, fits all 22 dossiers and plays cinematic protocols', async ({

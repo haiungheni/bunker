@@ -6,6 +6,8 @@ const fs = require('node:fs'),
   net = require('node:net');
 const { spawn } = require('node:child_process');
 const { once } = require('node:events');
+const { gzipSync } = require('node:zlib');
+const http = require('node:http');
 const { io } = require('socket.io-client');
 
 async function availablePort() {
@@ -16,14 +18,14 @@ async function availablePort() {
   await new Promise((resolve) => server.close(resolve));
   return port;
 }
-async function boot(port, dir) {
+async function boot(port, dir, pin = '123456') {
   const child = spawn(process.execPath, ['server.js'], {
     cwd: path.resolve(__dirname, '..'),
     env: {
       ...process.env,
       PORT: String(port),
       BUNKER_DATA_DIR: dir,
-      BUNKER_MODERATOR_PIN: '123456',
+      BUNKER_MODERATOR_PIN: pin,
     },
     stdio: ['ignore', 'pipe', 'pipe'],
     windowsHide: true,
@@ -84,6 +86,27 @@ test('real sockets authorize mutations, persist, restart and prevent reset when 
   const tv = await connect(instance.url, '', 'tv');
   sockets.push(tv);
   assert.equal((await command(tv, 'game:reset', { playerCount: 4 })).success, false);
+  const newCard = {
+    title: 'Restaurator de hărți',
+    description: 'Poate reface hărți vechi.',
+    category: 'profesie',
+    playerId: 1,
+    showOnTv: false,
+  };
+  assert.equal((await command(tv, 'catalog:create', newCard)).success, false);
+  assert.equal(
+    (await command(moderator, 'catalog:create', { ...newCard, playerId: 999 })).success,
+    false,
+  );
+  const added = once(moderator, 'catalog:card_added');
+  assert.equal((await command(moderator, 'catalog:create', newCard)).success, true);
+  const [customCard] = await added;
+  assert.equal(customCard.title, newCard.title);
+  assert.equal(
+    (await command(moderator, 'catalog:create', { ...newCard, title: 'RESTAURATOR DE HARTI' }))
+      .success,
+    false,
+  );
   assert.equal(
     (await command(moderator, 'player:rename', { playerId: 1, name: 'Persisted' })).success,
     true,
@@ -125,6 +148,9 @@ test('real sockets authorize mutations, persist, restart and prevent reset when 
   ).json();
   assert.equal(state.players[0].name, 'Persisted');
   assert.equal(state.players[0].votes, 2);
+  assert.deepEqual(state.players[0].cards.profesie, customCard);
+  const restartedCatalog = await (await fetch(instance.url + '/api/cards')).json();
+  assert.equal(restartedCatalog.cards.filter((card) => card.title === newCard.title).length, 1);
   // Make the history index unusable; reset must not discard the active game.
   fs.mkdirSync(path.join(dir, 'games_history.json'));
   const reset = await fetch(instance.url + '/api/reset', {
@@ -141,7 +167,94 @@ test('real sockets authorize mutations, persist, restart and prevent reset when 
   sockets.push(active);
   for (let i = 0; i < 2; i++)
     assert.equal((await command(active, 'game:reset_and_save', { playerCount: 8 })).success, true);
+  assert.equal(
+    (
+      await command(active, 'player:reveal_card', {
+        gameId: state.gameId,
+        playerId: 1,
+        category: 'profesie',
+        cardId: customCard.id,
+      })
+    ).success,
+    false,
+  );
   const history = JSON.parse(fs.readFileSync(path.join(dir, 'games_history.json'), 'utf8'));
   assert.equal(history.length, 2);
   assert.notEqual(history[0].id, history[1].id);
+  assert.equal(
+    (
+      await command(active, 'player:reveal_card', {
+        playerId: 1,
+        category: 'profesie',
+        cardId: customCard.id,
+        showOnTv: false,
+      })
+    ).success,
+    true,
+  );
 });
+
+test(
+  'remote moderator access requires a PIN by default and host can revoke other sessions',
+  { timeout: 15000 },
+  async (t) => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'bunker-sessions-'));
+    const port = await availablePort();
+    const { child, url } = await boot(port, dir, '');
+    let client;
+    t.after(async () => {
+      client?.disconnect();
+      await stop(child);
+      fs.rmSync(dir, { recursive: true, force: true });
+    });
+    const signIn = () =>
+      fetch(url + '/api/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: '{}',
+      });
+    const remoteStatus = await new Promise((resolve, reject) => {
+      const request = http.request(
+        url + '/api/session',
+        {
+          method: 'POST',
+          headers: { Host: 'bunker.local', 'Content-Type': 'application/json' },
+        },
+        (response) => {
+          response.resume();
+          resolve(response.statusCode);
+        },
+      );
+      request.on('error', reject);
+      request.end('{}');
+    });
+    assert.equal(remoteStatus, 401);
+    const compressed = await fetch(url + '/api/session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Content-Encoding': 'gzip' },
+      body: gzipSync('{}'),
+    });
+    assert.equal(compressed.status, 415);
+    const { token: host } = await (await signIn()).json();
+    const { token: other } = await (await signIn()).json();
+    assert.ok(host && other);
+    assert.notEqual(host, other);
+    client = await connect(url, other);
+    const revoked = once(client, 'session:expired');
+    const response = await fetch(url + '/api/sessions/others', {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${host}` },
+    });
+    assert.equal(response.status, 200);
+    assert.equal((await response.json()).count, 1);
+    await revoked;
+    assert.equal(
+      (await fetch(url + '/api/history', { headers: { Authorization: `Bearer ${other}` } })).status,
+      401,
+    );
+    assert.equal(
+      (await fetch(url + '/api/history', { headers: { Authorization: `Bearer ${host}` } })).status,
+      200,
+    );
+  },
+);

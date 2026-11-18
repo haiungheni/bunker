@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const socket = window.BunkerClient.create('moderator');
   const escapeHtml = window.BunkerClient.escapeHtml;
   let currentState = null;
-  let activePickerTarget = null; // { playerId, category }
+  let activePickerTarget = null;
+  let phaseDraft = null;
 
   // Sound Engine
   const sound = window.soundEngine;
@@ -12,18 +13,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   // The server supplies the catalog with init; bind all handlers before connecting.
 
   // Socket Events
-  socket.on('init', ({ state, catalog, serverIps, port }) => {
+  socket.on('init', ({ state, catalog, serverIps, port, canManageSessions }) => {
     window.CardsDB.data = catalog;
     window.CardsDB.isLoaded = true;
-    currentState = state;
-    renderAll();
+    syncState(state);
+    if (activePickerTarget && cardCreateForm.hidden) renderPickerGrid();
+    document.getElementById('btnRevokeModeratorSessions').hidden = !canManageSessions;
     setupTvUrls(serverIps, port);
   });
 
-  socket.on('game:state', (state) => {
-    currentState = state;
-    renderAll();
+  socket.on('catalog:card_added', (card) => {
+    window.CardsDB.data.cards.push(card);
+    if (activePickerTarget && cardCreateForm.hidden) renderPickerGrid();
   });
+
+  socket.on('game:state', syncState);
 
   socket.on('timer:tick', ({ timeLeft, duration, type, activeSpeakerId }) => {
     if (currentState && currentState.timer) {
@@ -112,6 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const btnTimer30 = document.getElementById('btnTimer30');
   const btnTimer60 = document.getElementById('btnTimer60');
   const btnStopSpeaker = document.getElementById('btnStopSpeaker');
+  const btnNextSpeaker = document.getElementById('btnNextSpeaker');
 
   const selectRound = document.getElementById('selectRound');
   const selectPhase = document.getElementById('selectPhase');
@@ -127,6 +132,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const cardPickerGrid = document.getElementById('cardPickerGrid');
   const cardPickerTitle = document.getElementById('cardPickerTitle');
   const cardPickerSubtitle = document.getElementById('cardPickerSubtitle');
+  const cardCreatePrompt = document.getElementById('cardPickerCreatePrompt');
+  const cardCreateForm = document.getElementById('cardCreateForm');
+  const cardCreateTitle = document.getElementById('cardCreateTitle');
+  const cardCreateDescription = document.getElementById('cardCreateDescription');
+  const btnSaveCardCreate = document.getElementById('btnSaveCardCreate');
   const checkShowOnTv = document.getElementById('checkShowOnTv');
 
   const gameSetupModal = document.getElementById('gameSetupModal');
@@ -178,6 +188,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     finale: 'Faza Finală (Epilog)',
   };
 
+  function syncState(state) {
+    if (currentState && currentState.gameId !== state.gameId) {
+      closeCardPicker();
+      gameSetupModal.classList.remove('active');
+      quickScheduleModal.classList.remove('active');
+      phaseDraft = null;
+    }
+    if (currentState?.round !== state.round || currentState?.phase !== state.phase) phaseDraft = null;
+    currentState = state;
+    renderAll();
+  }
+
   // Main Render Function
   function renderAll() {
     if (!currentState) return;
@@ -185,8 +207,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       activePickerTarget?.playerId != null &&
       currentState.players.find((p) => p.id === activePickerTarget.playerId)?.status !== 'alive'
     ) {
-      cardPickerModal.classList.remove('active');
-      activePickerTarget = null;
+      closeCardPicker();
     }
 
     renderHeader();
@@ -199,6 +220,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderPlayers();
     renderBunkerTab();
     renderVotingTab();
+    renderTvControls();
     renderFinaleTab();
     document.getElementById('btnUndo').disabled = !currentState.canUndo;
     document.getElementById('saveStatus').textContent = currentState.saveError
@@ -215,8 +237,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     headerBunkerVal.textContent = `${currentState.bunkerCapacity} locuri / ${aliveCount} rămași`;
     tabPlayerCount.textContent = currentState.players.length;
 
-    selectRound.value = currentState.round;
-    selectPhase.value = currentState.phase;
+    if (!phaseDraft) {
+      selectRound.value = currentState.round;
+      selectPhase.value = currentState.phase;
+    }
   }
 
   // Render Timer Bar
@@ -228,10 +252,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       const speaker = currentState.players.find((p) => p.id === currentState.activeSpeakerId);
       timerSpeakerText.textContent = speaker ? `${speaker.name} este la cuvânt` : 'Vorbitor activ';
     } else {
-      timerSpeakerText.textContent = 'Niciun vorbitor selectat';
+      timerSpeakerText.textContent = timer.type === 'speech' && timer.timeLeft === 0
+        ? 'Timp expirat'
+        : 'Niciun vorbitor selectat';
     }
 
     btnTimerToggle.textContent = timer.isRunning ? '⏸' : '▶';
+    btnNextSpeaker.disabled =
+      currentState.phase === 'finale' || ['collecting', 'result', 'defense'].includes(currentState.voteSession?.stage) ||
+      !currentState.players.some((p) => p.status === 'alive' && p.id !== currentState.activeSpeakerId);
   }
 
   function updateTimerDisplay(seconds, duration) {
@@ -364,18 +393,20 @@ document.addEventListener('DOMContentLoaded', async () => {
           const content = document.createElement('div');
           content.className = 'slot-content-revealed';
 
-          const img = document.createElement('img');
-          img.className = 'slot-thumb';
-          img.src = revealedCard.image;
-          img.alt = revealedCard.title;
-          img.loading = 'lazy';
+          if (revealedCard.image) {
+            const img = document.createElement('img');
+            img.className = 'slot-thumb';
+            img.src = revealedCard.image;
+            img.alt = revealedCard.title;
+            img.loading = 'lazy';
+            content.appendChild(img);
+          }
 
           const title = document.createElement('span');
           title.className = 'slot-title';
           title.textContent = revealedCard.title;
           title.title = revealedCard.title;
 
-          content.appendChild(img);
           content.appendChild(title);
           slotEl.appendChild(content);
 
@@ -449,9 +480,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (cat) {
       catContent.innerHTML = `
-        <div class="catastrophe-image-wrap">
+        ${cat.image ? `<div class="catastrophe-image-wrap">
           <img src="${escapeHtml(cat.image)}" alt="${escapeHtml(cat.title)}" class="catastrophe-img">
-        </div>
+        </div>` : ''}
         <div class="catastrophe-details">
           <span class="badge badge-red">CATASTROFĂ PLANETARĂ</span>
           <div class="catastrophe-name">${escapeHtml(cat.title)}</div>
@@ -544,6 +575,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const grid = document.getElementById('votingCandidatesGrid');
+    const focusedVote = grid.contains(document.activeElement) && document.activeElement.dataset.vote;
     grid.innerHTML = '';
 
     const session = currentState.voteSession || { stage: 'idle', candidates: [] };
@@ -555,11 +587,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('voteSessionStatus').textContent =
       `${session.candidates.length ? 'Balotaj • ' : ''}${{ idle: 'Pregătire', collecting: 'Votare deschisă', result: 'Rezultat confirmabil', defense: 'Apărarea candidaților' }[session.stage] || session.stage} • ${done} / ${votesThisRound} exilări în rundă`;
     document.getElementById('btnCloseVoting').disabled = session.stage !== 'collecting';
+    document.getElementById('btnResetVoteCounts').disabled = !window.BunkerRules.showVoteTally(currentState);
     document.getElementById('btnStartVoting').textContent = session.candidates.length
       ? 'Pornește votul de departajare'
       : 'Pornește un vot nou';
     document.getElementById('btnStartVoting').disabled = session.stage === 'collecting';
-    document.getElementById('btnTiebreakTimer').disabled = session.stage !== 'result';
     let maxVotes = 0;
     let topCandidates = [];
 
@@ -572,6 +604,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         topCandidates.push(p);
       }
     });
+    document.getElementById('btnTiebreakTimer').disabled = session.stage !== 'result' || topCandidates.length < 2;
 
     alivePlayers.forEach((p) => {
       const box = document.createElement('div');
@@ -586,13 +619,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           <span class="candidate-prof">${escapeHtml(prof)}</span>
         </div>
         <div class="vote-counter-wrap">
-          <button class="vote-btn" ${session.stage !== 'collecting' ? 'disabled' : ''} onclick="window.changeVote(${p.id}, -1)">−</button>
+          <button class="vote-btn" data-vote="${p.id}:-1" aria-label="Scade un vot pentru ${escapeHtml(p.name)}" ${session.stage !== 'collecting' ? 'disabled' : ''}>−</button>
           <span class="vote-count-num">${p.votes || 0}</span>
-          <button class="vote-btn" ${session.stage !== 'collecting' ? 'disabled' : ''} onclick="window.changeVote(${p.id}, 1)">+</button>
+          <button class="vote-btn" data-vote="${p.id}:1" aria-label="Adaugă un vot pentru ${escapeHtml(p.name)}" ${session.stage !== 'collecting' ? 'disabled' : ''}>+</button>
         </div>
       `;
       grid.appendChild(box);
     });
+    if (focusedVote) grid.querySelector(`[data-vote="${focusedVote}"]:enabled`)?.focus({ preventScroll: true });
 
     // Summary bar
     const topSummary = document.getElementById('topVotedCandidate');
@@ -615,7 +649,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  window.changeVote = (playerId, delta) => socket.emit('votes:adjust', { playerId, delta });
+  document.getElementById('votingCandidatesGrid').addEventListener('click', (event) => {
+    const vote = event.target.closest('button[data-vote]');
+    if (!vote) return;
+    const [playerId, delta] = vote.dataset.vote.split(':').map(Number);
+    socket.emit('votes:adjust', { playerId, delta });
+  });
 
   // Render Finale Tab
   function renderFinaleTab() {
@@ -728,15 +767,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   btnStopSpeaker.addEventListener('click', () => {
     socket.emit('speaker:set', { playerId: null });
   });
+  btnNextSpeaker.addEventListener('click', () => socket.emit('speaker:next'));
   document.getElementById('btnStopTvDisplay').addEventListener('click', () => {
     socket.emit('modal:close');
   });
 
   // Phase Controls
+  for (const select of [selectRound, selectPhase]) {
+    select.addEventListener('change', () => {
+      if (currentState && !phaseDraft)
+        phaseDraft = { fromRound: currentState.round, fromPhase: currentState.phase };
+    });
+  }
   btnApplyPhase.addEventListener('click', () => {
     const r = parseInt(selectRound.value, 10);
     const p = selectPhase.value;
-    socket.emit('game:set_phase', { round: r, phase: p });
+    socket.emit('game:set_phase', { round: r, phase: p, ...phaseDraft }, (result) => {
+      if (result.success) {
+        phaseDraft = null;
+        renderHeader();
+      }
+    });
   });
 
   btnNextRound.addEventListener('click', () => {
@@ -769,6 +820,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('btnResetVoteCounts').addEventListener('click', () => {
     socket.emit('votes:record', { votes: {} });
+  });
+  document.getElementById('btnShowVotingOnTv').addEventListener('click', () => {
+    socket.emit('tv:display', { mode: 'votes' });
   });
 
   document.getElementById('btnTiebreakTimer').addEventListener('click', () => {
@@ -805,7 +859,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function openCardPicker(playerId, categorySlug) {
     if (playerId != null && currentState.players.find((p) => p.id === playerId)?.status !== 'alive')
       return;
-    activePickerTarget = { playerId, category: categorySlug };
+    activePickerTarget = { gameId: currentState.gameId, playerId, category: categorySlug };
 
     const player = playerId ? currentState.players.find((p) => p.id === playerId) : null;
     const catInfo = window.CardsDB.getCategoryInfo(categorySlug);
@@ -819,18 +873,66 @@ document.addEventListener('DOMContentLoaded', async () => {
     cardCategoryFilter.disabled = !!categorySlug;
     cardSearchInput.value = '';
 
-    renderPickerGrid();
+    cardPickerModal.inert = false;
     cardPickerModal.classList.add('active');
-    cardSearchInput.focus();
+    showPickerCreation(false);
   }
 
   function closeCardPicker() {
+    cardPickerModal.inert = true;
     cardPickerModal.classList.remove('active');
     activePickerTarget = null;
   }
 
+  function showPickerCreation(open) {
+    cardCreateForm.hidden = !open;
+    cardPickerGrid.hidden = open;
+    cardCreatePrompt.hidden = open;
+    cardSearchInput.disabled = open;
+    if (open) {
+      cardCreateForm.reset();
+      btnSaveCardCreate.disabled = false;
+      cardCreateTitle.value = cardSearchInput.value.trim();
+      cardCreateTitle.focus();
+    } else {
+      renderPickerGrid();
+      cardSearchInput.focus();
+    }
+  }
+
   btnCloseCardPicker.addEventListener('click', closeCardPicker);
   btnCancelCardPicker.addEventListener('click', closeCardPicker);
+  document.getElementById('btnOpenCardCreate').onclick = () => showPickerCreation(true);
+  document.getElementById('btnCancelCardCreate').onclick = () => showPickerCreation(false);
+  cardCreateForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const target = activePickerTarget;
+    if (!target || btnSaveCardCreate.disabled) return;
+    const title = cardCreateTitle.value.trim();
+    if (!title) {
+      showToast('Introdu titlul cartonașului.', true);
+      cardCreateTitle.focus();
+      return;
+    }
+    btnSaveCardCreate.disabled = true;
+    socket.emit(
+      'catalog:create',
+      {
+        ...target,
+        title,
+        description: cardCreateDescription.value.trim(),
+        showOnTv: checkShowOnTv.checked,
+      },
+      (result) => {
+        if (activePickerTarget !== target) return;
+        btnSaveCardCreate.disabled = false;
+        if (result.success) {
+          closeCardPicker();
+          if (result.saved) showToast('Cartonașul a fost adăugat în catalog.');
+        }
+      },
+    );
+  });
 
   cardSearchInput.addEventListener('input', () => {
     renderPickerGrid();
@@ -844,12 +946,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const q = cardSearchInput.value;
     const cat = cardCategoryFilter.value === 'all' ? null : cardCategoryFilter.value;
     const results = window.CardsDB.search(q, cat);
+    const normalizedQuery = window.BunkerRules.normalize(q.trim());
+    cardCreatePrompt.hidden =
+      !activePickerTarget?.category ||
+      !normalizedQuery ||
+      results.some((card) => window.BunkerRules.normalize(card.title) === normalizedQuery);
 
     cardPickerGrid.innerHTML = '';
 
     if (results.length === 0) {
-      cardPickerGrid.innerHTML =
-        '<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--text-dim);">Nicio carte găsită conform căutării.</div>';
+      cardPickerGrid.innerHTML = '<p class="card-picker-empty">Niciun cartonaș găsit.</p>';
       return;
     }
 
@@ -861,7 +967,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
 
       item.innerHTML = `
-        <img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" class="picker-card-img" loading="lazy">
+        ${c.image ? `<img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" class="picker-card-img" loading="lazy">` : ''}
         <div class="picker-card-info">
           <span class="picker-card-cat cat-${c.category}">${escapeHtml(c.categoryRo)}</span>
           <span class="picker-card-title">${escapeHtml(c.title)}</span>
@@ -878,13 +984,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (activePickerTarget.playerId) {
       socket.emit('player:reveal_card', {
+        gameId: activePickerTarget.gameId,
         playerId: activePickerTarget.playerId,
         category: activePickerTarget.category,
         cardId: card.id,
         showOnTv: showOnTv,
       });
     } else if (activePickerTarget.category === 'catastrofe') {
-      socket.emit('catastrophe:select', { cardId: card.id });
+      socket.emit('catastrophe:select', { gameId: activePickerTarget.gameId, cardId: card.id });
     }
 
     closeCardPicker();
@@ -1085,12 +1192,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Reset Game Handlers
   function handleResetGame() {
+    if (!currentState) return;
+    const { gameId, playerCount } = currentState;
     if (
       confirm(
-        'Ești sigur că vrei să resetezi jocul de la început?\n\nDatele jocului curent vor fi arhivate automat în istoricul JSON (în data/history/) înainte de resetare.',
+        'Ești sigur că vrei să resetezi jocul de la început?\n\nPartida curentă va fi arhivată automat înainte de resetare.',
       )
     ) {
-      socket.emit('game:reset_and_save', { playerCount: currentState.playerCount });
+      socket.emit('game:reset_and_save', { gameId, playerCount });
     }
   }
 
@@ -1121,6 +1230,46 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }
+
+  const tvViewButtons = document.querySelectorAll('[data-tv-view]');
+  function renderTvControls() {
+    const { mode, size, page } = currentState.tvDisplay ?? { mode: 'local', size: 4, page: 0 };
+    const selected = mode === 'pages' ? String(size) : mode;
+    for (const button of tvViewButtons)
+      button.setAttribute('aria-pressed', String(button.dataset.tvView === selected));
+    document.getElementById('btnShowVotingOnTv').disabled = !window.BunkerRules.showVoteTally(currentState);
+    document.getElementById('tvRemotePagination').hidden = mode !== 'pages';
+    if (mode === 'pages') {
+      const pages = Math.ceil(currentState.players.length / size);
+      document.getElementById('tvRemotePage').textContent = `Pagina ${Math.min(page + 1, pages)} / ${pages}`;
+      document.getElementById('btnTvRemotePrevious').disabled = pages < 2;
+      document.getElementById('btnTvRemoteNext').disabled = pages < 2;
+    }
+  }
+  for (const button of tvViewButtons) {
+    button.onclick = () => {
+      const view = button.dataset.tvView;
+      socket.emit('tv:display', view === '4' || view === '6'
+        ? { mode: 'pages', size: Number(view) }
+        : { mode: view });
+    };
+  }
+  document.getElementById('btnTvRemotePrevious').onclick = () => socket.emit('tv:display', { delta: -1 });
+  document.getElementById('btnTvRemoteNext').onclick = () => socket.emit('tv:display', { delta: 1 });
+  document.getElementById('btnRevokeModeratorSessions').onclick = async () => {
+    if (!confirm('Revoci accesul celorlalte console de moderator?')) return;
+    try {
+      const response = await fetch('/api/sessions/others', {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${socket.auth.token}` },
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error);
+      showToast(`Sesiuni revocate: ${result.count}.`);
+    } catch (error) {
+      showToast(error.message || 'Sesiunile nu au putut fi revocate.', true);
+    }
+  };
 
   // Setup TV Urls
   function setupTvUrls(serverIps, port) {

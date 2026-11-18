@@ -24,7 +24,7 @@
         <div class="hud-speaker-bar" id="tvSpeakerBar">
           <div class="speaker-indicator-pulse"></div>
           <div class="speaker-label-box">
-            <span class="speaker-caption">LA CUVÂNT:</span>
+            <span class="speaker-caption" id="tvSpeakerCaption">LA CUVÂNT:</span>
             <span class="speaker-player-name" id="tvSpeakerName">Jucător 1</span>
           </div>
           <div class="speaker-timer-box">
@@ -100,20 +100,23 @@
         </aside>
 
         <!-- Central Section: Survivors Grid -->
-        <main class="tv-main-grid-area">
+        <main class="tv-main-grid-area" id="tvPlayersArea">
           <div class="tv-page-controls">
+            <button id="tvShowDetails" class="btn btn-secondary btn-sm" aria-pressed="false" disabled>
+              Toate dosarele pe tot ecranul
+            </button>
             <button
               id="tvPreviousPage"
-              class="btn btn-secondary btn-sm"
+              class="btn btn-secondary btn-sm tv-paging-control"
               aria-label="Pagina precedentă"
             >
               ◀
             </button>
             <span id="tvPageIndicator"></span>
-            <button id="tvNextPage" class="btn btn-secondary btn-sm" aria-label="Pagina următoare">
+            <button id="tvNextPage" class="btn btn-secondary btn-sm tv-paging-control" aria-label="Pagina următoare">
               ▶
             </button>
-            <label
+            <label class="tv-paging-control"
               >Afișare
               <select id="tvPageSize">
                 <option value="auto" selected>Automată</option>
@@ -125,9 +128,12 @@
                 <option value="12">12 dosare</option>
               </select></label
             >
-            <label><input id="tvAutoPage" type="checkbox" checked /> Schimbare automată</label>
+            <label class="tv-paging-control"><input id="tvAutoPage" type="checkbox" checked /> Schimbare automată</label>
             <span id="tvVotingStatus" role="status"></span>
           </div>
+          <section id="tvVoteTally" class="tv-vote-tally" aria-label="Voturi pe jucător" hidden>
+            <ul id="tvVoteCounts" class="tv-vote-counts"></ul>
+          </section>
           <div class="survivors-header-bar">
             <div class="survivors-title">DOSARELE CANDIDAȚILOR LA BUNCĂR</div>
             <div class="survivors-status-legend">
